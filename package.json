@@ -1,7 +1,11 @@
 {
-  "name": "root",
-  "private": true,
-  "devDependencies": {
-    "lerna": "^4.0.0"
-  }
+    "name": "root",
+    "private": true,
+    "scripts": {
+        "publish": "lerna publish"
+    },
+    "devDependencies": {
+        "husky": "^7.0.4",
+        "lerna": "^4.0.0"
+    }
 }
