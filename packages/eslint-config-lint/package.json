@@ -1,5 +1,5 @@
 {
-    "name": "eslint-config-lint",
+    "name": "@alad/eslint-config-lint",
     "version": "0.0.2",
     "description": "> TODO: description",
     "author": "zhaoxingming <zhaoxingming@nucarf.com>",
