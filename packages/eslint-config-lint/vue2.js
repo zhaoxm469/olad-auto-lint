@@ -1,4 +1,4 @@
-const vueRules = require("./rules/vue-common.js");
+const vueRules = require("../eslint-config-olad/rules/vue-common.js");
 
 module.exports = {
   env: {
