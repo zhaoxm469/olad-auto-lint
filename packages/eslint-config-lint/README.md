@@ -1,7 +1,6 @@
 # ESLint规范
 
 阿拉钉前端ESLint规范，目前支持 `vue|typescript`  
-
 ## 安装
 
 ```bash

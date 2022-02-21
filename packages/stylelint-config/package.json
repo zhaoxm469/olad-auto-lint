@@ -1,0 +1,27 @@
+{
+    "name": "@olad/stylelint-config",
+    "version": "0.0.7",
+    "description": "阿拉钉前端Style规范，目前支持 `css|scss`",
+    "author": "zhaoxm",
+    "homepage": "https://github.com/zhaoxm469/olad-auto-lint#readme",
+    "license": "ISC",
+    "keywords": [
+        "stylelint"
+    ],
+    "main": "index.js",
+    "publishConfig": {
+        "registry": "http://npm.nucarf.cn/"
+    },
+    "dependencies": {
+        "stylelint": "^13.13.1",
+        "stylelint-config-standard": "^22.0.0",
+        "stylelint-order": "^4.1.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zhaoxm469/olad-auto-lint.git"
+    },
+    "bugs": {
+        "url": "https://github.com/zhaoxm469/olad-auto-lint/issues"
+    }
+}
