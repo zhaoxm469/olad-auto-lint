@@ -1,26 +1,26 @@
 {
-    "name": "@olad/commitlint-config",
-    "version": "0.0.8",
-    "description": "阿拉钉git提交规范",
-    "author": "zhaoxm",
-    "homepage": "https://github.com/zhaoxm469/olad-auto-lint#readme",
-    "license": "ISC",
-    "main": "index.js",
-    "publishConfig": {
-        "registry": "http://npm.nucarf.cn/"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/zhaoxm469/olad-auto-lint.git"
-    },
-    "dependencies": {
-        "@commitlint/cli": "^13.1.0",
-        "@commitlint/config-conventional": "^13.1.0"
-    },
-    "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1"
-    },
-    "bugs": {
-        "url": "https://github.com/zhaoxm469/olad-auto-lint/issues"
-    }
+  "name": "@olad/commitlint-config",
+  "version": "0.0.9",
+  "description": "阿拉钉git提交规范",
+  "author": "zhaoxm",
+  "homepage": "https://github.com/zhaoxm469/olad-auto-lint#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "http://npm.nucarf.cn/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaoxm469/olad-auto-lint.git"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/zhaoxm469/olad-auto-lint/issues"
+  }
 }
