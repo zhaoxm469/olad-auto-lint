@@ -1,54 +1,52 @@
 {
-    "name": "@olad/eslint-config-lint",
-    "version": "0.0.8",
-    "description": "ESLint config",
-    "author": "zhaoxm",
-    "homepage": "https://github.com/zhaoxm469/olad-auto-lint#readme",
-    "license": "ISC",
-    "main": "index.js",
-    "directories": {
-        "lib": "lib",
-        "test": "__tests__"
-    },
-    "files": [
-        "rules",
-        "base.js",
-        "index.js",
-        "typescript.js",
-        "vue.js",
-        "package.json",
-        "README.md"
-    ],
-    "dependencies": {
-        "@babel/eslint-parser": "^7.15.4",
-        "@typescript-eslint/eslint-plugin": "^4.32.0",
-        "@typescript-eslint/parser": "^4.32.0",
-        "@vue/eslint-config-standard": "^6.1.0",
-        "@vue/eslint-config-typescript": "^7.0.0",
-        "eslint": "^7.32.0",
-        "eslint-config-next": "^11.1.2",
-        "eslint-config-react-app": "^6.0.0",
-        "eslint-config-taro": "3.2.10",
-        "eslint-plugin-import": "^2.12.0",
-        "eslint-plugin-react": "^7.26.0",
-        "eslint-plugin-react-hooks": "^4.2.0",
-        "eslint-plugin-vue": "^7.18.0"
-    },
-    "devDependencies": {
-        "rimraf": "^3.0.2",
-        "typescript": "^4.4.3"
-    },
-    "publishConfig": {
-        "registry": "http://npm.nucarf.cn/"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/zhaoxm469/olad-auto-lint.git"
-    },
-    "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1"
-    },
-    "bugs": {
-        "url": "https://github.com/zhaoxm469/olad-auto-lint/issues"
-    }
+  "name": "@olad/eslint-config-lint",
+  "version": "0.0.8",
+  "description": "ESLint config",
+  "author": "zhaoxm",
+  "homepage": "https://github.com/zhaoxm469/olad-auto-lint#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "rules",
+    "base.js",
+    "index.js",
+    "typescript.js",
+    "vue.js",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@babel/eslint-parser": "^7.15.4",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-vue": "^7.20.0",
+    "prettier": "^2.5.1"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.3"
+  },
+  "publishConfig": {
+    "registry": "http://npm.nucarf.cn/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaoxm469/olad-auto-lint.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/zhaoxm469/olad-auto-lint/issues"
+  }
 }
