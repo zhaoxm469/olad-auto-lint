@@ -1,4 +1,4 @@
-import{_ as n,c as s,o as a,a as p}from"./app.8e8a4b1b.js";const t={components:{}},g='{"title":"vue \u89C4\u5219","description":"","frontmatter":{},"relativePath":"eslint/rules/vue.md","lastUpdated":1645439680703}',o=p(`__VP_STATIC_START__<h1 id="vue-\u89C4\u5219"><a class="header-anchor" href="#vue-\u89C4\u5219" aria-hidden="true">#</a> vue \u89C4\u5219</h1><p>\u5177\u4F53\u89C4\u5219\u53C2\u8003\uFF1A<a href="https://eslint.vuejs.org/rules/" target="_blank" rel="noopener noreferrer">https://eslint.vuejs.org/rules/</a></p><p>\u89C4\u5219\u5982\u4E0B\uFF1A</p><div class="language-js"><pre><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+import{_ as n,c as s,o as a,a as p}from"./app.a54f5374.js";const t={components:{}},g='{"title":"vue \u89C4\u5219","description":"","frontmatter":{},"relativePath":"eslint/rules/vue.md","lastUpdated":1645440403856}',o=p(`<h1 id="vue-\u89C4\u5219"><a class="header-anchor" href="#vue-\u89C4\u5219" aria-hidden="true">#</a> vue \u89C4\u5219</h1><p>\u5177\u4F53\u89C4\u5219\u53C2\u8003\uFF1A<a href="https://eslint.vuejs.org/rules/" target="_blank" rel="noopener noreferrer">https://eslint.vuejs.org/rules/</a></p><p>\u89C4\u5219\u5982\u4E0B\uFF1A</p><div class="language-js"><pre><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">/**
    * \u9650\u5236\u81EA\u5B9A\u4E49\u7EC4\u4EF6\u7684\u5C5E\u6027\u98CE\u683C
    */</span>
@@ -688,4 +688,4 @@ import{_ as n,c as s,o as a,a as p}from"./app.8e8a4b1b.js";const t={components:{
    */</span>
   <span class="token string-property property">&#39;vue/multiline-html-element-content-newline&#39;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre></div>__VP_STATIC_END__`,4),e=[o];function r(c,l,k,i,u,m){return a(),s("div",null,e)}var v=n(t,[["render",r]]);export{g as __pageData,v as default};
+</code></pre></div>`,4),e=[o];function r(c,l,k,i,u,m){return a(),s("div",null,e)}var v=n(t,[["render",r]]);export{g as __pageData,v as default};
