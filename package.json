@@ -7,8 +7,5 @@
     "devDependencies": {
         "husky": "^7.0.4",
         "lerna": "^4.0.0"
-    },
-    "dependencies": {
-        "@alad/eslint-config-lint": "^0.0.3"
     }
 }
