@@ -2,11 +2,11 @@ export const ROOT_PATH = process.cwd()
 
 export const targetFile = 'private'
 
-export const ESLINT_PACKAGE_NAME = 'eslint-config-selling'
+export const ESLINT_PACKAGE_NAME = '@olad/eslint-config-lint'
 
-export const COMMIT_LINT_PACKAGE_NAME = 'commitlint-config-selling'
+export const COMMIT_LINT_PACKAGE_NAME = '@olad/commitlint-config-lint'
 
-export const STYLE_LINT_PACKAGE_NAME = 'stylelint-config-selling'
+export const STYLE_LINT_PACKAGE_NAME = '@olad/stylelint-config-lint'
 
 export const packageMap = {
     folderName: {
