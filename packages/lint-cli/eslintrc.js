@@ -1,4 +1,4 @@
 /* eslint-disable */
 module.exports = {
-  "extends": ['selling/vue']
+  "extends": ['@olad/lint/typescript']
 }
