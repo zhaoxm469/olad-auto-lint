@@ -1,11 +1,11 @@
-# `@alad/test`
+# `@olad/lint-cli`
 
 > TODO: description
 
 ## Usage
 
 ```
-const test = require('@alad/test');
+const lintCli = require('@olad/lint-cli');
 
 // TODO: DEMONSTRATE API
 ```

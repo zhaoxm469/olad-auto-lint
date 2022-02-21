@@ -1,0 +1,1 @@
+export const eslintType = ["typescript", "vue"]
