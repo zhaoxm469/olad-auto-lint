@@ -67,21 +67,11 @@ const tryToRemovePackage = (safeDepList: string[] = []) => {
 // 检查并移除旧的lint包
 const checkAndRemoveOldPackage = async (packageName: string) => {
 
-    const indirectDependicies = [];
-    // const indirectDependicies = allDeps[packageMap.depsName[packageName]]
     const userPackage = getUserPackage();
 
-    console.log({ indirectDependicies, packageName });
-
-    // 卸载旧版lint包
-    if ((userPackage.hasOwnProperty('dependencies') && userPackage.dependencies.hasOwnProperty(packageName)) ||
-        (userPackage.hasOwnProperty('devDependencies') && userPackage.devDependencies.hasOwnProperty(packageName))
-    ) {
-        // commandSync(`npm uninstall ${packageName}`, { stdio: 'inherit' })
+    if (JSON.stringify(userPackage).includes(packageName)) {
+        commandSync(`npm uninstall ${packageName}`, { stdio: 'inherit' })
     }
-
-    // 卸载lint已经包含的间接依赖
-    tryToRemovePackage(indirectDependicies)
 }
 
 
@@ -215,17 +205,12 @@ const npmInstall = (confg: NpmInstallConfig) => {
 
     startSpinner(`正在安装依赖: ${packageName}`)
 
-    console.log({ packageName });
-
-    // commandSync(`pnpm add ${packageName} -D`, { stdio: 'inherit' })
+    commandSync(`npm i ${packageName} -D`, { stdio: 'inherit' })
 
     succeedSpiner(`${packageName}安装完成`)
 
-
     if (eslintType) {
         const contentResult = Handlebars.compile(content)({ eslintType })
-        console.log({ contentResult });
-
         writeFileSync(targetFileName, contentResult)
     } else {
         writeFileSync(content, join(ROOT_PATH, targetFileName))
