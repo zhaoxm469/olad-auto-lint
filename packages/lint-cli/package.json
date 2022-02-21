@@ -1,6 +1,6 @@
 {
   "name": "@olad/lint-cli",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "olad-lint cli工具",
   "main": "./build",
   "scripts": {
