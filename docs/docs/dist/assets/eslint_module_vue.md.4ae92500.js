@@ -1,60 +1,42 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>
-      vue 规则 | olad-auto-lint
-    </title>
-    <meta name="description" content="A VitePress site">
-    <link rel="stylesheet" href="/assets/style.faec9f17.css">
-    <link rel="modulepreload" href="/assets/Home.a2c33b76.js">
-    <link rel="modulepreload" href="/assets/app.a54f5374.js">
-    <link rel="modulepreload" href="/assets/eslint_rules_vue.md.badd08f3.lean.js">
-    <link rel="modulepreload" href="/assets/app.a54f5374.js">
-    
-    
-  </head>
-  <body>
-    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-b2bb904e><div class="sidebar-button" data-v-b2bb904e><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/" aria-label="olad-auto-lint, back to home" data-v-b2bb904e data-v-05b58416><!----> olad-auto-lint</a><div class="flex-grow" data-v-b2bb904e></div><div class="nav" data-v-b2bb904e><nav class="nav-links" data-v-b2bb904e data-v-3de693e3><!--[--><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/guide/intro" data-v-77e86150>介绍 <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/cli/intro" data-v-77e86150>CLI <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/eslint/intro" data-v-77e86150>EsLint <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/stylelint/intro" data-v-77e86150>StyleLint <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/commitlint/intro" data-v-77e86150>CommitLint <!----></a></div></div><!--]--><!----><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item isExternal" href="https://github.com/zhaoxm469/olad-auto-lint" target="_blank" rel="noopener noreferrer" data-v-77e86150>Github <svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15" data-v-77e86150><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div></div></nav></div><!--[--><!--]--></header><!--[--><aside class="sidebar hover-scrollbar" data-v-61004fbf><nav class="nav-links nav" data-v-61004fbf data-v-3de693e3><!--[--><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/guide/intro" data-v-77e86150>介绍 <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/cli/intro" data-v-77e86150>CLI <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/eslint/intro" data-v-77e86150>EsLint <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/stylelint/intro" data-v-77e86150>StyleLint <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/commitlint/intro" data-v-77e86150>CommitLint <!----></a></div></div><!--]--><!----><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item isExternal" href="https://github.com/zhaoxm469/olad-auto-lint" target="_blank" rel="noopener noreferrer" data-v-77e86150>Github <svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15" data-v-77e86150><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div></div></nav><!--[--><!--]--><ul class="sidebar-links" data-v-61004fbf><!--[--><li class="sidebar-link"><p class="sidebar-link-item">指南</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/guide/intro">介绍</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/guide/changelog">更新日志</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">CLI</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/cli/intro">介绍</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">EsLint</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/eslint/intro">介绍</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/eslint/rules/index">规则</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">StyleLint</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/stylelint/intro">介绍</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/stylelint/rules">规则</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">CommitLint</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/commitlint/intro">介绍</a><!----></li></ul></li><!--]--></ul><!--[--><!--]--></aside><ul class="right-slug" data-v-61004fbf data-v-ca112384><!--[--><!--]--></ul><!--]--><div class="sidebar-mask"></div><main class="page" data-v-f7095a1c><div class="container hover-scrollbar" data-v-f7095a1c><!--[--><!--]--><div class="content" data-v-f7095a1c><div data-v-f7095a1c><h1 id="vue-规则"><a class="header-anchor" href="#vue-规则" aria-hidden="true">#</a> vue 规则</h1><p>具体规则参考：<a href="https://eslint.vuejs.org/rules/" target="_blank" rel="noopener noreferrer">https://eslint.vuejs.org/rules/</a></p><p>规则如下：</p><div class="language-js"><pre><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+import{_ as n,c as s,o as a,a as p}from"./app.62e41da6.js";const t={components:{}},g='{"title":"vue \u89C4\u5219","description":"","frontmatter":{},"relativePath":"eslint/module/vue.md","lastUpdated":1645442586736}',o=p(`<h1 id="vue-\u89C4\u5219"><a class="header-anchor" href="#vue-\u89C4\u5219" aria-hidden="true">#</a> vue \u89C4\u5219</h1><p>\u5177\u4F53\u89C4\u5219\u53C2\u8003\uFF1A<a href="https://eslint.vuejs.org/rules/" target="_blank" rel="noopener noreferrer">https://eslint.vuejs.org/rules/</a></p><p>\u89C4\u5219\u5982\u4E0B\uFF1A</p><div class="language-js"><pre><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">/**
-   * 限制自定义组件的属性风格
+   * \u9650\u5236\u81EA\u5B9A\u4E49\u7EC4\u4EF6\u7684\u5C5E\u6027\u98CE\u683C
    */</span>
   <span class="token string-property property">&#39;vue/attribute-hyphenation&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 标签属性必须按规则排序
+   * \u6807\u7B7E\u5C5E\u6027\u5FC5\u987B\u6309\u89C4\u5219\u6392\u5E8F
    */</span>
   <span class="token string-property property">&#39;vue/attributes-order&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * &lt;script&gt; 标签必须有 lang 属性
+   * &lt;script&gt; \u6807\u7B7E\u5FC5\u987B\u6709 lang \u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/block-lang&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 变量名必须是 camelCase 风格的
-   * @reason 很多 api 或文件名都不是 camelCase 风格的
+   * \u53D8\u91CF\u540D\u5FC5\u987B\u662F camelCase \u98CE\u683C\u7684
+   * @reason \u5F88\u591A api \u6216\u6587\u4EF6\u540D\u90FD\u4E0D\u662F camelCase \u98CE\u683C\u7684
    */</span>
   <span class="token literal-property property">camelcase</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token string-property property">&#39;vue/camelcase&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 支持在模版中使用 eslint-disable-next-line 等注释
+   * \u652F\u6301\u5728\u6A21\u7248\u4E2D\u4F7F\u7528 eslint-disable-next-line \u7B49\u6CE8\u91CA
    */</span>
   <span class="token string-property property">&#39;vue/comment-directive&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 限制组件接口定义的模式
+   * \u9650\u5236\u7EC4\u4EF6\u63A5\u53E3\u5B9A\u4E49\u7684\u6A21\u5F0F
    */</span>
   <span class="token string-property property">&#39;vue/component-api-style&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 组件的 name 属性必须符合 PascalCase
-   * @reason 这是官方建议的规范
+   * \u7EC4\u4EF6\u7684 name \u5C5E\u6027\u5FC5\u987B\u7B26\u5408 PascalCase
+   * @reason \u8FD9\u662F\u5B98\u65B9\u5EFA\u8BAE\u7684\u89C4\u8303
    */</span>
   <span class="token string-property property">&#39;vue/component-definition-name-casing&#39;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;PascalCase&#39;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 限制组件名的风格
+   * \u9650\u5236\u7EC4\u4EF6\u540D\u7684\u98CE\u683C
    */</span>
   <span class="token string-property property">&#39;vue/component-name-in-template-casing&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 组件中必须按照 &lt;script&gt;, &lt;template&gt;, &lt;style&gt; 排序
-   * @reason 这是官方建议的顺序
+   * \u7EC4\u4EF6\u4E2D\u5FC5\u987B\u6309\u7167 &lt;script&gt;, &lt;template&gt;, &lt;style&gt; \u6392\u5E8F
+   * @reason \u8FD9\u662F\u5B98\u65B9\u5EFA\u8BAE\u7684\u987A\u5E8F
    */</span>
   <span class="token string-property property">&#39;vue/component-tags-order&#39;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
@@ -63,168 +45,168 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 自定义事件名必须用 kebab-case 风格
+   * \u81EA\u5B9A\u4E49\u4E8B\u4EF6\u540D\u5FC5\u987B\u7528 kebab-case \u98CE\u683C
    */</span>
   <span class="token string-property property">&#39;vue/custom-event-name-casing&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用 foo[&#39;bar&#39;]，必须写成 foo.bar
-   * @reason 当需要写一系列属性的时候，可以更统一
+   * \u7981\u6B62\u4F7F\u7528 foo[&#39;bar&#39;]\uFF0C\u5FC5\u987B\u5199\u6210 foo.bar
+   * @reason \u5F53\u9700\u8981\u5199\u4E00\u7CFB\u5217\u5C5E\u6027\u7684\u65F6\u5019\uFF0C\u53EF\u4EE5\u66F4\u7EDF\u4E00
    */</span>
   <span class="token string-property property">&#39;dot-notation&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token string-property property">&#39;vue/dot-notation&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 必须使用 === 或 !==，禁止使用 == 或 !=
+   * \u5FC5\u987B\u4F7F\u7528 === \u6216 !==\uFF0C\u7981\u6B62\u4F7F\u7528 == \u6216 !=
    */</span>
   <span class="token literal-property property">eqeqeq</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token string-property property">&#39;vue/eqeqeq&#39;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;always&#39;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * button 标签必须有 type 属性
+   * button \u6807\u7B7E\u5FC5\u987B\u6709 type \u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/html-button-has-type&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * HTML 注释的 &lt;!-- 后必须有空格或换行符
-   * @reason 代码格式问题，最好由 Prettier 解决
+   * HTML \u6CE8\u91CA\u7684 &lt;!-- \u540E\u5FC5\u987B\u6709\u7A7A\u683C\u6216\u6362\u884C\u7B26
+   * @reason \u4EE3\u7801\u683C\u5F0F\u95EE\u9898\uFF0C\u6700\u597D\u7531 Prettier \u89E3\u51B3
    */</span>
   <span class="token string-property property">&#39;vue/html-comment-content-newline&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * HTML 注释必须有首位空格
-   * @reason 代码格式问题，最好由 Prettier 解决
+   * HTML \u6CE8\u91CA\u5FC5\u987B\u6709\u9996\u4F4D\u7A7A\u683C
+   * @reason \u4EE3\u7801\u683C\u5F0F\u95EE\u9898\uFF0C\u6700\u597D\u7531 Prettier \u89E3\u51B3
    */</span>
   <span class="token string-property property">&#39;vue/html-comment-content-spacing&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * HTML 注释缩进必须有两个空格
-   * @reason 代码格式问题，最好由 Prettier 解决
+   * HTML \u6CE8\u91CA\u7F29\u8FDB\u5FC5\u987B\u6709\u4E24\u4E2A\u7A7A\u683C
+   * @reason \u4EE3\u7801\u683C\u5F0F\u95EE\u9898\uFF0C\u6700\u597D\u7531 Prettier \u89E3\u51B3
    */</span>
   <span class="token string-property property">&#39;vue/html-comment-indent&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 修复 no-unused-vars 不检查 jsx 的问题
+   * \u4FEE\u590D no-unused-vars \u4E0D\u68C0\u67E5 jsx \u7684\u95EE\u9898
    */</span>
   <span class="token string-property property">&#39;vue/jsx-uses-vars&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 组件名称必须和文件名一致
+   * \u7EC4\u4EF6\u540D\u79F0\u5FC5\u987B\u548C\u6587\u4EF6\u540D\u4E00\u81F4
    */</span>
   <span class="token string-property property">&#39;vue/match-component-file-name&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 多行属性之间必须有空行
-   * @reason 代码格式问题，最好由 Prettier 解决
+   * \u591A\u884C\u5C5E\u6027\u4E4B\u95F4\u5FC5\u987B\u6709\u7A7A\u884C
+   * @reason \u4EE3\u7801\u683C\u5F0F\u95EE\u9898\uFF0C\u6700\u597D\u7531 Prettier \u89E3\u51B3
    */</span>
   <span class="token string-property property">&#39;vue/new-line-between-multi-line-property&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * nextTick 必须使用 Promise 模式调用
+   * nextTick \u5FC5\u987B\u4F7F\u7528 Promise \u6A21\u5F0F\u8C03\u7528
    */</span>
   <span class="token string-property property">&#39;vue/next-tick-style&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * watch 中禁止使用箭头函数
+   * watch \u4E2D\u7981\u6B62\u4F7F\u7528\u7BAD\u5934\u51FD\u6570
    */</span>
   <span class="token string-property property">&#39;vue/no-arrow-functions-in-watch&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 计算属性禁止包含异步方法
+   * \u8BA1\u7B97\u5C5E\u6027\u7981\u6B62\u5305\u542B\u5F02\u6B65\u65B9\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/no-async-in-computed-properties&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止 &lt;template&gt; 中使用字符串
+   * \u7981\u6B62 &lt;template&gt; \u4E2D\u4F7F\u7528\u5B57\u7B26\u4E32
    */</span>
   <span class="token string-property property">&#39;vue/no-bare-strings-in-template&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止给布尔值 props 添加默认值
-   * @reason 类型相关的约束交给 TypeScript
+   * \u7981\u6B62\u7ED9\u5E03\u5C14\u503C props \u6DFB\u52A0\u9ED8\u8BA4\u503C
+   * @reason \u7C7B\u578B\u76F8\u5173\u7684\u7EA6\u675F\u4EA4\u7ED9 TypeScript
    */</span>
   <span class="token string-property property">&#39;vue/no-boolean-default&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止将常量作为分支条件判断中的测试表达式，但允许作为循环条件判断中的测试表达式
+   * \u7981\u6B62\u5C06\u5E38\u91CF\u4F5C\u4E3A\u5206\u652F\u6761\u4EF6\u5224\u65AD\u4E2D\u7684\u6D4B\u8BD5\u8868\u8FBE\u5F0F\uFF0C\u4F46\u5141\u8BB8\u4F5C\u4E3A\u5FAA\u73AF\u6761\u4EF6\u5224\u65AD\u4E2D\u7684\u6D4B\u8BD5\u8868\u8FBE\u5F0F
    */</span>
   <span class="token string-property property">&#39;no-constant-condition&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token string-property property">&#39;vue/no-constant-condition&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止自定义的 v-modal 修饰语
+   * \u7981\u6B62\u81EA\u5B9A\u4E49\u7684 v-modal \u4FEE\u9970\u8BED
    */</span>
   <span class="token string-property property">&#39;vue/no-custom-modifiers-on-v-model&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在 data 中使用已废弃的对象定义
+   * \u7981\u6B62\u5728 data \u4E2D\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684\u5BF9\u8C61\u5B9A\u4E49
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-data-object-declaration&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用已废弃的 destroyed 和 beforeDestroy 生命周期
+   * \u7981\u6B62\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684 destroyed \u548C beforeDestroy \u751F\u547D\u5468\u671F
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-destroyed-lifecycle&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用已废弃的 $listeners
+   * \u7981\u6B62\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684 $listeners
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-dollar-listeners-api&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用已废弃的 $scopedSlots
+   * \u7981\u6B62\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684 $scopedSlots
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-dollar-scopedslots-api&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用已废弃的 events 接口
+   * \u7981\u6B62\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684 events \u63A5\u53E3
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-events-api&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用已废弃的 filters 语法
+   * \u7981\u6B62\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684 filters \u8BED\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-filter&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用已废弃的 functional 模版
+   * \u7981\u6B62\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684 functional \u6A21\u7248
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-functional-template&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用已废弃的 is 属性
+   * \u7981\u6B62\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684 is \u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-html-element-is&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用已废弃的 inline-template 属性
+   * \u7981\u6B62\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684 inline-template \u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-inline-template&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用已废弃的 this
+   * \u7981\u6B62\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684 this
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-props-default-this&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁用已废弃的 scope 属性
+   * \u7981\u7528\u5DF2\u5E9F\u5F03\u7684 scope \u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-scope-attribute&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 使用 v-slot 替代已废弃的 slot
+   * \u4F7F\u7528 v-slot \u66FF\u4EE3\u5DF2\u5E9F\u5F03\u7684 slot
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-slot-attribute&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁用已废弃的 slot-scope
+   * \u7981\u7528\u5DF2\u5E9F\u5F03\u7684 slot-scope
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-slot-scope-attribute&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在 v-bind 指令中使用已废弃的 .sync 修饰符
+   * \u7981\u6B62\u5728 v-bind \u6307\u4EE4\u4E2D\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684 .sync \u4FEE\u9970\u7B26
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-v-bind-sync&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁用已废弃的 v-is 指令
+   * \u7981\u7528\u5DF2\u5E9F\u5F03\u7684 v-is \u6307\u4EE4
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-v-is&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用已废弃的 .native 修饰符
+   * \u7981\u6B62\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684 .native \u4FEE\u9970\u7B26
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-v-on-native-modifier&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用已废弃的数字修饰符
+   * \u7981\u6B62\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684\u6570\u5B57\u4FEE\u9970\u7B26
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-v-on-number-modifiers&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用已废弃的 Vue.config.keyCodes
+   * \u7981\u6B62\u4F7F\u7528\u5DF2\u5E9F\u5F03\u7684 Vue.config.keyCodes
    */</span>
   <span class="token string-property property">&#39;vue/no-deprecated-vue-config-keycodes&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止重复的键名
+   * \u7981\u6B62\u91CD\u590D\u7684\u952E\u540D
    */</span>
   <span class="token string-property property">&#39;vue/no-dupe-keys&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在 v-if 和 v-else-if 中出现重复的测试表达式
+   * \u7981\u6B62\u5728 v-if \u548C v-else-if \u4E2D\u51FA\u73B0\u91CD\u590D\u7684\u6D4B\u8BD5\u8868\u8FBE\u5F0F
    */</span>
   <span class="token string-property property">&#39;vue/no-dupe-v-else-if&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 使用 v-bind=&quot;$attrs&quot; 时 inheritAttrs 必须是 false
+   * \u4F7F\u7528 v-bind=&quot;$attrs&quot; \u65F6 inheritAttrs \u5FC5\u987B\u662F false
    */</span>
   <span class="token string-property property">&#39;vue/no-duplicate-attr-inheritance&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止出现重复的属性
+   * \u7981\u6B62\u51FA\u73B0\u91CD\u590D\u7684\u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/no-duplicate-attributes&#39;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
@@ -234,24 +216,24 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止 &lt;template&gt; &lt;script&gt; &lt;style&gt; 为空
+   * \u7981\u6B62 &lt;template&gt; &lt;script&gt; &lt;style&gt; \u4E3A\u7A7A
    */</span>
   <span class="token string-property property">&#39;vue/no-empty-component-block&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止解构赋值中出现空 {} 或 []
+   * \u7981\u6B62\u89E3\u6784\u8D4B\u503C\u4E2D\u51FA\u73B0\u7A7A {} \u6216 []
    */</span>
   <span class="token string-property property">&#39;no-empty-pattern&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token string-property property">&#39;vue/no-empty-pattern&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在 &lt;script setup&gt; 中使用 export
+   * \u7981\u6B62\u5728 &lt;script setup&gt; \u4E2D\u4F7F\u7528 export
    */</span>
   <span class="token string-property property">&#39;vue/no-export-in-script-setup&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止 model 中出现错误的属性
+   * \u7981\u6B62 model \u4E2D\u51FA\u73B0\u9519\u8BEF\u7684\u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/no-invalid-model-keys&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用特殊空白符（比如全角空格），除非是出现在字符串、正则表达式、模版字符串中或 HTML 内容中
+   * \u7981\u6B62\u4F7F\u7528\u7279\u6B8A\u7A7A\u767D\u7B26\uFF08\u6BD4\u5982\u5168\u89D2\u7A7A\u683C\uFF09\uFF0C\u9664\u975E\u662F\u51FA\u73B0\u5728\u5B57\u7B26\u4E32\u3001\u6B63\u5219\u8868\u8FBE\u5F0F\u3001\u6A21\u7248\u5B57\u7B26\u4E32\u4E2D\u6216 HTML \u5185\u5BB9\u4E2D
    */</span>
   <span class="token string-property property">&#39;no-irregular-whitespace&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token string-property property">&#39;vue/no-irregular-whitespace&#39;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
@@ -265,417 +247,417 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止异步注册生命周期
+   * \u7981\u6B62\u5F02\u6B65\u6CE8\u518C\u751F\u547D\u5468\u671F
    */</span>
   <span class="token string-property property">&#39;vue/no-lifecycle-after-await&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止出现没必要的 &lt;template&gt;
+   * \u7981\u6B62\u51FA\u73B0\u6CA1\u5FC5\u8981\u7684 &lt;template&gt;
    */</span>
   <span class="token string-property property">&#39;vue/no-lone-template&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止 class 中出现复数的对象
+   * \u7981\u6B62 class \u4E2D\u51FA\u73B0\u590D\u6570\u7684\u5BF9\u8C61
    */</span>
   <span class="token string-property property">&#39;vue/no-multiple-objects-in-class&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止给 scoped slots 传递多个参数
+   * \u7981\u6B62\u7ED9 scoped slots \u4F20\u9012\u591A\u4E2A\u53C2\u6570
    */</span>
   <span class="token string-property property">&#39;vue/no-multiple-slot-args&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止模版中有多个根节点
+   * \u7981\u6B62\u6A21\u7248\u4E2D\u6709\u591A\u4E2A\u6839\u8282\u70B9
    */</span>
   <span class="token string-property property">&#39;vue/no-multiple-template-root&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止修改组件的 props
+   * \u7981\u6B62\u4FEE\u6539\u7EC4\u4EF6\u7684 props
    */</span>
   <span class="token string-property property">&#39;vue/no-mutating-props&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止出现语法错误
+   * \u7981\u6B62\u51FA\u73B0\u8BED\u6CD5\u9519\u8BEF
    */</span>
   <span class="token string-property property">&#39;vue/no-parsing-error&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止潜在的拼写错误
+   * \u7981\u6B62\u6F5C\u5728\u7684\u62FC\u5199\u9519\u8BEF
    */</span>
   <span class="token string-property property">&#39;vue/no-potential-component-option-typo&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止直接使用由 ref 生成的变量，必须使用它的 value
+   * \u7981\u6B62\u76F4\u63A5\u4F7F\u7528\u7531 ref \u751F\u6210\u7684\u53D8\u91CF\uFF0C\u5FC5\u987B\u4F7F\u7528\u5B83\u7684 value
    */</span>
   <span class="token string-property property">&#39;vue/no-ref-as-operand&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 组件的 name 属性静止使用保留字
+   * \u7EC4\u4EF6\u7684 name \u5C5E\u6027\u9759\u6B62\u4F7F\u7528\u4FDD\u7559\u5B57
    */</span>
   <span class="token string-property property">&#39;vue/no-reserved-component-names&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止覆盖保留字
+   * \u7981\u6B62\u8986\u76D6\u4FDD\u7559\u5B57
    */</span>
   <span class="token string-property property">&#39;vue/no-reserved-keys&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在模版中使用指定的 block
+   * \u7981\u6B62\u5728\u6A21\u7248\u4E2D\u4F7F\u7528\u6307\u5B9A\u7684 block
    */</span>
   <span class="token string-property property">&#39;vue/no-restricted-block&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止 await 后调用指定的函数
+   * \u7981\u6B62 await \u540E\u8C03\u7528\u6307\u5B9A\u7684\u51FD\u6570
    */</span>
   <span class="token string-property property">&#39;vue/no-restricted-call-after-await&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 限制使用特定的 class
+   * \u9650\u5236\u4F7F\u7528\u7279\u5B9A\u7684 class
    */</span>
   <span class="token string-property property">&#39;vue/no-restricted-class&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用指定的组件选项
+   * \u7981\u6B62\u4F7F\u7528\u6307\u5B9A\u7684\u7EC4\u4EF6\u9009\u9879
    */</span>
   <span class="token string-property property">&#39;vue/no-restricted-component-options&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用特定的自定义事件
+   * \u7981\u6B62\u4F7F\u7528\u7279\u5B9A\u7684\u81EA\u5B9A\u4E49\u4E8B\u4EF6
    */</span>
   <span class="token string-property property">&#39;vue/no-restricted-custom-event&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用特定的 props
+   * \u7981\u6B62\u4F7F\u7528\u7279\u5B9A\u7684 props
    */</span>
   <span class="token string-property property">&#39;vue/no-restricted-props&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用指定的属性
+   * \u7981\u6B62\u4F7F\u7528\u6307\u5B9A\u7684\u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/no-restricted-static-attribute&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用指定的语法
+   * \u7981\u6B62\u4F7F\u7528\u6307\u5B9A\u7684\u8BED\u6CD5
    */</span>
   <span class="token string-property property">&#39;no-restricted-syntax&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token string-property property">&#39;vue/no-restricted-syntax&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用指定的 v-bind 参数
+   * \u7981\u6B62\u4F7F\u7528\u6307\u5B9A\u7684 v-bind \u53C2\u6570
    */</span>
   <span class="token string-property property">&#39;vue/no-restricted-v-bind&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止对 setup 中的 props 解构
+   * \u7981\u6B62\u5BF9 setup \u4E2D\u7684 props \u89E3\u6784
    */</span>
   <span class="token string-property property">&#39;vue/no-setup-props-destructure&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 组件的 data 属性的值必须是一个函数
+   * \u7EC4\u4EF6\u7684 data \u5C5E\u6027\u7684\u503C\u5FC5\u987B\u662F\u4E00\u4E2A\u51FD\u6570
    */</span>
   <span class="token string-property property">&#39;vue/no-shared-component-data&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在计算属性中对属性修改
+   * \u7981\u6B62\u5728\u8BA1\u7B97\u5C5E\u6027\u4E2D\u5BF9\u5C5E\u6027\u4FEE\u6539
    */</span>
   <span class="token string-property property">&#39;vue/no-side-effects-in-computed-properties&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在数组中出现连续的逗号
+   * \u7981\u6B62\u5728\u6570\u7EC4\u4E2D\u51FA\u73B0\u8FDE\u7EED\u7684\u9017\u53F7
    */</span>
   <span class="token string-property property">&#39;no-sparse-arrays&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token string-property property">&#39;vue/no-sparse-arrays&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用 style 属性
+   * \u7981\u6B62\u4F7F\u7528 style \u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/no-static-inline-styles&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止 &lt;template&gt; 使用 key 属性
+   * \u7981\u6B62 &lt;template&gt; \u4F7F\u7528 key \u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/no-template-key&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 模版中的变量名禁止与前一个作用域重名
+   * \u6A21\u7248\u4E2D\u7684\u53D8\u91CF\u540D\u7981\u6B62\u4E0E\u524D\u4E00\u4E2A\u4F5C\u7528\u57DF\u91CD\u540D
    */</span>
   <span class="token string-property property">&#39;vue/no-template-shadow&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 添加了 target=&quot;_blank&quot; 属性时，必须添加 rel=&quot;noopener noreferrer&quot;
+   * \u6DFB\u52A0\u4E86 target=&quot;_blank&quot; \u5C5E\u6027\u65F6\uFF0C\u5FC5\u987B\u6DFB\u52A0 rel=&quot;noopener noreferrer&quot;
    */</span>
   <span class="token string-property property">&#39;vue/no-template-target-blank&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在 &lt;textarea&gt; 中出现模版语法 {{message}}
+   * \u7981\u6B62\u5728 &lt;textarea&gt; \u4E2D\u51FA\u73B0\u6A21\u7248\u8BED\u6CD5 {{message}}
    */</span>
   <span class="token string-property property">&#39;vue/no-textarea-mustache&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在 beforeRouteEnter 方法中使用 this
+   * \u7981\u6B62\u5728 beforeRouteEnter \u65B9\u6CD5\u4E2D\u4F7F\u7528 this
    */</span>
   <span class="token string-property property">&#39;vue/no-this-in-before-route-enter&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用未注册的组件
+   * \u7981\u6B62\u4F7F\u7528\u672A\u6CE8\u518C\u7684\u7EC4\u4EF6
    */</span>
   <span class="token string-property property">&#39;vue/no-unregistered-components&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 当你的 vue 版本较老时，禁用还未支持的语法
+   * \u5F53\u4F60\u7684 vue \u7248\u672C\u8F83\u8001\u65F6\uFF0C\u7981\u7528\u8FD8\u672A\u652F\u6301\u7684\u8BED\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/no-unsupported-features&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止定义在 components 中的组件未使用
+   * \u7981\u6B62\u5B9A\u4E49\u5728 components \u4E2D\u7684\u7EC4\u4EF6\u672A\u4F7F\u7528
    */</span>
   <span class="token string-property property">&#39;vue/no-unused-components&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止属性定义了却未使用
+   * \u7981\u6B62\u5C5E\u6027\u5B9A\u4E49\u4E86\u5374\u672A\u4F7F\u7528
    */</span>
   <span class="token string-property property">&#39;vue/no-unused-properties&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 标签属性必须按规则排序
-   * @reason 识别有限制，无法识别在其他组件中使用的情况
+   * \u6807\u7B7E\u5C5E\u6027\u5FC5\u987B\u6309\u89C4\u5219\u6392\u5E8F
+   * @reason \u8BC6\u522B\u6709\u9650\u5236\uFF0C\u65E0\u6CD5\u8BC6\u522B\u5728\u5176\u4ED6\u7EC4\u4EF6\u4E2D\u4F7F\u7528\u7684\u60C5\u51B5
    */</span>
   <span class="token string-property property">&#39;vue/no-unused-refs&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 模版中已定义的变量必须使用
+   * \u6A21\u7248\u4E2D\u5DF2\u5B9A\u4E49\u7684\u53D8\u91CF\u5FC5\u987B\u4F7F\u7528
    */</span>
   <span class="token string-property property">&#39;vue/no-unused-vars&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止将计算熟悉当作方法调用
+   * \u7981\u6B62\u5C06\u8BA1\u7B97\u719F\u6089\u5F53\u4F5C\u65B9\u6CD5\u8C03\u7528
    */</span>
   <span class="token string-property property">&#39;vue/no-use-computed-property-like-method&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在同一个元素上使用 v-if 和 v-for 指令
+   * \u7981\u6B62\u5728\u540C\u4E00\u4E2A\u5143\u7D20\u4E0A\u4F7F\u7528 v-if \u548C v-for \u6307\u4EE4
    */</span>
   <span class="token string-property property">&#39;vue/no-use-v-if-with-v-for&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止出现没必要的字符串连接
+   * \u7981\u6B62\u51FA\u73B0\u6CA1\u5FC5\u8981\u7684\u5B57\u7B26\u4E32\u8FDE\u63A5
    */</span>
   <span class="token string-property property">&#39;no-useless-concat&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token string-property property">&#39;vue/no-useless-concat&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止出现无用的 mustache 字符串
+   * \u7981\u6B62\u51FA\u73B0\u65E0\u7528\u7684 mustache \u5B57\u7B26\u4E32
    */</span>
   <span class="token string-property property">&#39;vue/no-useless-mustaches&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止模版中使用未生效的属性
+   * \u7981\u6B62\u6A21\u7248\u4E2D\u4F7F\u7528\u672A\u751F\u6548\u7684\u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/no-useless-template-attributes&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止出现无用的 v-bind
+   * \u7981\u6B62\u51FA\u73B0\u65E0\u7528\u7684 v-bind
    */</span>
   <span class="token string-property property">&#39;vue/no-useless-v-bind&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止有 v-for 属性时又有 key 属性
+   * \u7981\u6B62\u6709 v-for \u5C5E\u6027\u65F6\u53C8\u6709 key \u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/no-v-for-template-key&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止 v-for 属性的子节点有 key 属性
+   * \u7981\u6B62 v-for \u5C5E\u6027\u7684\u5B50\u8282\u70B9\u6709 key \u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/no-v-for-template-key-on-child&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用 v-html
+   * \u7981\u6B62\u4F7F\u7528 v-html
    */</span>
   <span class="token string-property property">&#39;vue/no-v-html&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止给 v-model 属性添加参数
+   * \u7981\u6B62\u7ED9 v-model \u5C5E\u6027\u6DFB\u52A0\u53C2\u6570
    */</span>
   <span class="token string-property property">&#39;vue/no-v-model-argument&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止使用 v-text
+   * \u7981\u6B62\u4F7F\u7528 v-text
    */</span>
   <span class="token string-property property">&#39;vue/no-v-text&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在 await 之后调用 watch
+   * \u7981\u6B62\u5728 await \u4E4B\u540E\u8C03\u7528 watch
    */</span>
   <span class="token string-property property">&#39;vue/no-watch-after-await&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 一个文件必须仅包含一个组件
+   * \u4E00\u4E2A\u6587\u4EF6\u5FC5\u987B\u4EC5\u5305\u542B\u4E00\u4E2A\u7EC4\u4EF6
    */</span>
   <span class="token string-property property">&#39;vue/one-component-per-file&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 组件的属性必须为一定的顺序
+   * \u7EC4\u4EF6\u7684\u5C5E\u6027\u5FC5\u987B\u4E3A\u4E00\u5B9A\u7684\u987A\u5E8F
    */</span>
   <span class="token string-property property">&#39;vue/order-in-components&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * &lt;template&gt; &lt;script&gt; &lt;style&gt; 之间必须由空行
-   * @reason 代码格式问题，最好由 Prettier 解决
+   * &lt;template&gt; &lt;script&gt; &lt;style&gt; \u4E4B\u95F4\u5FC5\u987B\u7531\u7A7A\u884C
+   * @reason \u4EE3\u7801\u683C\u5F0F\u95EE\u9898\uFF0C\u6700\u597D\u7531 Prettier \u89E3\u51B3
    */</span>
   <span class="token string-property property">&#39;vue/padding-line-between-blocks&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 必须使用模版字符串而不是字符串连接
+   * \u5FC5\u987B\u4F7F\u7528\u6A21\u7248\u5B57\u7B26\u4E32\u800C\u4E0D\u662F\u5B57\u7B26\u4E32\u8FDE\u63A5
    */</span>
   <span class="token string-property property">&#39;prefer-template&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token string-property property">&#39;vue/prefer-template&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * props 必须用驼峰式
+   * props \u5FC5\u987B\u7528\u9A7C\u5CF0\u5F0F
    */</span>
   <span class="token string-property property">&#39;vue/prop-name-casing&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * &lt;component&gt; 必须有绑定的组件
+   * &lt;component&gt; \u5FC5\u987B\u6709\u7ED1\u5B9A\u7684\u7EC4\u4EF6
    */</span>
   <span class="token string-property property">&#39;vue/require-component-is&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * props 如果不是 required 的字段，必须有默认值
-   * @reason 类型相关的约束交给 TypeScript
+   * props \u5982\u679C\u4E0D\u662F required \u7684\u5B57\u6BB5\uFF0C\u5FC5\u987B\u6709\u9ED8\u8BA4\u503C
+   * @reason \u7C7B\u578B\u76F8\u5173\u7684\u7EA6\u675F\u4EA4\u7ED9 TypeScript
    */</span>
   <span class="token string-property property">&#39;vue/require-default-prop&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 必须直接使用 export default 导出组件
+   * \u5FC5\u987B\u76F4\u63A5\u4F7F\u7528 export default \u5BFC\u51FA\u7EC4\u4EF6
    */</span>
   <span class="token string-property property">&#39;vue/require-direct-export&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * emits 必须为函数
+   * emits \u5FC5\u987B\u4E3A\u51FD\u6570
    */</span>
   <span class="token string-property property">&#39;vue/require-emit-validator&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * emits 属性必须包含 $emit() 中的值
+   * emits \u5C5E\u6027\u5FC5\u987B\u5305\u542B $emit() \u4E2D\u7684\u503C
    */</span>
   <span class="token string-property property">&#39;vue/require-explicit-emits&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 必须导出 expose
+   * \u5FC5\u987B\u5BFC\u51FA expose
    */</span>
   <span class="token string-property property">&#39;vue/require-expose&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 组件必须包含 name 属性
+   * \u7EC4\u4EF6\u5FC5\u987B\u5305\u542B name \u5C5E\u6027
    */</span>
   <span class="token string-property property">&#39;vue/require-name-property&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * props 的取值必须是基本类型的构造函数，而不是字符串
-   * @reason 类型相关的约束交给 TypeScript
+   * props \u7684\u53D6\u503C\u5FC5\u987B\u662F\u57FA\u672C\u7C7B\u578B\u7684\u6784\u9020\u51FD\u6570\uFF0C\u800C\u4E0D\u662F\u5B57\u7B26\u4E32
+   * @reason \u7C7B\u578B\u76F8\u5173\u7684\u7EA6\u675F\u4EA4\u7ED9 TypeScript
    */</span>
   <span class="token string-property property">&#39;vue/require-prop-type-constructor&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * prop 必须有类型限制
-   * @reason 类型相关的约束交给 TypeScript
+   * prop \u5FC5\u987B\u6709\u7C7B\u578B\u9650\u5236
+   * @reason \u7C7B\u578B\u76F8\u5173\u7684\u7EA6\u675F\u4EA4\u7ED9 TypeScript
    */</span>
   <span class="token string-property property">&#39;vue/require-prop-types&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * render 函数必须有返回值
+   * render \u51FD\u6570\u5FC5\u987B\u6709\u8FD4\u56DE\u503C
    */</span>
   <span class="token string-property property">&#39;vue/require-render-return&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * this.$slots.default 必须被当作方法使用
+   * this.$slots.default \u5FC5\u987B\u88AB\u5F53\u4F5C\u65B9\u6CD5\u4F7F\u7528
    */</span>
   <span class="token string-property property">&#39;vue/require-slots-as-functions&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * transition 内部必须有条件指令
+   * transition \u5185\u90E8\u5FC5\u987B\u6709\u6761\u4EF6\u6307\u4EE4
    */</span>
   <span class="token string-property property">&#39;vue/require-toggle-inside-transition&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-for 指令的元素必须有 v-bind:key
+   * v-for \u6307\u4EE4\u7684\u5143\u7D20\u5FC5\u987B\u6709 v-bind:key
    */</span>
   <span class="token string-property property">&#39;vue/require-v-for-key&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * prop 的默认值必须匹配它的类型
-   * @reason 类型相关的约束交给 TypeScript
+   * prop \u7684\u9ED8\u8BA4\u503C\u5FC5\u987B\u5339\u914D\u5B83\u7684\u7C7B\u578B
+   * @reason \u7C7B\u578B\u76F8\u5173\u7684\u7EA6\u675F\u4EA4\u7ED9 TypeScript
    */</span>
   <span class="token string-property property">&#39;vue/require-valid-default-prop&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 计算属性必须有返回值
+   * \u8BA1\u7B97\u5C5E\u6027\u5FC5\u987B\u6709\u8FD4\u56DE\u503C
    */</span>
   <span class="token string-property property">&#39;vue/return-in-computed-property&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * emits 中的方法必须有返回值
+   * emits \u4E2D\u7684\u65B9\u6CD5\u5FC5\u987B\u6709\u8FD4\u56DE\u503C
    */</span>
   <span class="token string-property property">&#39;vue/return-in-emits-validator&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * script setup 中定义的变量必须使用
+   * script setup \u4E2D\u5B9A\u4E49\u7684\u53D8\u91CF\u5FC5\u987B\u4F7F\u7528
    */</span>
   <span class="token string-property property">&#39;vue/script-setup-uses-vars&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * props 的键名必须排好序
+   * props \u7684\u952E\u540D\u5FC5\u987B\u6392\u597D\u5E8F
    */</span>
   <span class="token string-property property">&#39;vue/sort-keys&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * class 的值必须按字母排序
+   * class \u7684\u503C\u5FC5\u987B\u6309\u5B57\u6BCD\u6392\u5E8F
    */</span>
   <span class="token string-property property">&#39;vue/static-class-names-order&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在模版中用 this
+   * \u7981\u6B62\u5728\u6A21\u7248\u4E2D\u7528 this
    */</span>
   <span class="token string-property property">&#39;vue/this-in-template&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 当一个节点上出现两个 v-on:click 时，其中一个必须为 exact
+   * \u5F53\u4E00\u4E2A\u8282\u70B9\u4E0A\u51FA\u73B0\u4E24\u4E2A v-on:click \u65F6\uFF0C\u5176\u4E2D\u4E00\u4E2A\u5FC5\u987B\u4E3A exact
    */</span>
   <span class="token string-property property">&#39;vue/use-v-on-exact&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 使用缩写的 : 而不是 v-bind:
+   * \u4F7F\u7528\u7F29\u5199\u7684 : \u800C\u4E0D\u662F v-bind:
    */</span>
   <span class="token string-property property">&#39;vue/v-bind-style&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-for 中必须用 in 进行遍历
+   * v-for \u4E2D\u5FC5\u987B\u7528 in \u8FDB\u884C\u904D\u5386
    */</span>
   <span class="token string-property property">&#39;vue/v-for-delimiter-style&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在 v-on 的事件名使用横杠
+   * \u7981\u6B62\u5728 v-on \u7684\u4E8B\u4EF6\u540D\u4F7F\u7528\u6A2A\u6760
    */</span>
   <span class="token string-property property">&#39;vue/v-on-event-hyphenation&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止在 v-on 的值中调用函数
+   * \u7981\u6B62\u5728 v-on \u7684\u503C\u4E2D\u8C03\u7528\u51FD\u6570
    */</span>
   <span class="token string-property property">&#39;vue/v-on-function-call&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 使用缩写的 @click 而不是 v-on:click
+   * \u4F7F\u7528\u7F29\u5199\u7684 @click \u800C\u4E0D\u662F v-on:click
    */</span>
   <span class="token string-property property">&#39;vue/v-on-style&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 使用缩写的 #one 而不是 v-slot:one
+   * \u4F7F\u7528\u7F29\u5199\u7684 #one \u800C\u4E0D\u662F v-slot:one
    */</span>
   <span class="token string-property property">&#39;vue/v-slot-style&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * defineEmits 必须使用合法的语法
+   * defineEmits \u5FC5\u987B\u4F7F\u7528\u5408\u6CD5\u7684\u8BED\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-define-emits&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * defineProps 必须使用合法的语法
+   * defineProps \u5FC5\u987B\u4F7F\u7528\u5408\u6CD5\u7684\u8BED\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-define-props&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 禁止调用 Vue.nextTick 或 vm.$nextTick 时不使用 await
+   * \u7981\u6B62\u8C03\u7528 Vue.nextTick \u6216 vm.$nextTick \u65F6\u4E0D\u4F7F\u7528 await
    */</span>
   <span class="token string-property property">&#39;vue/valid-next-tick&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * template 的根节点必须合法
+   * template \u7684\u6839\u8282\u70B9\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-template-root&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-bind 指令必须合法
+   * v-bind \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-bind&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-bind:foo.sync 指令必须合法
+   * v-bind:foo.sync \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-bind-sync&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-cloak 指令必须合法
+   * v-cloak \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-cloak&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-else 指令必须合法
+   * v-else \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-else&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-else-if 指令必须合法
+   * v-else-if \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-else-if&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-for 指令必须合法
+   * v-for \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-for&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-html 指令必须合法
+   * v-html \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-html&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-if 指令必须合法
+   * v-if \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-if&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-is 指令必须合法
+   * v-is \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-is&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * valid-v-memo 指令必须合法
+   * valid-v-memo \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-memo&#39;</span><span class="token operator">:</span> <span class="token string">&#39;off&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-model 指令必须合法
+   * v-model \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-model&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-on 指令必须合法
+   * v-on \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-on&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-once 指令必须合法
+   * v-once \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-once&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-pre 指令必须合法
+   * v-pre \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-pre&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-show 指令必须合法
+   * v-show \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-show&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-slot 指令必须合法
+   * v-slot \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-slot&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * v-text 指令必须合法
+   * v-text \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
    */</span>
   <span class="token string-property property">&#39;vue/valid-v-text&#39;</span><span class="token operator">:</span> <span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span>
   <span class="token string-property property">&#39;vue/html-indent&#39;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#39;error&#39;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -686,7 +668,7 @@
       <span class="token literal-property property">multiline</span><span class="token operator">:</span> <span class="token string">&#39;always&#39;</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token comment">// 多个特性的元素应该分多行撰写，每个特性一行</span>
+  <span class="token comment">// \u591A\u4E2A\u7279\u6027\u7684\u5143\u7D20\u5E94\u8BE5\u5206\u591A\u884C\u64B0\u5199\uFF0C\u6BCF\u4E2A\u7279\u6027\u4E00\u884C</span>
   <span class="token string-property property">&#39;vue/max-attributes-per-line&#39;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token number">1</span><span class="token punctuation">,</span>
     <span class="token punctuation">{</span>
@@ -698,16 +680,12 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 在单行元素的内容前后需要换行符
+   * \u5728\u5355\u884C\u5143\u7D20\u7684\u5185\u5BB9\u524D\u540E\u9700\u8981\u6362\u884C\u7B26
    */</span>
   <span class="token string-property property">&#39;vue/singleline-html-element-content-newline&#39;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
   <span class="token comment">/**
-   * 在多行元素的内容之前和之后需要换行符
+   * \u5728\u591A\u884C\u5143\u7D20\u7684\u5185\u5BB9\u4E4B\u524D\u548C\u4E4B\u540E\u9700\u8981\u6362\u884C\u7B26
    */</span>
   <span class="token string-property property">&#39;vue/multiline-html-element-content-newline&#39;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre></div></div></div><footer class="page-footer" data-v-f7095a1c data-v-a6128342><div class="edit" data-v-a6128342><div class="edit-link" data-v-a6128342 data-v-17eda031><!----></div></div><div class="updated" data-v-a6128342><p class="last-updated" data-v-a6128342 data-v-5a2a6a2c><span class="prefix" data-v-5a2a6a2c>Last Updated:</span><span class="datetime" data-v-5a2a6a2c></span></p></div></footer><!----><!--[--><!--]--></div></main></div><!----><!--]--></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"index.md\":\"c796b4f4\",\"cli_intro.md\":\"1d20bbf6\",\"commitlint_intro.md\":\"f1c319c7\",\"eslint_intro.md\":\"41990dc9\",\"guide_changelog.md\":\"7a5e350f\",\"guide_intro.md\":\"0420b98b\",\"stylelint_intro.md\":\"1691ab41\",\"stylelint_rules.md\":\"9c74b16c\",\"eslint_rules_common.md\":\"592c328c\",\"eslint_rules_index.md\":\"e61a3819\",\"eslint_rules_typescript.md\":\"36bcfabd\",\"eslint_rules_vue.md\":\"badd08f3\"}")</script>
-    <script type="module" async src="/assets/app.a54f5374.js"></script>
-  </body>
-</html>
+</code></pre></div>`,4),e=[o];function r(c,l,k,i,u,m){return a(),s("div",null,e)}var v=n(t,[["render",r]]);export{g as __pageData,v as default};
