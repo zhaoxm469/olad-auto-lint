@@ -1,6 +1,6 @@
 {
     "name": "@olad/stylelint-config",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "阿拉钉前端Style规范，目前支持 `css|scss`",
     "author": "zhaoxm",
     "homepage": "https://github.com/zhaoxm469/olad-auto-lint#readme",
