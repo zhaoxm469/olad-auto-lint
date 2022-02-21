@@ -1,6 +1,6 @@
 {
   "name": "@olad/commitlint-config",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "阿拉钉git提交规范",
   "author": "zhaoxm",
   "homepage": "https://github.com/zhaoxm469/olad-auto-lint#readme",
