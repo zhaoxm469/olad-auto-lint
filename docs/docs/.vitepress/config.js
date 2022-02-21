@@ -1,10 +1,9 @@
-const base = process.env.NODE_ENV === 'production' ? '/docs' : '';
 const { resolve } = require('path');
 
 module.exports = {
   title: 'olad-auto-lint',
   description: '',
-  base,
+  base:'',
   themeConfig: {
     // logo: '../logo.svg',
     nav: [{ text: 'demo', link: '/math' }],
