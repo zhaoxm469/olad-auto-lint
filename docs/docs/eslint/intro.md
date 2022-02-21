@@ -1,6 +1,6 @@
 # ESLint 规范
 
-阿拉钉前端 ESLint 规范依赖包，目前支持 `vue|typescript`
+ESLint 目前支持 `vue|typescript`
 
 ## 安装
 
@@ -25,7 +25,7 @@ yarn add @olad/eslint-config-lint --D
 
 ```js
 module.exports = {
-  extends: ['@olad/lint//vue'],
+    extends: ['@olad/lint//vue'],
 };
 ```
 
@@ -33,7 +33,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: ['@olad/lint/typescript'],
+    extends: ['@olad/lint/typescript'],
 };
 ```
 

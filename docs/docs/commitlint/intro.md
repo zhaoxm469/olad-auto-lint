@@ -1,6 +1,6 @@
 ## CommitLint 规范
 
-阿拉钉前端 CommitLint 规范
+CommitLint 规范
 
 ## 安装
 

@@ -1,6 +1,6 @@
 # StyleLint 规范
 
-阿拉钉前端 stylelint 规范，目前支持`css|scss`
+stylelint 规范，目前支持`css|scss`
 
 使用`stylelint`官方代码风格`stylelint-config-standard`  
 该风格是 `stylelint`汲取了`GitHub`、`Google`、`Airbnb`等，使用`stylelint-order`强制按照某个顺序进行编码。
