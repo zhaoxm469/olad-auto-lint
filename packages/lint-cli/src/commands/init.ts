@@ -168,7 +168,7 @@ const installStrategy = () => {
             })
 
             npmInstall({
-                targetFileName: 'stylelintrc.js',
+                targetFileName: '.stylelintrc.js',
                 packageName: STYLE_LINT_PACKAGE_NAME,
                 templateName: '.stylelintrc.js',
                 eslintType: lint.eslintType!
@@ -181,7 +181,7 @@ const installStrategy = () => {
             installHusky(ROOT_PATH)
 
             npmInstall({
-                targetFileName: 'commitlintrc.js',
+                targetFileName: '.commitlintrc.js',
                 packageName: COMMIT_LINT_PACKAGE_NAME,
                 templateName: '.commitlintrc.js',
                 eslintType: lint.eslintType!
