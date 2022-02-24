@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const lintCli = require('..');
+const lintCli = require("..");
 
-describe('@olad/lint-cli', () => {
-    it('needs tests');
+describe("olad-lint-cli", () => {
+  it("needs tests");
 });
