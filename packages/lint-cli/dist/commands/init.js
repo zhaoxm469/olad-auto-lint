@@ -70,13 +70,13 @@ const getLintOptionsPrompt = async () => {
                     name: 'eslint',
                     checked: true
                 },
-                //  {
-                //     name: 'stylelint',
-                //     checked: true
-                // }, {
-                //     name: 'commitlint',
-                //     checked: true
-                // }
+                {
+                    name: 'stylelint',
+                    checked: true
+                }, {
+                    name: 'commitlint',
+                    checked: true
+                }
             ]
         }
     ]);
