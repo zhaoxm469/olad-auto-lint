@@ -136,7 +136,7 @@ const installStrategy = () => {
                 ]
             });
             npmInstall({
-                targetFileName: 'stylelintrc.js',
+                targetFileName: '.stylelintrc.js',
                 packageName: consts_1.STYLE_LINT_PACKAGE_NAME,
                 templateName: '.stylelintrc.js',
                 eslintType: lint.eslintType
@@ -147,7 +147,7 @@ const installStrategy = () => {
             (0, spinner_1.startSpinner)(`开始初始化commitlint`);
             installHusky(consts_1.ROOT_PATH);
             npmInstall({
-                targetFileName: 'commitlintrc.js',
+                targetFileName: '.commitlintrc.js',
                 packageName: consts_1.COMMIT_LINT_PACKAGE_NAME,
                 templateName: '.commitlintrc.js',
                 eslintType: lint.eslintType
