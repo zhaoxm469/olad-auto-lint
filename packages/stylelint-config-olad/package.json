@@ -1,5 +1,5 @@
 {
-  "name": "@olad/stylelint-config",
+  "name": "stylelint-config-olad",
   "version": "0.0.12",
   "description": "阿拉钉前端Style规范，目前支持 `css|scss`",
   "author": "zhaoxm",

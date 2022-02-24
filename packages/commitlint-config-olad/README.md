@@ -1,29 +1,33 @@
-## CommitLint规范
+## CommitLint 规范
 
-阿拉钉前端CommitLint规范
+阿拉钉前端 CommitLint 规范
 
 ## 安装
 
 ```shell
-npm install @olad/commitlint-config -D
+npm install commitlint-config-olad -D
 # OR
-yarn add @olad/commitlint-config --dev
+yarn add commitlint-config-olad --dev
 ```
+
 ## 使用
+
 在你的工程根目录下创建一个`.commitlintrc.js`配置文件
 
 配置如下即可:
+
 ```js
 module.exports = {
-    "extends": "@olad/commitlint-config"
-}
+  extends: "commitlint-config-olad",
+};
 ```
 
 ## 注意事项
 
-如果项目之前安装过CommitLint相关的包，建议卸载，避免引入不必要的包。如`@commitlint/cli`、`@commitlint/config-conventional`等，直接在package.json搜索**commitlint**，相关的包全部卸载
+如果项目之前安装过 CommitLint 相关的包，建议卸载，避免引入不必要的包。如`@commitlint/cli`、`@commitlint/config-conventional`等，直接在 package.json 搜索**commitlint**，相关的包全部卸载
 
 #### 规范
+
 格式： `<type>[(scope)]: <description>`
 
 示例

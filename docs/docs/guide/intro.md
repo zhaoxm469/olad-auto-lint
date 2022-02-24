@@ -16,12 +16,12 @@ olad-auto-lint 是针对公司内部 完全定制化的 前端 Lint 规范的解
 
 ## 基础包介绍
 
-| 包名                     | 功能                 | 包地址                                                                            |
-| ------------------------ | -------------------- | --------------------------------------------------------------------------------- |
-| @olad/commitlint-config  | 提供 CommitLint 规范 | https://github.com/zhaoxm469/olad-auto-lint/tree/main/packages/commitlint-config  |
-| @olad/stylelint-config   | 提供 StyleLintt 规范 | https://github.com/zhaoxm469/olad-auto-lint/tree/main/packages/stylelint-config   |
-| @olad/eslint-config-lint | 提供 EsLint 规范     | https://github.com/zhaoxm469/olad-auto-lint/tree/main/packages/eslint-config-lint |
-| @olad/lint-cli           | 命令行工具           | https://github.com/zhaoxm469/olad-auto-lint/tree/main/packages/lint-cli           |
+| 包名                   | 功能                 | 包地址                                                                            |
+| ---------------------- | -------------------- | --------------------------------------------------------------------------------- |
+| commitlint-config-olad | 提供 CommitLint 规范 | https://github.com/zhaoxm469/olad-auto-lint/tree/main/packages/commitlint-config  |
+| stylelint-config-olad  | 提供 StyleLintt 规范 | https://github.com/zhaoxm469/olad-auto-lint/tree/main/packages/stylelint-config   |
+| eslint-config-olad     | 提供 EsLint 规范     | https://github.com/zhaoxm469/olad-auto-lint/tree/main/packages/eslint-config-lint |
+| @olad/lint-cli         | 命令行工具           | https://github.com/zhaoxm469/olad-auto-lint/tree/main/packages/lint-cli           |
 
 ## 如何使用
 

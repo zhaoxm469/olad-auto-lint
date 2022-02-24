@@ -1,7 +1,6 @@
 import { ESLINT_PACKAGE_NAME, STYLE_LINT_PACKAGE_NAME, COMMIT_LINT_PACKAGE_NAME, ROOT_PATH } from '../config/consts';
 import { NpmInstallConfig, PackageJson, Lints, LintItem } from './../types/shared';
 import { eslintType } from './../config/eslintType';
-// import * as allDeps from '../lib/safeDeps'
 import Handlebars from 'handlebars'
 import { readFileSync, writeFileSync, existsSync, removeSync } from 'fs-extra';
 import { commandSync } from 'execa'
@@ -150,7 +149,7 @@ const installStrategy = () => {
             addFile('.eslintignore', '.eslintrc.js')
 
             npmInstall({
-                targetFileName: 'eslintrc.js',
+                targetFileName: '.eslintrc.js',
                 packageName: ESLINT_PACKAGE_NAME,
                 templateName: '.eslintrc.js',
                 eslintType: lint.eslintType!

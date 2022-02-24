@@ -6,13 +6,13 @@ ESLint 目前支持 `vue|typescript`
 
 ```bash
 # with pnpm
-pnpm add @olad/eslint-config-lint -D
+pnpm add eslint-config-olad -D
 
 # with npm
-npm install @olad/eslint-config-lint -D
+npm install eslint-config-olad -D
 
 # with yarn
-yarn add @olad/eslint-config-lint --D
+yarn add eslint-config-olad --D
 ```
 
 ## 使用
@@ -25,7 +25,7 @@ yarn add @olad/eslint-config-lint --D
 
 ```js
 module.exports = {
-    extends: ['@olad/lint//vue'],
+  extends: ['@olad/lint//vue'],
 };
 ```
 
@@ -33,7 +33,7 @@ module.exports = {
 
 ```js
 module.exports = {
-    extends: ['@olad/lint/typescript'],
+  extends: ['@olad/lint/typescript'],
 };
 ```
 

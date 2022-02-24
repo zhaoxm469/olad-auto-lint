@@ -6,13 +6,13 @@ CommitLint 规范
 
 ```bash
 # with npm
-npm install @olad/commitlint-config -D
+npm install commitlint-config-olad -D
 
 # with yarn
-yarn add @olad/commitlint-config --dev
+yarn add commitlint-config-olad --dev
 
 # with npm
-pnpm add @olad/commitlint-config --dev
+pnpm add commitlint-config-olad --dev
 ```
 
 ## 使用
@@ -23,7 +23,7 @@ pnpm add @olad/commitlint-config --dev
 
 ```js
 module.exports = {
-  extends: '@olad/commitlint-config',
+  extends: 'commitlint-config-olad',
 };
 ```
 

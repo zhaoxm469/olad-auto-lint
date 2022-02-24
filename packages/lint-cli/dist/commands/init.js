@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const consts_1 = require("../config/consts");
 const eslintType_1 = require("./../config/eslintType");
-// import * as allDeps from '../lib/safeDeps'
 const handlebars_1 = require("handlebars");
 const fs_extra_1 = require("fs-extra");
 const execa_1 = require("execa");
@@ -121,7 +120,7 @@ const installStrategy = () => {
             // 解决.eslintrc.js报错
             addFile('.eslintignore', '.eslintrc.js');
             npmInstall({
-                targetFileName: 'eslintrc.js',
+                targetFileName: '.eslintrc.js',
                 packageName: consts_1.ESLINT_PACKAGE_NAME,
                 templateName: '.eslintrc.js',
                 eslintType: lint.eslintType

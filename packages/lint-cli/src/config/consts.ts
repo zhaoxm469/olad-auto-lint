@@ -2,11 +2,11 @@ export const ROOT_PATH = process.cwd()
 
 export const targetFile = 'private'
 
-export const ESLINT_PACKAGE_NAME = '@olad/eslint-config-lint'
+export const ESLINT_PACKAGE_NAME = 'eslint-config-olad'
 
-export const COMMIT_LINT_PACKAGE_NAME = '@olad/commitlint-config'
+export const COMMIT_LINT_PACKAGE_NAME = 'commitlint-config-olad'
 
-export const STYLE_LINT_PACKAGE_NAME = '@olad/stylelint-config'
+export const STYLE_LINT_PACKAGE_NAME = 'stylelint-config-olad'
 
 export const safeDependencies = ['eslint', 'commitlint', 'stylelint']
 

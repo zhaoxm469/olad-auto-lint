@@ -5,13 +5,13 @@
 
 ```bash
 # with pnpm 
-pnpm add @olad/eslint-config-lint -D 
+pnpm add eslint-config-olad -D 
 
 # with npm 
-npm install @olad/eslint-config-lint -D
+npm install eslint-config-olad -D
 
 # with yarn 
-yarn add @olad/eslint-config-lint --D
+yarn add eslint-config-olad --D
 ```
 
 ## 使用

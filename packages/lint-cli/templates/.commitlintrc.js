@@ -1,3 +1,3 @@
 module.exports = {
-  "extends": "@olad/commitlint-config"
-}
+  extends: "commitlint-config-olad",
+};

@@ -1,3 +1,3 @@
 module.exports = {
-  "extends": "@olad/stylelint-config"
-}
+  extends: "stylelint-config-olad",
+};
