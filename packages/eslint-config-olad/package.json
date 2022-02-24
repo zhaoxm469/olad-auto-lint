@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-olad",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "ESLint config",
   "author": "zhaoxm",
   "homepage": "https://github.com/zhaoxm469/olad-auto-lint#readme",
