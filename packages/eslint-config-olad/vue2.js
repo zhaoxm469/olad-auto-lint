@@ -2,12 +2,9 @@ const vueRules = require("./rules/vue-common.js");
 
 module.exports = {
   parser: require.resolve("vue-eslint-parser"),
-  env: {
-    es2021: true,
-  },
   extends: ["./base.js"],
   parserOptions: {
-    es6: true,
+    ecmaVersion: 2019,
     sourceType: "module",
   },
   plugins: ["vue"],
