@@ -1,9 +1,11 @@
 /*
  * @Date: 2022-02-21 16:09:52
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-03-06 13:45:51
+ * @LastEditTime: 2022-03-06 15:22:46
  * @Description: 公共规则配置，包含200+条规则，具体如下。文档 https://eslint.bootcss.com/docs/rules/
  */
+
+/* eslint-disable no-magic-numbers */
 
 module.exports = {
   /**
@@ -28,7 +30,7 @@ module.exports = {
   /**
    * 在箭头函数中的箭头前后强制保持一致的间距
    */
-  "arrow-spacing": [2, { before: true, after: true }],
+  "arrow-spacing": ["error", { before: true, after: true }],
   /**
    * 将 var 定义的变量视为块作用域，禁止在块外使用
    * @reason 已经禁止使用 var 了
@@ -74,10 +76,6 @@ module.exports = {
    * 不强制 最后一个
    */
   "comma-dangle": 0,
-  /**
-   * 不判断对象方法里是否使用了 this
-   */
-  "class-methods-use-this": 0,
   /**
    * switch 语句必须有 default
    */
@@ -903,7 +901,7 @@ module.exports = {
   /**
    * 强制使用反撇号、双引号或单引号
    */
-  quotes: ["error", "single"],
+  quotes: ["error", "double"],
   /**
    * parseInt 必须传入第二个参数
    */
