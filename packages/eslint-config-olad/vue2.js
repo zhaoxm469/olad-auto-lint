@@ -1,4 +1,4 @@
-const vueRules = require("./rules/vue-common.js");
+const vueRules = require("./rules/vue-common.js")
 
 module.exports = {
   parser: require.resolve("vue-eslint-parser"),
@@ -93,4 +93,4 @@ module.exports = {
     "vue/valid-v-slot": "error",
     "vue/valid-v-text": "error",
   },
-};
+}

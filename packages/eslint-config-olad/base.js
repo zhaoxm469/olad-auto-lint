@@ -5,7 +5,7 @@
  * @Description: 公共配置
  */
 
-const common = require("./rules/common.js");
+const common = require("./rules/common.js")
 
 module.exports = {
   env: {
@@ -17,4 +17,4 @@ module.exports = {
     sourceType: "module",
   },
   rules: Object.assign({}, common),
-};
+}

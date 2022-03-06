@@ -681,4 +681,4 @@ module.exports = {
    * 在多行元素的内容之前和之后需要换行符
    */
   "vue/multiline-html-element-content-newline": 0,
-};
+}

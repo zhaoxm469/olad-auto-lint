@@ -1,4 +1,4 @@
-const vueRules = require("./rules/vue-common.js");
+const vueRules = require("./rules/vue-common.js")
 
 module.exports = {
   root: true,
@@ -18,4 +18,4 @@ module.exports = {
   },
   plugins: ["vue", "prettier"],
   rules: Object.assign({}, vueRules),
-};
+}
