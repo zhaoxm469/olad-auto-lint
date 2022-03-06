@@ -3,12 +3,15 @@ const vueRules = require("./rules/vue-common.js")
 
 module.exports = {
   parser: require.resolve("vue-eslint-parser"),
-  extends: ["./base.js"],
+  extends: [
+    "./base.js",
+    "plugin:prettier/recommended"
+  ],
   parserOptions: {
     ecmaVersion: 2019,
     sourceType: "module",
   },
-  plugins: ["vue"],
+  plugins: ["vue","prettier"],
   rules: {
     ...vueRules,
     /**

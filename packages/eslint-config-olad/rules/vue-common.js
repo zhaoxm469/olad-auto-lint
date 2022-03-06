@@ -2,7 +2,7 @@
  * @Date: 2022-02-21 16:08:54
  * @LastEditors: zhaoxm
  * @LastEditTime: 2022-03-06 15:21:09
- * @Description:
+ * @Description: 
  */
 /**
  * @rulesName vue
@@ -12,5 +12,5 @@
 module.exports = {
   "vue/comment-directive": "error",
   "vue/jsx-uses-vars": "error",
-  "vue/script-setup-uses-vars": "error",
+  "vue/script-setup-uses-vars": "error"
 }
