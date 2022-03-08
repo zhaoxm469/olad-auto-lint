@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:09:52
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-03-06 15:22:46
+ * @LastEditTime: 2022-03-07 18:17:33
  * @Description: 公共规则配置，包含200+条规则，具体如下。文档 https://eslint.bootcss.com/docs/rules/
  */
 
@@ -606,8 +606,9 @@ module.exports = {
   "no-restricted-syntax": "off",
   /**
    * 禁止在 return 语句里赋值
+   * @reason 有时候代码会简写 例如 isLoading => this.isLoading = isLoading;
    */
-  "no-return-assign": ["error", "always"],
+  "no-return-assign": "off",
   /**
    * 禁止在 return 语句里使用 await
    */

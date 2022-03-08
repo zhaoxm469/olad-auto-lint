@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:09:24
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-03-06 15:21:02
+ * @LastEditTime: 2022-03-08 09:19:50
  * @Description: 公共配置
  */
 
@@ -11,10 +11,12 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    es6: true,
   },
   parserOptions: {
     ecmaVersion: 12,
     sourceType: "module",
   },
+  parser: "babel-eslint",
   rules: Object.assign({}, common),
 }

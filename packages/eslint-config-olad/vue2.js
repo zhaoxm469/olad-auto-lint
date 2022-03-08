@@ -5,13 +5,12 @@ module.exports = {
   parser: require.resolve("vue-eslint-parser"),
   extends: [
     "./base.js",
-    "plugin:prettier/recommended"
   ],
   parserOptions: {
     ecmaVersion: 2019,
     sourceType: "module",
   },
-  plugins: ["vue","prettier"],
+  plugins: ["vue"],
   rules: {
     ...vueRules,
     /**
@@ -45,10 +44,6 @@ module.exports = {
      * v-text 指令必须合法
      */
     "vue/valid-v-text": "error",
-    /**
-     * 要求或不允许在标记的右括号前加上空格
-     */
-    "vue/html-close-bracket-sspaceing":"error",
     "vue/html-indent": ["error", 2],
     /**
      * 元素开始 > 括号是否换行
@@ -183,7 +178,12 @@ module.exports = {
     /**
      * 对自定义事件名称强制实施特定大小写
      */
-    "vue/custom-event-name-casging":"error",
+    "vue/custom-event-name-casing": ["error",
+      "kebab-case",
+      {
+        "ignores": []
+      }
+    ],
     /**
      * watch 中禁止使用箭头函数 , 怕this指向有问题
      */
@@ -201,10 +201,6 @@ module.exports = {
      * @reason 在某些情况可能会出现自定义修饰符
      */
     "vue/no-custom-modifiers-on-v-model": "off",
-    /**
-     * 不允许向模板添加多个根节点
-     */
-    "vue/no-multi-template-root":"error",
     /**
      * 禁止重复的键名
      */
