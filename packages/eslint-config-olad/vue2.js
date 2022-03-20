@@ -12,7 +12,6 @@ module.exports = {
   plugins: ["vue", "prettier"],
   rules: {
     ...vueRules,
-    "prettier/prettier": "error",
     /**
      * 限制自定义组件的 attrs属性风格
      */
