@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:09:52
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-03-07 18:17:33
+ * @LastEditTime: 2022-03-20 22:09:03
  * @Description: 公共规则配置，包含200+条规则，具体如下。文档 https://eslint.bootcss.com/docs/rules/
  */
 
@@ -845,7 +845,7 @@ module.exports = {
    * 不强制 const 还是let
    * @reason 如果一个变量不会被重新赋值，最好使用const进行声明
    */
-  "prefer-const": "error",
+  "prefer-const": ["error", { destructuring: "all" }],
   /**
    * 解构 对象
    */
