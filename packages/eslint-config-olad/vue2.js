@@ -3,10 +3,9 @@ const vueRules = require("./rules/vue-common.js")
 
 module.exports = {
   parser: require.resolve("vue-eslint-parser"),
-  extends: [
-    "./base.js",
-  ],
+  extends: ["./base.js"],
   parserOptions: {
+    parser: "babel-eslint",
     ecmaVersion: 2019,
     sourceType: "module",
   },
@@ -88,7 +87,7 @@ module.exports = {
     /**
      * 差值表达式 中数据左右是否有间距
      */
-    "vue/mustache-interpolation-spacing":["error", "always" ],
+    "vue/mustache-interpolation-spacing": ["error", "always"],
     /**
      * 在多行元素的内容之前和之后需要换行符
      */
@@ -108,7 +107,7 @@ module.exports = {
     /**
      * 强制每个组件都应该再单独的文件中
      */
-    "vue/one-component-per-file":"off",
+    "vue/one-component-per-file": "off",
     /**
      * 强制约束 定义的 props name为 驼峰命名
      */
@@ -178,11 +177,12 @@ module.exports = {
     /**
      * 对自定义事件名称强制实施特定大小写
      */
-    "vue/custom-event-name-casing": ["error",
+    "vue/custom-event-name-casing": [
+      "error",
       "kebab-case",
       {
-        "ignores": []
-      }
+        ignores: [],
+      },
     ],
     /**
      * watch 中禁止使用箭头函数 , 怕this指向有问题
@@ -273,7 +273,7 @@ module.exports = {
      */
     "vue/no-useless-template-attributes": "error",
     /**
-     * template 不必带key， 
+     * template 不必带key，
      * @reason 因为带key无效的，要带的话只需要给他下面的元素带
      */
     "vue/no-v-for-template-key": "error",
