@@ -3,15 +3,16 @@ const vueRules = require("./rules/vue-common.js")
 
 module.exports = {
   parser: require.resolve("vue-eslint-parser"),
-  extends: ["./base.js"],
+  extends: ["./base.js", "prettier"],
   parserOptions: {
     parser: "babel-eslint",
     ecmaVersion: 2019,
     sourceType: "module",
   },
-  plugins: ["vue"],
+  plugins: ["vue", "prettier"],
   rules: {
     ...vueRules,
+    "prettier/prettier": "error",
     /**
      * 限制自定义组件的 attrs属性风格
      */
