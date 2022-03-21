@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>
-      规则 | olad-auto-lint
-    </title>
-    <meta name="description" content="A VitePress site">
-    <link rel="stylesheet" href="/assets/style.faec9f17.css">
-    <link rel="modulepreload" href="/assets/Home.5e4f02ba.js">
-    <link rel="modulepreload" href="/assets/app.62e41da6.js">
-    <link rel="modulepreload" href="/assets/eslint_rules.md.ef4eafec.lean.js">
-    <link rel="modulepreload" href="/assets/app.62e41da6.js">
-    
-    
-  </head>
-  <body>
-    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-b2bb904e><div class="sidebar-button" data-v-b2bb904e><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/" aria-label="olad-auto-lint, back to home" data-v-b2bb904e data-v-05b58416><!----> olad-auto-lint</a><div class="flex-grow" data-v-b2bb904e></div><div class="nav" data-v-b2bb904e><nav class="nav-links" data-v-b2bb904e data-v-3de693e3><!--[--><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/guide/intro" data-v-77e86150>介绍 <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/cli/intro" data-v-77e86150>CLI <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/eslint/intro" data-v-77e86150>EsLint <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/stylelint/intro" data-v-77e86150>StyleLint <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/commitlint/intro" data-v-77e86150>CommitLint <!----></a></div></div><!--]--><!----><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item isExternal" href="https://github.com/zhaoxm469/olad-auto-lint" target="_blank" rel="noopener noreferrer" data-v-77e86150>Github <svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15" data-v-77e86150><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div></div></nav></div><!--[--><!--]--></header><!--[--><aside class="sidebar hover-scrollbar" data-v-61004fbf><nav class="nav-links nav" data-v-61004fbf data-v-3de693e3><!--[--><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/guide/intro" data-v-77e86150>介绍 <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/cli/intro" data-v-77e86150>CLI <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/eslint/intro" data-v-77e86150>EsLint <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/stylelint/intro" data-v-77e86150>StyleLint <!----></a></div></div><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item" href="/commitlint/intro" data-v-77e86150>CommitLint <!----></a></div></div><!--]--><!----><div class="item" data-v-3de693e3><div class="nav-link" data-v-3de693e3 data-v-77e86150><a class="item isExternal" href="https://github.com/zhaoxm469/olad-auto-lint" target="_blank" rel="noopener noreferrer" data-v-77e86150>Github <svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15" data-v-77e86150><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div></div></nav><!--[--><!--]--><ul class="sidebar-links" data-v-61004fbf><!--[--><li class="sidebar-link"><p class="sidebar-link-item">指南</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/guide/intro">介绍</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/guide/changelog">更新日志</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">CLI</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/cli/intro">介绍</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">EsLint</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/eslint/intro">介绍</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item active" href="/eslint/rules">规则</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">StyleLint</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/stylelint/intro">介绍</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/stylelint/rules">规则</a><!----></li></ul></li><li class="sidebar-link"><p class="sidebar-link-item">CommitLint</p><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="/commitlint/intro">介绍</a><!----></li></ul></li><!--]--></ul><!--[--><!--]--></aside><ul class="right-slug" data-v-61004fbf data-v-ca112384><!--[--><li class="slug-item level-1" data-v-ca112384><a href="#javascript-公共规则" class="link" data-v-ca112384>JavaScript 公共规则</a></li><li class="slug-item level-1" data-v-ca112384><a href="#vue2-规则" class="link" data-v-ca112384>Vue2 规则</a></li><!--]--></ul><!--]--><div class="sidebar-mask"></div><main class="page" data-v-f7095a1c><div class="container hover-scrollbar" data-v-f7095a1c><!--[--><!--]--><div class="content" data-v-f7095a1c><div data-v-f7095a1c><h1 id="规则"><a class="header-anchor" href="#规则" aria-hidden="true">#</a> 规则</h1><p>根据以下自定义规则帮助我们检查文件中的代码规范以及风格</p><h2 id="javascript-公共规则"><a class="header-anchor" href="#javascript-公共规则" aria-hidden="true">#</a> JavaScript 公共规则</h2><p>共计 209 条规则，启用规则 131 条</p><div class="language-js"><pre><code><span class="token comment">/**
- * setter 必须有对应的 getter，getter 可以没有对应的 setter
+import{_ as n,c as s,o as a,a as t}from"./app.62e41da6.js";const p={components:{}},m='{"title":"\u89C4\u5219","description":"","frontmatter":{},"headers":[{"level":2,"title":"JavaScript \u516C\u5171\u89C4\u5219","slug":"javascript-\u516C\u5171\u89C4\u5219"},{"level":2,"title":"Vue2 \u89C4\u5219","slug":"vue2-\u89C4\u5219"}],"relativePath":"eslint/rules.md","lastUpdated":1647826813772}',o=t(`__VP_STATIC_START__<h1 id="\u89C4\u5219"><a class="header-anchor" href="#\u89C4\u5219" aria-hidden="true">#</a> \u89C4\u5219</h1><p>\u6839\u636E\u4EE5\u4E0B\u81EA\u5B9A\u4E49\u89C4\u5219\u5E2E\u52A9\u6211\u4EEC\u68C0\u67E5\u6587\u4EF6\u4E2D\u7684\u4EE3\u7801\u89C4\u8303\u4EE5\u53CA\u98CE\u683C</p><h2 id="javascript-\u516C\u5171\u89C4\u5219"><a class="header-anchor" href="#javascript-\u516C\u5171\u89C4\u5219" aria-hidden="true">#</a> JavaScript \u516C\u5171\u89C4\u5219</h2><p>\u5171\u8BA1 209 \u6761\u89C4\u5219\uFF0C\u542F\u7528\u89C4\u5219 131 \u6761</p><div class="language-js"><pre><code><span class="token comment">/**
+ * setter \u5FC5\u987B\u6709\u5BF9\u5E94\u7684 getter\uFF0Cgetter \u53EF\u4EE5\u6CA1\u6709\u5BF9\u5E94\u7684 setter
  */</span>
 <span class="token string-property property">&quot;accessor-pairs&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -27,38 +9,38 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 数组的方法除了 forEach 之外，回调函数必须有返回值
+ * \u6570\u7EC4\u7684\u65B9\u6CD5\u9664\u4E86 forEach \u4E4B\u5916\uFF0C\u56DE\u8C03\u51FD\u6570\u5FC5\u987B\u6709\u8FD4\u56DE\u503C
  */</span>
 <span class="token string-property property">&quot;array-callback-return&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 箭头函数体必须由大括号包裹
- * @reason 代码格式问题，最好由 Prettier 解决
+ * \u7BAD\u5934\u51FD\u6570\u4F53\u5FC5\u987B\u7531\u5927\u62EC\u53F7\u5305\u88F9
+ * @reason \u4EE3\u7801\u683C\u5F0F\u95EE\u9898\uFF0C\u6700\u597D\u7531 Prettier \u89E3\u51B3
  */</span>
 <span class="token string-property property">&quot;arrow-body-style&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 在箭头函数中的箭头前后强制保持一致的间距
+ * \u5728\u7BAD\u5934\u51FD\u6570\u4E2D\u7684\u7BAD\u5934\u524D\u540E\u5F3A\u5236\u4FDD\u6301\u4E00\u81F4\u7684\u95F4\u8DDD
  */</span>
 <span class="token string-property property">&quot;arrow-spacing&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">before</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">after</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 将 var 定义的变量视为块作用域，禁止在块外使用
- * @reason 已经禁止使用 var 了
+ * \u5C06 var \u5B9A\u4E49\u7684\u53D8\u91CF\u89C6\u4E3A\u5757\u4F5C\u7528\u57DF\uFF0C\u7981\u6B62\u5728\u5757\u5916\u4F7F\u7528
+ * @reason \u5DF2\u7ECF\u7981\u6B62\u4F7F\u7528 var \u4E86
  */</span>
 <span class="token string-property property">&quot;block-scoped-var&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 变量名必须是 camelCase 风格的
- * @reason 很多 api 或文件名都不是 camelCase 风格的
+ * \u53D8\u91CF\u540D\u5FC5\u987B\u662F camelCase \u98CE\u683C\u7684
+ * @reason \u5F88\u591A api \u6216\u6587\u4EF6\u540D\u90FD\u4E0D\u662F camelCase \u98CE\u683C\u7684
  */</span>
 <span class="token literal-property property">camelcase</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 注释的首字母必须大写
+ * \u6CE8\u91CA\u7684\u9996\u5B57\u6BCD\u5FC5\u987B\u5927\u5199
  */</span>
 <span class="token string-property property">&quot;capitalized-comments&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 在类的非静态方法中，必须存在对 this 的引用
+ * \u5728\u7C7B\u7684\u975E\u9759\u6001\u65B9\u6CD5\u4E2D\uFF0C\u5FC5\u987B\u5B58\u5728\u5BF9 this \u7684\u5F15\u7528
  */</span>
 <span class="token string-property property">&quot;class-methods-use-this&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止函数的循环复杂度超过 20
+ * \u7981\u6B62\u51FD\u6570\u7684\u5FAA\u73AF\u590D\u6742\u5EA6\u8D85\u8FC7 20
  * @reason https://en.wikipedia.org/wiki/Cyclomatic_complexity
  */</span>
 <span class="token literal-property property">complexity</span><span class="token operator">:</span> <span class="token punctuation">[</span>
@@ -68,49 +50,49 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止函数在不同分支返回不同类型的值
- * @reason 缺少 TypeScript 的支持，类型判断是不准确的
+ * \u7981\u6B62\u51FD\u6570\u5728\u4E0D\u540C\u5206\u652F\u8FD4\u56DE\u4E0D\u540C\u7C7B\u578B\u7684\u503C
+ * @reason \u7F3A\u5C11 TypeScript \u7684\u652F\u6301\uFF0C\u7C7B\u578B\u5224\u65AD\u662F\u4E0D\u51C6\u786E\u7684
  */</span>
 <span class="token string-property property">&quot;consistent-return&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 限制 this 的别名
+ * \u9650\u5236 this \u7684\u522B\u540D
  */</span>
 <span class="token string-property property">&quot;consistent-this&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * constructor 中必须有 super
+ * constructor \u4E2D\u5FC5\u987B\u6709 super
  */</span>
 <span class="token string-property property">&quot;constructor-super&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 不强制 最后一个
+ * \u4E0D\u5F3A\u5236 \u6700\u540E\u4E00\u4E2A
  */</span>
 <span class="token string-property property">&quot;comma-dangle&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * switch 语句必须有 default
+ * switch \u8BED\u53E5\u5FC5\u987B\u6709 default
  */</span>
 <span class="token string-property property">&quot;default-case&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * switch 语句中的 default 必须在最后
+ * switch \u8BED\u53E5\u4E2D\u7684 default \u5FC5\u987B\u5728\u6700\u540E
  */</span>
 <span class="token string-property property">&quot;default-case-last&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 有默认值的参数必须放在函数参数的末尾
+ * \u6709\u9ED8\u8BA4\u503C\u7684\u53C2\u6570\u5FC5\u987B\u653E\u5728\u51FD\u6570\u53C2\u6570\u7684\u672B\u5C3E
  */</span>
 <span class="token string-property property">&quot;default-param-last&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 foo[&#39;bar&#39;]，必须写成 foo.bar
- * @reason 当需要写一系列属性的时候，可以更统一
+ * \u7981\u6B62\u4F7F\u7528 foo[&#39;bar&#39;]\uFF0C\u5FC5\u987B\u5199\u6210 foo.bar
+ * @reason \u5F53\u9700\u8981\u5199\u4E00\u7CFB\u5217\u5C5E\u6027\u7684\u65F6\u5019\uFF0C\u53EF\u4EE5\u66F4\u7EDF\u4E00
  */</span>
 <span class="token string-property property">&quot;dot-notation&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 必须使用 === 或 !==，禁止使用 == 或 !=
+ * \u5FC5\u987B\u4F7F\u7528 === \u6216 !==\uFF0C\u7981\u6B62\u4F7F\u7528 == \u6216 !=
  */</span>
 <span class="token literal-property property">eqeqeq</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止方向错误的 for 循环
+ * \u7981\u6B62\u65B9\u5411\u9519\u8BEF\u7684 for \u5FAA\u73AF
  */</span>
 <span class="token string-property property">&quot;for-direction&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 函数赋值给变量的时候，函数名必须与变量名一致
+ * \u51FD\u6570\u8D4B\u503C\u7ED9\u53D8\u91CF\u7684\u65F6\u5019\uFF0C\u51FD\u6570\u540D\u5FC5\u987B\u4E0E\u53D8\u91CF\u540D\u4E00\u81F4
  */</span>
 <span class="token string-property property">&quot;func-name-matching&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -120,101 +102,101 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 函数必须有名字
+ * \u51FD\u6570\u5FC5\u987B\u6709\u540D\u5B57
  */</span>
 <span class="token string-property property">&quot;func-names&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 必须只使用函数声明或只使用函数表达式
+ * \u5FC5\u987B\u53EA\u4F7F\u7528\u51FD\u6570\u58F0\u660E\u6216\u53EA\u4F7F\u7528\u51FD\u6570\u8868\u8FBE\u5F0F
  */</span>
 <span class="token string-property property">&quot;func-style&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * getter 必须有返回值，并且禁止返回空
+ * getter \u5FC5\u987B\u6709\u8FD4\u56DE\u503C\uFF0C\u5E76\u4E14\u7981\u6B62\u8FD4\u56DE\u7A7A
  */</span>
 <span class="token string-property property">&quot;getter-return&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 在生成器函数中的`*`运算符周围强制保持一致的间距
+ * \u5728\u751F\u6210\u5668\u51FD\u6570\u4E2D\u7684\`*\`\u8FD0\u7B97\u7B26\u5468\u56F4\u5F3A\u5236\u4FDD\u6301\u4E00\u81F4\u7684\u95F4\u8DDD
  */</span>
 <span class="token string-property property">&quot;generator-star-spacing&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">before</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">after</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * setter 和 getter 必须写在一起
+ * setter \u548C getter \u5FC5\u987B\u5199\u5728\u4E00\u8D77
  */</span>
 <span class="token string-property property">&quot;grouped-accessor-pairs&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * for in 内部必须有 hasOwnProperty
+ * for in \u5185\u90E8\u5FC5\u987B\u6709 hasOwnProperty
  */</span>
 <span class="token string-property property">&quot;guard-for-in&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用指定的标识符
+ * \u7981\u6B62\u4F7F\u7528\u6307\u5B9A\u7684\u6807\u8BC6\u7B26
  */</span>
 <span class="token string-property property">&quot;id-denylist&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 限制变量名长度
+ * \u9650\u5236\u53D8\u91CF\u540D\u957F\u5EA6
  */</span>
 <span class="token string-property property">&quot;id-length&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 限制变量名必须匹配指定的正则表达式
+ * \u9650\u5236\u53D8\u91CF\u540D\u5FC5\u987B\u5339\u914D\u6307\u5B9A\u7684\u6B63\u5219\u8868\u8FBE\u5F0F
  */</span>
 <span class="token string-property property">&quot;id-match&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 首行缩进
+ * \u9996\u884C\u7F29\u8FDB
  */</span>
 <span class="token literal-property property">indent</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">SwitchCase</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 变量必须在定义的时候赋值
+ * \u53D8\u91CF\u5FC5\u987B\u5728\u5B9A\u4E49\u7684\u65F6\u5019\u8D4B\u503C
  */</span>
 <span class="token string-property property">&quot;init-declarations&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 属性使用双引号
+ * \u5C5E\u6027\u4F7F\u7528\u53CC\u5F15\u53F7
  */</span>
 <span class="token string-property property">&quot;jsx-quotes&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;prefer-double&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 单行注释必须写在上一行
+ * \u5355\u884C\u6CE8\u91CA\u5FC5\u987B\u5199\u5728\u4E0A\u4E00\u884C
  */</span>
 <span class="token string-property property">&quot;line-comment-position&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 类的成员之间是否需要空行
- * @reason 有时为了紧凑需要挨在一起，有时为了可读性需要空一行
+ * \u7C7B\u7684\u6210\u5458\u4E4B\u95F4\u662F\u5426\u9700\u8981\u7A7A\u884C
+ * @reason \u6709\u65F6\u4E3A\u4E86\u7D27\u51D1\u9700\u8981\u6328\u5728\u4E00\u8D77\uFF0C\u6709\u65F6\u4E3A\u4E86\u53EF\u8BFB\u6027\u9700\u8981\u7A7A\u4E00\u884C
  */</span>
 <span class="token string-property property">&quot;lines-between-class-members&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 限制一个文件中类的数量
+ * \u9650\u5236\u4E00\u4E2A\u6587\u4EF6\u4E2D\u7C7B\u7684\u6570\u91CF
  */</span>
 <span class="token string-property property">&quot;max-classes-per-file&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 代码块嵌套的深度禁止超过 5 层
+ * \u4EE3\u7801\u5757\u5D4C\u5957\u7684\u6DF1\u5EA6\u7981\u6B62\u8D85\u8FC7 5 \u5C42
  */</span>
 <span class="token string-property property">&quot;max-depth&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 限制一个文件最多的行数
+ * \u9650\u5236\u4E00\u4E2A\u6587\u4EF6\u6700\u591A\u7684\u884C\u6570
  */</span>
 <span class="token string-property property">&quot;max-lines&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 限制函数块中的代码行数
+ * \u9650\u5236\u51FD\u6570\u5757\u4E2D\u7684\u4EE3\u7801\u884C\u6570
  */</span>
 <span class="token string-property property">&quot;max-lines-per-function&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 回调函数嵌套禁止超过 3 层，多了请用 async await 替代
+ * \u56DE\u8C03\u51FD\u6570\u5D4C\u5957\u7981\u6B62\u8D85\u8FC7 3 \u5C42\uFF0C\u591A\u4E86\u8BF7\u7528 async await \u66FF\u4EE3
  */</span>
 <span class="token string-property property">&quot;max-nested-callbacks&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 函数的参数禁止超过 5 个
+ * \u51FD\u6570\u7684\u53C2\u6570\u7981\u6B62\u8D85\u8FC7 5 \u4E2A
  */</span>
 <span class="token string-property property">&quot;max-params&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 限制函数块中的语句数量
+ * \u9650\u5236\u51FD\u6570\u5757\u4E2D\u7684\u8BED\u53E5\u6570\u91CF
  */</span>
 <span class="token string-property property">&quot;max-statements&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 限制一行中的语句数量
+ * \u9650\u5236\u4E00\u884C\u4E2D\u7684\u8BED\u53E5\u6570\u91CF
  */</span>
 <span class="token string-property property">&quot;max-statements-per-line&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 约束多行注释的格式
- * @reason 能写注释已经不容易了，不需要限制太多
+ * \u7EA6\u675F\u591A\u884C\u6CE8\u91CA\u7684\u683C\u5F0F
+ * @reason \u80FD\u5199\u6CE8\u91CA\u5DF2\u7ECF\u4E0D\u5BB9\u6613\u4E86\uFF0C\u4E0D\u9700\u8981\u9650\u5236\u592A\u591A
  */</span>
 <span class="token string-property property">&quot;multiline-comment-style&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * new 后面的类名必须首字母大写
+ * new \u540E\u9762\u7684\u7C7B\u540D\u5FC5\u987B\u9996\u5B57\u6BCD\u5927\u5199
  */</span>
 <span class="token string-property property">&quot;new-cap&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -225,60 +207,60 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 alert
+ * \u7981\u6B62\u4F7F\u7528 alert
  */</span>
 <span class="token string-property property">&quot;no-alert&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 Array 构造函数时传入的参数超过一个
- * @reason 参数为一个时表示创建一个指定长度的数组，比较常用
- * 参数为多个时表示创建一个指定内容的数组，此时可以用数组字面量实现，不必使用构造函数
+ * \u7981\u6B62\u4F7F\u7528 Array \u6784\u9020\u51FD\u6570\u65F6\u4F20\u5165\u7684\u53C2\u6570\u8D85\u8FC7\u4E00\u4E2A
+ * @reason \u53C2\u6570\u4E3A\u4E00\u4E2A\u65F6\u8868\u793A\u521B\u5EFA\u4E00\u4E2A\u6307\u5B9A\u957F\u5EA6\u7684\u6570\u7EC4\uFF0C\u6BD4\u8F83\u5E38\u7528
+ * \u53C2\u6570\u4E3A\u591A\u4E2A\u65F6\u8868\u793A\u521B\u5EFA\u4E00\u4E2A\u6307\u5B9A\u5185\u5BB9\u7684\u6570\u7EC4\uFF0C\u6B64\u65F6\u53EF\u4EE5\u7528\u6570\u7EC4\u5B57\u9762\u91CF\u5B9E\u73B0\uFF0C\u4E0D\u5FC5\u4F7F\u7528\u6784\u9020\u51FD\u6570
  */</span>
 <span class="token string-property property">&quot;no-array-constructor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止将 async 函数做为 new Promise 的回调函数
- * @reason 出现这种情况时，一般不需要使用 new Promise 实现异步了
+ * \u7981\u6B62\u5C06 async \u51FD\u6570\u505A\u4E3A new Promise \u7684\u56DE\u8C03\u51FD\u6570
+ * @reason \u51FA\u73B0\u8FD9\u79CD\u60C5\u51B5\u65F6\uFF0C\u4E00\u822C\u4E0D\u9700\u8981\u4F7F\u7528 new Promise \u5B9E\u73B0\u5F02\u6B65\u4E86
  */</span>
 <span class="token string-property property">&quot;no-async-promise-executor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止将 await 写在循环里，因为这样就无法同时发送多个异步请求了
- * @reason 要求太严格了，有时需要在循环中写 await
+ * \u7981\u6B62\u5C06 await \u5199\u5728\u5FAA\u73AF\u91CC\uFF0C\u56E0\u4E3A\u8FD9\u6837\u5C31\u65E0\u6CD5\u540C\u65F6\u53D1\u9001\u591A\u4E2A\u5F02\u6B65\u8BF7\u6C42\u4E86
+ * @reason \u8981\u6C42\u592A\u4E25\u683C\u4E86\uFF0C\u6709\u65F6\u9700\u8981\u5728\u5FAA\u73AF\u4E2D\u5199 await
  */</span>
 <span class="token string-property property">&quot;no-await-in-loop&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用位运算
+ * \u7981\u6B62\u4F7F\u7528\u4F4D\u8FD0\u7B97
  */</span>
 <span class="token string-property property">&quot;no-bitwise&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 caller 或 callee
- * @reason 它们是已废弃的语法
+ * \u7981\u6B62\u4F7F\u7528 caller \u6216 callee
+ * @reason \u5B83\u4EEC\u662F\u5DF2\u5E9F\u5F03\u7684\u8BED\u6CD5
  */</span>
 <span class="token string-property property">&quot;no-caller&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * switch 的 case 内有变量定义的时候，必须使用大括号将 case 内变成一个代码块
+ * switch \u7684 case \u5185\u6709\u53D8\u91CF\u5B9A\u4E49\u7684\u65F6\u5019\uFF0C\u5FC5\u987B\u4F7F\u7528\u5927\u62EC\u53F7\u5C06 case \u5185\u53D8\u6210\u4E00\u4E2A\u4EE3\u7801\u5757
  */</span>
 <span class="token string-property property">&quot;no-case-declarations&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止对已定义的 class 重新赋值
+ * \u7981\u6B62\u5BF9\u5DF2\u5B9A\u4E49\u7684 class \u91CD\u65B0\u8D4B\u503C
  */</span>
 <span class="token string-property property">&quot;no-class-assign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止与负零进行比较
+ * \u7981\u6B62\u4E0E\u8D1F\u96F6\u8FDB\u884C\u6BD4\u8F83
  */</span>
 <span class="token string-property property">&quot;no-compare-neg-zero&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在测试表达式中使用赋值语句，除非这个赋值语句被括号包起来了
+ * \u7981\u6B62\u5728\u6D4B\u8BD5\u8868\u8FBE\u5F0F\u4E2D\u4F7F\u7528\u8D4B\u503C\u8BED\u53E5\uFF0C\u9664\u975E\u8FD9\u4E2A\u8D4B\u503C\u8BED\u53E5\u88AB\u62EC\u53F7\u5305\u8D77\u6765\u4E86
  */</span>
 <span class="token string-property property">&quot;no-cond-assign&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;except-parens&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 console
+ * \u7981\u6B62\u4F7F\u7528 console
  */</span>
 <span class="token string-property property">&quot;no-console&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止对使用 const 定义的常量重新赋值
+ * \u7981\u6B62\u5BF9\u4F7F\u7528 const \u5B9A\u4E49\u7684\u5E38\u91CF\u91CD\u65B0\u8D4B\u503C
  */</span>
 <span class="token string-property property">&quot;no-const-assign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止将常量作为分支条件判断中的测试表达式，但允许作为循环条件判断中的测试表达式
+ * \u7981\u6B62\u5C06\u5E38\u91CF\u4F5C\u4E3A\u5206\u652F\u6761\u4EF6\u5224\u65AD\u4E2D\u7684\u6D4B\u8BD5\u8868\u8FBE\u5F0F\uFF0C\u4F46\u5141\u8BB8\u4F5C\u4E3A\u5FAA\u73AF\u6761\u4EF6\u5224\u65AD\u4E2D\u7684\u6D4B\u8BD5\u8868\u8FBE\u5F0F
  */</span>
 <span class="token string-property property">&quot;no-constant-condition&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -287,123 +269,123 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在构造函数中返回值
+ * \u7981\u6B62\u5728\u6784\u9020\u51FD\u6570\u4E2D\u8FD4\u56DE\u503C
  */</span>
 <span class="token string-property property">&quot;no-constructor-return&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 continue
+ * \u7981\u6B62\u4F7F\u7528 continue
  */</span>
 <span class="token string-property property">&quot;no-continue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在正则表达式中出现 Ctrl 键的 ASCII 表示，即禁止使用 /\x1f/
- * @reason 几乎不会遇到这种场景
+ * \u7981\u6B62\u5728\u6B63\u5219\u8868\u8FBE\u5F0F\u4E2D\u51FA\u73B0 Ctrl \u952E\u7684 ASCII \u8868\u793A\uFF0C\u5373\u7981\u6B62\u4F7F\u7528 /\\x1f/
+ * @reason \u51E0\u4E4E\u4E0D\u4F1A\u9047\u5230\u8FD9\u79CD\u573A\u666F
  */</span>
 <span class="token string-property property">&quot;no-control-regex&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 debugger
+ * \u7981\u6B62\u4F7F\u7528 debugger
  */</span>
 <span class="token string-property property">&quot;no-debugger&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止对一个变量使用 delete
- * @reason 编译阶段就会报错了
+ * \u7981\u6B62\u5BF9\u4E00\u4E2A\u53D8\u91CF\u4F7F\u7528 delete
+ * @reason \u7F16\u8BD1\u9636\u6BB5\u5C31\u4F1A\u62A5\u9519\u4E86
  */</span>
 <span class="token string-property property">&quot;no-delete-var&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在正则表达式中出现形似除法操作符的开头，如 let a = /=foo/
- * @reason 有代码高亮的话，在阅读这种代码时，也完全不会产生歧义或理解上的困难
+ * \u7981\u6B62\u5728\u6B63\u5219\u8868\u8FBE\u5F0F\u4E2D\u51FA\u73B0\u5F62\u4F3C\u9664\u6CD5\u64CD\u4F5C\u7B26\u7684\u5F00\u5934\uFF0C\u5982 let a = /=foo/
+ * @reason \u6709\u4EE3\u7801\u9AD8\u4EAE\u7684\u8BDD\uFF0C\u5728\u9605\u8BFB\u8FD9\u79CD\u4EE3\u7801\u65F6\uFF0C\u4E5F\u5B8C\u5168\u4E0D\u4F1A\u4EA7\u751F\u6B67\u4E49\u6216\u7406\u89E3\u4E0A\u7684\u56F0\u96BE
  */</span>
 <span class="token string-property property">&quot;no-div-regex&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在函数参数中出现重复名称的参数
- * @reason 编译阶段就会报错了
+ * \u7981\u6B62\u5728\u51FD\u6570\u53C2\u6570\u4E2D\u51FA\u73B0\u91CD\u590D\u540D\u79F0\u7684\u53C2\u6570
+ * @reason \u7F16\u8BD1\u9636\u6BB5\u5C31\u4F1A\u62A5\u9519\u4E86
  */</span>
 <span class="token string-property property">&quot;no-dupe-args&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止重复定义类的成员
+ * \u7981\u6B62\u91CD\u590D\u5B9A\u4E49\u7C7B\u7684\u6210\u5458
  */</span>
 <span class="token string-property property">&quot;no-dupe-class-members&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止 if else 的条件判断中出现重复的条件
+ * \u7981\u6B62 if else \u7684\u6761\u4EF6\u5224\u65AD\u4E2D\u51FA\u73B0\u91CD\u590D\u7684\u6761\u4EF6
  */</span>
 <span class="token string-property property">&quot;no-dupe-else-if&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在对象字面量中出现重复的键名
+ * \u7981\u6B62\u5728\u5BF9\u8C61\u5B57\u9762\u91CF\u4E2D\u51FA\u73B0\u91CD\u590D\u7684\u952E\u540D
  */</span>
 <span class="token string-property property">&quot;no-dupe-keys&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 switch 语句中出现重复测试表达式的 case
+ * \u7981\u6B62\u5728 switch \u8BED\u53E5\u4E2D\u51FA\u73B0\u91CD\u590D\u6D4B\u8BD5\u8868\u8FBE\u5F0F\u7684 case
  */</span>
 <span class="token string-property property">&quot;no-duplicate-case&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止重复导入模块
+ * \u7981\u6B62\u91CD\u590D\u5BFC\u5165\u6A21\u5757
  */</span>
 <span class="token string-property property">&quot;no-duplicate-imports&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 else 内使用 return，必须改为提前结束
- * @reason else 中使用 return 可以使代码结构更清晰
+ * \u7981\u6B62\u5728 else \u5185\u4F7F\u7528 return\uFF0C\u5FC5\u987B\u6539\u4E3A\u63D0\u524D\u7ED3\u675F
+ * @reason else \u4E2D\u4F7F\u7528 return \u53EF\u4EE5\u4F7F\u4EE3\u7801\u7ED3\u6784\u66F4\u6E05\u6670
  */</span>
 <span class="token string-property property">&quot;no-else-return&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止出现空代码块，允许 catch 为空代码块
+ * \u7981\u6B62\u51FA\u73B0\u7A7A\u4EE3\u7801\u5757\uFF0C\u5141\u8BB8 catch \u4E3A\u7A7A\u4EE3\u7801\u5757
  */</span>
 <span class="token string-property property">&quot;no-empty&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在正则表达式中使用空的字符集 []
+ * \u7981\u6B62\u5728\u6B63\u5219\u8868\u8FBE\u5F0F\u4E2D\u4F7F\u7528\u7A7A\u7684\u5B57\u7B26\u96C6 []
  */</span>
 <span class="token string-property property">&quot;no-empty-character-class&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 不允许有空函数
- * @reason 有时需要将一个空函数设置为某个项的默认值
+ * \u4E0D\u5141\u8BB8\u6709\u7A7A\u51FD\u6570
+ * @reason \u6709\u65F6\u9700\u8981\u5C06\u4E00\u4E2A\u7A7A\u51FD\u6570\u8BBE\u7F6E\u4E3A\u67D0\u4E2A\u9879\u7684\u9ED8\u8BA4\u503C
  */</span>
 <span class="token string-property property">&quot;no-empty-function&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止解构赋值中出现空 {} 或 []
+ * \u7981\u6B62\u89E3\u6784\u8D4B\u503C\u4E2D\u51FA\u73B0\u7A7A {} \u6216 []
  */</span>
 <span class="token string-property property">&quot;no-empty-pattern&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 foo == null，必须使用 foo === null
+ * \u7981\u6B62\u4F7F\u7528 foo == null\uFF0C\u5FC5\u987B\u4F7F\u7528 foo === null
  */</span>
 <span class="token string-property property">&quot;no-eq-null&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 eval
+ * \u7981\u6B62\u4F7F\u7528 eval
  */</span>
 <span class="token string-property property">&quot;no-eval&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止将 catch 的第一个参数 error 重新赋值
+ * \u7981\u6B62\u5C06 catch \u7684\u7B2C\u4E00\u4E2A\u53C2\u6570 error \u91CD\u65B0\u8D4B\u503C
  */</span>
 <span class="token string-property property">&quot;no-ex-assign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止修改原生对象
- * @reason 修改原生对象可能会与将来版本的 js 冲突
+ * \u7981\u6B62\u4FEE\u6539\u539F\u751F\u5BF9\u8C61
+ * @reason \u4FEE\u6539\u539F\u751F\u5BF9\u8C61\u53EF\u80FD\u4F1A\u4E0E\u5C06\u6765\u7248\u672C\u7684 js \u51B2\u7A81
  */</span>
 <span class="token string-property property">&quot;no-extend-native&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止出现没必要的 bind
+ * \u7981\u6B62\u51FA\u73B0\u6CA1\u5FC5\u8981\u7684 bind
  */</span>
 <span class="token string-property property">&quot;no-extra-bind&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止不必要的布尔类型转换
+ * \u7981\u6B62\u4E0D\u5FC5\u8981\u7684\u5E03\u5C14\u7C7B\u578B\u8F6C\u6362
  */</span>
 <span class="token string-property property">&quot;no-extra-boolean-cast&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止出现没必要的 label
- * @reason 已经禁止使用 label 了
+ * \u7981\u6B62\u51FA\u73B0\u6CA1\u5FC5\u8981\u7684 label
+ * @reason \u5DF2\u7ECF\u7981\u6B62\u4F7F\u7528 label \u4E86
  */</span>
 <span class="token string-property property">&quot;no-extra-label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * switch 的 case 内必须有 break, return 或 throw，空的 case 除外
+ * switch \u7684 case \u5185\u5FC5\u987B\u6709 break, return \u6216 throw\uFF0C\u7A7A\u7684 case \u9664\u5916
  */</span>
 <span class="token string-property property">&quot;no-fallthrough&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止将一个函数声明重新赋值
+ * \u7981\u6B62\u5C06\u4E00\u4E2A\u51FD\u6570\u58F0\u660E\u91CD\u65B0\u8D4B\u503C
  */</span>
 <span class="token string-property property">&quot;no-func-assign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止对全局变量赋值
+ * \u7981\u6B62\u5BF9\u5168\u5C40\u53D8\u91CF\u8D4B\u503C
  */</span>
 <span class="token string-property property">&quot;no-global-assign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 ~+ 等难以理解的类型转换，仅允许使用 !!
+ * \u7981\u6B62\u4F7F\u7528 ~+ \u7B49\u96BE\u4EE5\u7406\u89E3\u7684\u7C7B\u578B\u8F6C\u6362\uFF0C\u4EC5\u5141\u8BB8\u4F7F\u7528 !!
  */</span>
 <span class="token string-property property">&quot;no-implicit-coercion&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -412,37 +394,37 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在全局作用域下定义变量或申明函数
- * @reason 模块化之后，不会出现这种在全局作用域下定义变量的情况
+ * \u7981\u6B62\u5728\u5168\u5C40\u4F5C\u7528\u57DF\u4E0B\u5B9A\u4E49\u53D8\u91CF\u6216\u7533\u660E\u51FD\u6570
+ * @reason \u6A21\u5757\u5316\u4E4B\u540E\uFF0C\u4E0D\u4F1A\u51FA\u73B0\u8FD9\u79CD\u5728\u5168\u5C40\u4F5C\u7528\u57DF\u4E0B\u5B9A\u4E49\u53D8\u91CF\u7684\u60C5\u51B5
  */</span>
 <span class="token string-property property">&quot;no-implicit-globals&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 setTimeout 或 setInterval 中传入字符串
+ * \u7981\u6B62\u5728 setTimeout \u6216 setInterval \u4E2D\u4F20\u5165\u5B57\u7B26\u4E32
  */</span>
 <span class="token string-property property">&quot;no-implied-eval&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止对导入的模块进行赋值
+ * \u7981\u6B62\u5BF9\u5BFC\u5165\u7684\u6A21\u5757\u8FDB\u884C\u8D4B\u503C
  */</span>
 <span class="token string-property property">&quot;no-import-assign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在代码后添加单行注释
+ * \u7981\u6B62\u5728\u4EE3\u7801\u540E\u6DFB\u52A0\u5355\u884C\u6CE8\u91CA
  */</span>
 <span class="token string-property property">&quot;no-inline-comments&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 if 代码块内出现函数声明
+ * \u7981\u6B62\u5728 if \u4EE3\u7801\u5757\u5185\u51FA\u73B0\u51FD\u6570\u58F0\u660E
  */</span>
 <span class="token string-property property">&quot;no-inner-declarations&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;both&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 RegExp 构造函数中出现非法的正则表达式
+ * \u7981\u6B62\u5728 RegExp \u6784\u9020\u51FD\u6570\u4E2D\u51FA\u73B0\u975E\u6CD5\u7684\u6B63\u5219\u8868\u8FBE\u5F0F
  */</span>
 <span class="token string-property property">&quot;no-invalid-regexp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在类之外的地方使用 this
- * @reason 只允许在 class 中使用 this
+ * \u7981\u6B62\u5728\u7C7B\u4E4B\u5916\u7684\u5730\u65B9\u4F7F\u7528 this
+ * @reason \u53EA\u5141\u8BB8\u5728 class \u4E2D\u4F7F\u7528 this
  */</span>
 <span class="token string-property property">&quot;no-invalid-this&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用特殊空白符（比如全角空格），除非是出现在字符串、正则表达式或模版字符串中
+ * \u7981\u6B62\u4F7F\u7528\u7279\u6B8A\u7A7A\u767D\u7B26\uFF08\u6BD4\u5982\u5168\u89D2\u7A7A\u683C\uFF09\uFF0C\u9664\u975E\u662F\u51FA\u73B0\u5728\u5B57\u7B26\u4E32\u3001\u6B63\u5219\u8868\u8FBE\u5F0F\u6216\u6A21\u7248\u5B57\u7B26\u4E32\u4E2D
  */</span>
 <span class="token string-property property">&quot;no-irregular-whitespace&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -454,42 +436,42 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 __iterator__
- * @reason __iterator__ 是一个已废弃的属性
- * 使用 [Symbol.iterator] 替代它
+ * \u7981\u6B62\u4F7F\u7528 __iterator__
+ * @reason __iterator__ \u662F\u4E00\u4E2A\u5DF2\u5E9F\u5F03\u7684\u5C5E\u6027
+ * \u4F7F\u7528 [Symbol.iterator] \u66FF\u4EE3\u5B83
  */</span>
 <span class="token string-property property">&quot;no-iterator&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止 label 名称与已定义的变量重复
- * @reason 已经禁止使用 label 了
+ * \u7981\u6B62 label \u540D\u79F0\u4E0E\u5DF2\u5B9A\u4E49\u7684\u53D8\u91CF\u91CD\u590D
+ * @reason \u5DF2\u7ECF\u7981\u6B62\u4F7F\u7528 label \u4E86
  */</span>
 <span class="token string-property property">&quot;no-label-var&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 label
+ * \u7981\u6B62\u4F7F\u7528 label
  */</span>
 <span class="token string-property property">&quot;no-labels&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用没必要的 {} 作为代码块
+ * \u7981\u6B62\u4F7F\u7528\u6CA1\u5FC5\u8981\u7684 {} \u4F5C\u4E3A\u4EE3\u7801\u5757
  */</span>
 <span class="token string-property property">&quot;no-lone-blocks&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止 else 中只有一个单独的 if
- * @reason 单独的 if 可以把逻辑表达的更清楚
+ * \u7981\u6B62 else \u4E2D\u53EA\u6709\u4E00\u4E2A\u5355\u72EC\u7684 if
+ * @reason \u5355\u72EC\u7684 if \u53EF\u4EE5\u628A\u903B\u8F91\u8868\u8FBE\u7684\u66F4\u6E05\u695A
  */</span>
 <span class="token string-property property">&quot;no-lonely-if&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在循环内的函数内部出现循环体条件语句中定义的变量
- * @reason 使用 let 就已经解决了这个问题了
+ * \u7981\u6B62\u5728\u5FAA\u73AF\u5185\u7684\u51FD\u6570\u5185\u90E8\u51FA\u73B0\u5FAA\u73AF\u4F53\u6761\u4EF6\u8BED\u53E5\u4E2D\u5B9A\u4E49\u7684\u53D8\u91CF
+ * @reason \u4F7F\u7528 let \u5C31\u5DF2\u7ECF\u89E3\u51B3\u4E86\u8FD9\u4E2A\u95EE\u9898\u4E86
  */</span>
 <span class="token string-property property">&quot;no-loop-func&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用超出 js 精度范围的数字
+ * \u7981\u6B62\u4F7F\u7528\u8D85\u51FA js \u7CBE\u5EA6\u8303\u56F4\u7684\u6570\u5B57
  */</span>
 <span class="token string-property property">&quot;no-loss-of-precision&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用使用魔法魔法数字
- * @reason 常量或者参数，不用魔法数字或者字符串,代码更容易看懂，代码逻辑更清晰。看到代码就知道意义。代码维护和优化更容易。
- * 某些情况指定数字用作数组的索引是否是可以的
+ * \u7981\u6B62\u4F7F\u7528\u4F7F\u7528\u9B54\u6CD5\u9B54\u6CD5\u6570\u5B57
+ * @reason \u5E38\u91CF\u6216\u8005\u53C2\u6570\uFF0C\u4E0D\u7528\u9B54\u6CD5\u6570\u5B57\u6216\u8005\u5B57\u7B26\u4E32,\u4EE3\u7801\u66F4\u5BB9\u6613\u770B\u61C2\uFF0C\u4EE3\u7801\u903B\u8F91\u66F4\u6E05\u6670\u3002\u770B\u5230\u4EE3\u7801\u5C31\u77E5\u9053\u610F\u4E49\u3002\u4EE3\u7801\u7EF4\u62A4\u548C\u4F18\u5316\u66F4\u5BB9\u6613\u3002
+ * \u67D0\u4E9B\u60C5\u51B5\u6307\u5B9A\u6570\u5B57\u7528\u4F5C\u6570\u7EC4\u7684\u7D22\u5F15\u662F\u5426\u662F\u53EF\u4EE5\u7684
  */</span>
 <span class="token string-property property">&quot;no-magic-numbers&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -498,228 +480,228 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止正则表达式中使用肉眼无法区分的特殊字符
- * @reason 某些特殊字符很难看出差异，最好不要在正则中使用
+ * \u7981\u6B62\u6B63\u5219\u8868\u8FBE\u5F0F\u4E2D\u4F7F\u7528\u8089\u773C\u65E0\u6CD5\u533A\u5206\u7684\u7279\u6B8A\u5B57\u7B26
+ * @reason \u67D0\u4E9B\u7279\u6B8A\u5B57\u7B26\u5F88\u96BE\u770B\u51FA\u5DEE\u5F02\uFF0C\u6700\u597D\u4E0D\u8981\u5728\u6B63\u5219\u4E2D\u4F7F\u7528
  */</span>
 <span class="token string-property property">&quot;no-misleading-character-class&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止连续赋值，比如 foo = bar = 1
+ * \u7981\u6B62\u8FDE\u7EED\u8D4B\u503C\uFF0C\u6BD4\u5982 foo = bar = 1
  */</span>
 <span class="token string-property property">&quot;no-multi-assign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 \ 来换行字符串
+ * \u7981\u6B62\u4F7F\u7528 \\ \u6765\u6362\u884C\u5B57\u7B26\u4E32
  */</span>
 <span class="token string-property property">&quot;no-multi-str&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止 if 里有否定的表达式
- * @reason 否定的表达式可以把逻辑表达的更清楚
+ * \u7981\u6B62 if \u91CC\u6709\u5426\u5B9A\u7684\u8868\u8FBE\u5F0F
+ * @reason \u5426\u5B9A\u7684\u8868\u8FBE\u5F0F\u53EF\u4EE5\u628A\u903B\u8F91\u8868\u8FBE\u7684\u66F4\u6E05\u695A
  */</span>
 <span class="token string-property property">&quot;no-negated-condition&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用嵌套的三元表达式，比如 a ? b : c ? d : e
+ * \u7981\u6B62\u4F7F\u7528\u5D4C\u5957\u7684\u4E09\u5143\u8868\u8FBE\u5F0F\uFF0C\u6BD4\u5982 a ? b : c ? d : e
  */</span>
 <span class="token string-property property">&quot;no-nested-ternary&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止直接 new 一个类而不赋值
- * @reason new 应该作为创建一个类的实例的方法，所以不能不赋值
+ * \u7981\u6B62\u76F4\u63A5 new \u4E00\u4E2A\u7C7B\u800C\u4E0D\u8D4B\u503C
+ * @reason new \u5E94\u8BE5\u4F5C\u4E3A\u521B\u5EFA\u4E00\u4E2A\u7C7B\u7684\u5B9E\u4F8B\u7684\u65B9\u6CD5\uFF0C\u6240\u4EE5\u4E0D\u80FD\u4E0D\u8D4B\u503C
  */</span>
 <span class="token string-property property">&quot;no-new&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 new Function
- * @reason 这和 eval 是等价的
+ * \u7981\u6B62\u4F7F\u7528 new Function
+ * @reason \u8FD9\u548C eval \u662F\u7B49\u4EF7\u7684
  */</span>
 <span class="token string-property property">&quot;no-new-func&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止直接 new Object
+ * \u7981\u6B62\u76F4\u63A5 new Object
  */</span>
 <span class="token string-property property">&quot;no-new-object&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 new 来生成 Symbol
+ * \u7981\u6B62\u4F7F\u7528 new \u6765\u751F\u6210 Symbol
  */</span>
 <span class="token string-property property">&quot;no-new-symbol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 new 来生成 String, Number 或 Boolean
+ * \u7981\u6B62\u4F7F\u7528 new \u6765\u751F\u6210 String, Number \u6216 Boolean
  */</span>
 <span class="token string-property property">&quot;no-new-wrappers&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在字符串中使用 \8 \9
- * @reason 代码格式问题，最好由 Prettier 解决
+ * \u7981\u6B62\u5728\u5B57\u7B26\u4E32\u4E2D\u4F7F\u7528 \\8 \\9
+ * @reason \u4EE3\u7801\u683C\u5F0F\u95EE\u9898\uFF0C\u6700\u597D\u7531 Prettier \u89E3\u51B3
  */</span>
 <span class="token string-property property">&quot;no-nonoctal-decimal-escape&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止将 Math, JSON 或 Reflect 直接作为函数调用
+ * \u7981\u6B62\u5C06 Math, JSON \u6216 Reflect \u76F4\u63A5\u4F5C\u4E3A\u51FD\u6570\u8C03\u7528
  */</span>
 <span class="token string-property property">&quot;no-obj-calls&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 0 开头的数字表示八进制数
- * @reason 编译阶段就会报错了
+ * \u7981\u6B62\u4F7F\u7528 0 \u5F00\u5934\u7684\u6570\u5B57\u8868\u793A\u516B\u8FDB\u5236\u6570
+ * @reason \u7F16\u8BD1\u9636\u6BB5\u5C31\u4F1A\u62A5\u9519\u4E86
  */</span>
 <span class="token string-property property">&quot;no-octal&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用八进制的转义符
- * @reason 编译阶段就会报错了
+ * \u7981\u6B62\u4F7F\u7528\u516B\u8FDB\u5236\u7684\u8F6C\u4E49\u7B26
+ * @reason \u7F16\u8BD1\u9636\u6BB5\u5C31\u4F1A\u62A5\u9519\u4E86
  */</span>
 <span class="token string-property property">&quot;no-octal-escape&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止对函数的参数重新赋值
+ * \u7981\u6B62\u5BF9\u51FD\u6570\u7684\u53C2\u6570\u91CD\u65B0\u8D4B\u503C
  */</span>
 <span class="token string-property property">&quot;no-param-reassign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 ++ 或 --
+ * \u7981\u6B62\u4F7F\u7528 ++ \u6216 --
  */</span>
 <span class="token string-property property">&quot;no-plusplus&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 Promise 的回调函数中直接 return
- * @reason Promise程序函数通常会启动一些异步操作。完成后，执行程序应调用结果，或者如果发生错误。
+ * \u7981\u6B62\u5728 Promise \u7684\u56DE\u8C03\u51FD\u6570\u4E2D\u76F4\u63A5 return
+ * @reason Promise\u7A0B\u5E8F\u51FD\u6570\u901A\u5E38\u4F1A\u542F\u52A8\u4E00\u4E9B\u5F02\u6B65\u64CD\u4F5C\u3002\u5B8C\u6210\u540E\uFF0C\u6267\u884C\u7A0B\u5E8F\u5E94\u8C03\u7528\u7ED3\u679C\uFF0C\u6216\u8005\u5982\u679C\u53D1\u751F\u9519\u8BEF\u3002
  */</span>
 <span class="token string-property property">&quot;no-promise-executor-return&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 __proto__
- * @reason __proto__ 是已废弃的语法
+ * \u7981\u6B62\u4F7F\u7528 __proto__
+ * @reason __proto__ \u662F\u5DF2\u5E9F\u5F03\u7684\u8BED\u6CD5
  */</span>
 <span class="token string-property property">&quot;no-proto&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 hasOwnProperty, isPrototypeOf 或 propertyIsEnumerable
- * @reason hasOwnProperty 比较常用
+ * \u7981\u6B62\u4F7F\u7528 hasOwnProperty, isPrototypeOf \u6216 propertyIsEnumerable
+ * @reason hasOwnProperty \u6BD4\u8F83\u5E38\u7528
  */</span>
 <span class="token string-property property">&quot;no-prototype-builtins&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止重复定义变量
- * @reason 禁用 var 之后，编译阶段就会报错了
+ * \u7981\u6B62\u91CD\u590D\u5B9A\u4E49\u53D8\u91CF
+ * @reason \u7981\u7528 var \u4E4B\u540E\uFF0C\u7F16\u8BD1\u9636\u6BB5\u5C31\u4F1A\u62A5\u9519\u4E86
  */</span>
 <span class="token string-property property">&quot;no-redeclare&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在正则表达式中出现连续的空格
+ * \u7981\u6B62\u5728\u6B63\u5219\u8868\u8FBE\u5F0F\u4E2D\u51FA\u73B0\u8FDE\u7EED\u7684\u7A7A\u683C
  */</span>
 <span class="token string-property property">&quot;no-regex-spaces&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止导出指定的变量名
+ * \u7981\u6B62\u5BFC\u51FA\u6307\u5B9A\u7684\u53D8\u91CF\u540D
  */</span>
 <span class="token string-property property">&quot;no-restricted-exports&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用指定的全局变量
+ * \u7981\u6B62\u4F7F\u7528\u6307\u5B9A\u7684\u5168\u5C40\u53D8\u91CF
  */</span>
 <span class="token string-property property">&quot;no-restricted-globals&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止导入指定的模块
+ * \u7981\u6B62\u5BFC\u5165\u6307\u5B9A\u7684\u6A21\u5757
  */</span>
 <span class="token string-property property">&quot;no-restricted-imports&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用指定的对象属性
+ * \u7981\u6B62\u4F7F\u7528\u6307\u5B9A\u7684\u5BF9\u8C61\u5C5E\u6027
  */</span>
 <span class="token string-property property">&quot;no-restricted-properties&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用指定的语法
+ * \u7981\u6B62\u4F7F\u7528\u6307\u5B9A\u7684\u8BED\u6CD5
  */</span>
 <span class="token string-property property">&quot;no-restricted-syntax&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 return 语句里赋值
- * @reason 有时候代码会简写 例如 isLoading =&gt; this.isLoading = isLoading;
+ * \u7981\u6B62\u5728 return \u8BED\u53E5\u91CC\u8D4B\u503C
+ * @reason \u6709\u65F6\u5019\u4EE3\u7801\u4F1A\u7B80\u5199 \u4F8B\u5982 isLoading =&gt; this.isLoading = isLoading;
  */</span>
 <span class="token string-property property">&quot;no-return-assign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 return 语句里使用 await
+ * \u7981\u6B62\u5728 return \u8BED\u53E5\u91CC\u4F7F\u7528 await
  */</span>
 <span class="token string-property property">&quot;no-return-await&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止出现 location.href = &#39;javascript:void(0)&#39;;
- * @reason 有些场景下还是需要用到这个
+ * \u7981\u6B62\u51FA\u73B0 location.href = &#39;javascript:void(0)&#39;;
+ * @reason \u6709\u4E9B\u573A\u666F\u4E0B\u8FD8\u662F\u9700\u8981\u7528\u5230\u8FD9\u4E2A
  */</span>
 <span class="token string-property property">&quot;no-script-url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止将自己赋值给自己
+ * \u7981\u6B62\u5C06\u81EA\u5DF1\u8D4B\u503C\u7ED9\u81EA\u5DF1
  */</span>
 <span class="token string-property property">&quot;no-self-assign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止将自己与自己比较
+ * \u7981\u6B62\u5C06\u81EA\u5DF1\u4E0E\u81EA\u5DF1\u6BD4\u8F83
  */</span>
 <span class="token string-property property">&quot;no-self-compare&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用逗号操作符
+ * \u7981\u6B62\u4F7F\u7528\u9017\u53F7\u64CD\u4F5C\u7B26
  */</span>
 <span class="token string-property property">&quot;no-sequences&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止 setter 有返回值
+ * \u7981\u6B62 setter \u6709\u8FD4\u56DE\u503C
  */</span>
 <span class="token string-property property">&quot;no-setter-return&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止变量名与上层作用域内的已定义的变量重复
- * @reason 很多时候函数的形参和传参是同名的
+ * \u7981\u6B62\u53D8\u91CF\u540D\u4E0E\u4E0A\u5C42\u4F5C\u7528\u57DF\u5185\u7684\u5DF2\u5B9A\u4E49\u7684\u53D8\u91CF\u91CD\u590D
+ * @reason \u5F88\u591A\u65F6\u5019\u51FD\u6570\u7684\u5F62\u53C2\u548C\u4F20\u53C2\u662F\u540C\u540D\u7684
  */</span>
 <span class="token string-property property">&quot;no-shadow&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用保留字作为变量名
+ * \u7981\u6B62\u4F7F\u7528\u4FDD\u7559\u5B57\u4F5C\u4E3A\u53D8\u91CF\u540D
  */</span>
 <span class="token string-property property">&quot;no-shadow-restricted-names&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在数组中出现连续的逗号
+ * \u7981\u6B62\u5728\u6570\u7EC4\u4E2D\u51FA\u73B0\u8FDE\u7EED\u7684\u9017\u53F7
  */</span>
 <span class="token string-property property">&quot;no-sparse-arrays&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在普通字符串中出现模版字符串里的变量形式
+ * \u7981\u6B62\u5728\u666E\u901A\u5B57\u7B26\u4E32\u4E2D\u51FA\u73B0\u6A21\u7248\u5B57\u7B26\u4E32\u91CC\u7684\u53D8\u91CF\u5F62\u5F0F
  */</span>
 <span class="token string-property property">&quot;no-template-curly-in-string&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用三元表达式
+ * \u7981\u6B62\u4F7F\u7528\u4E09\u5143\u8868\u8FBE\u5F0F
  */</span>
 <span class="token string-property property">&quot;no-ternary&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 super 被调用之前使用 this 或 super
+ * \u7981\u6B62\u5728 super \u88AB\u8C03\u7528\u4E4B\u524D\u4F7F\u7528 this \u6216 super
  */</span>
 <span class="token string-property property">&quot;no-this-before-super&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止 throw 字面量，必须 throw 一个 Error 对象
+ * \u7981\u6B62 throw \u5B57\u9762\u91CF\uFF0C\u5FC5\u987B throw \u4E00\u4E2A Error \u5BF9\u8C61
  */</span>
 <span class="token string-property property">&quot;no-throw-literal&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用未定义的变量
+ * \u7981\u6B62\u4F7F\u7528\u672A\u5B9A\u4E49\u7684\u53D8\u91CF
  */</span>
 <span class="token string-property property">&quot;no-undef&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止将 undefined 赋值给变量
+ * \u7981\u6B62\u5C06 undefined \u8D4B\u503C\u7ED9\u53D8\u91CF
  */</span>
 <span class="token string-property property">&quot;no-undef-init&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 undefined
+ * \u7981\u6B62\u4F7F\u7528 undefined
  */</span>
 <span class="token string-property property">&quot;no-undefined&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止变量名出现下划线
+ * \u7981\u6B62\u53D8\u91CF\u540D\u51FA\u73B0\u4E0B\u5212\u7EBF
  */</span>
 <span class="token string-property property">&quot;no-underscore-dangle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 循环内必须对循环条件中的变量有修改
+ * \u5FAA\u73AF\u5185\u5FC5\u987B\u5BF9\u5FAA\u73AF\u6761\u4EF6\u4E2D\u7684\u53D8\u91CF\u6709\u4FEE\u6539
  */</span>
 <span class="token string-property property">&quot;no-unmodified-loop-condition&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 必须使用 !a 替代 a ? false : true
- * @reason 允许三元运算符后边是表达式的情况
+ * \u5FC5\u987B\u4F7F\u7528 !a \u66FF\u4EE3 a ? false : true
+ * @reason \u5141\u8BB8\u4E09\u5143\u8FD0\u7B97\u7B26\u540E\u8FB9\u662F\u8868\u8FBE\u5F0F\u7684\u60C5\u51B5
  */</span>
 <span class="token string-property property">&quot;no-unneeded-ternary&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">defaultAssignment</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 return, throw, break 或 continue 之后还有代码
+ * \u7981\u6B62\u5728 return, throw, break \u6216 continue \u4E4B\u540E\u8FD8\u6709\u4EE3\u7801
  */</span>
 <span class="token string-property property">&quot;no-unreachable&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在第一轮循环时就一定会退出循环的情况出现
- * @reason 在极少数情况下，只有一次迭代（或最多一次迭代）是预期行为，应重构代码以使用条件而不是 和 循环。最佳做法是避免对此类情况使用循环构造。
+ * \u7981\u6B62\u5728\u7B2C\u4E00\u8F6E\u5FAA\u73AF\u65F6\u5C31\u4E00\u5B9A\u4F1A\u9000\u51FA\u5FAA\u73AF\u7684\u60C5\u51B5\u51FA\u73B0
+ * @reason \u5728\u6781\u5C11\u6570\u60C5\u51B5\u4E0B\uFF0C\u53EA\u6709\u4E00\u6B21\u8FED\u4EE3\uFF08\u6216\u6700\u591A\u4E00\u6B21\u8FED\u4EE3\uFF09\u662F\u9884\u671F\u884C\u4E3A\uFF0C\u5E94\u91CD\u6784\u4EE3\u7801\u4EE5\u4F7F\u7528\u6761\u4EF6\u800C\u4E0D\u662F \u548C \u5FAA\u73AF\u3002\u6700\u4F73\u505A\u6CD5\u662F\u907F\u514D\u5BF9\u6B64\u7C7B\u60C5\u51B5\u4F7F\u7528\u5FAA\u73AF\u6784\u9020\u3002
  */</span>
 <span class="token string-property property">&quot;no-unreachable-loop&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 finally 中出现 return, throw, break 或 continue
- * @reason finally 中的语句会在 try 之前执行
+ * \u7981\u6B62\u5728 finally \u4E2D\u51FA\u73B0 return, throw, break \u6216 continue
+ * @reason finally \u4E2D\u7684\u8BED\u53E5\u4F1A\u5728 try \u4E4B\u524D\u6267\u884C
  */</span>
 <span class="token string-property property">&quot;no-unsafe-finally&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 in 或 instanceof 操作符的左侧变量前使用感叹号
+ * \u7981\u6B62\u5728 in \u6216 instanceof \u64CD\u4F5C\u7B26\u7684\u5DE6\u4FA7\u53D8\u91CF\u524D\u4F7F\u7528\u611F\u53F9\u53F7
  */</span>
 <span class="token string-property property">&quot;no-unsafe-negation&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 不允许在不允许使用值的上下文中使用可选链接
+ * \u4E0D\u5141\u8BB8\u5728\u4E0D\u5141\u8BB8\u4F7F\u7528\u503C\u7684\u4E0A\u4E0B\u6587\u4E2D\u4F7F\u7528\u53EF\u9009\u94FE\u63A5
  */</span>
 <span class="token string-property property">&quot;no-unsafe-optional-chaining&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止无用的表达式
+ * \u7981\u6B62\u65E0\u7528\u7684\u8868\u8FBE\u5F0F
  */</span>
 <span class="token string-property property">&quot;no-unused-expressions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -730,12 +712,12 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止出现没用到的 label
- * @reason 已经禁止使用 label 了
+ * \u7981\u6B62\u51FA\u73B0\u6CA1\u7528\u5230\u7684 label
+ * @reason \u5DF2\u7ECF\u7981\u6B62\u4F7F\u7528 label \u4E86
  */</span>
 <span class="token string-property property">&quot;no-unused-labels&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 已定义的变量必须使用
+ * \u5DF2\u5B9A\u4E49\u7684\u53D8\u91CF\u5FC5\u987B\u4F7F\u7528
  */</span>
 <span class="token string-property property">&quot;no-unused-vars&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -747,73 +729,73 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 变量必须先定义后使用
+ * \u53D8\u91CF\u5FC5\u987B\u5148\u5B9A\u4E49\u540E\u4F7F\u7528
  */</span>
 <span class="token string-property property">&quot;no-use-before-define&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token punctuation">{</span> <span class="token literal-property property">functions</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">classes</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token literal-property property">variables</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止正则表达式中出现无用的回溯引用
- * @reason 某些回溯引用语法上没问题，但是会永远匹配到空字符串
+ * \u7981\u6B62\u6B63\u5219\u8868\u8FBE\u5F0F\u4E2D\u51FA\u73B0\u65E0\u7528\u7684\u56DE\u6EAF\u5F15\u7528
+ * @reason \u67D0\u4E9B\u56DE\u6EAF\u5F15\u7528\u8BED\u6CD5\u4E0A\u6CA1\u95EE\u9898\uFF0C\u4F46\u662F\u4F1A\u6C38\u8FDC\u5339\u914D\u5230\u7A7A\u5B57\u7B26\u4E32
  */</span>
 <span class="token string-property property">&quot;no-useless-backreference&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止出现没必要的 call 或 apply
+ * \u7981\u6B62\u51FA\u73B0\u6CA1\u5FC5\u8981\u7684 call \u6216 apply
  */</span>
 <span class="token string-property property">&quot;no-useless-call&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 catch 中仅仅只是把错误 throw 出去
- * @reason 这样的 catch 是没有意义的，等价于直接执行 try 里的代码
+ * \u7981\u6B62\u5728 catch \u4E2D\u4EC5\u4EC5\u53EA\u662F\u628A\u9519\u8BEF throw \u51FA\u53BB
+ * @reason \u8FD9\u6837\u7684 catch \u662F\u6CA1\u6709\u610F\u4E49\u7684\uFF0C\u7B49\u4EF7\u4E8E\u76F4\u63A5\u6267\u884C try \u91CC\u7684\u4EE3\u7801
  */</span>
 <span class="token string-property property">&quot;no-useless-catch&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止出现没必要的计算键名
+ * \u7981\u6B62\u51FA\u73B0\u6CA1\u5FC5\u8981\u7684\u8BA1\u7B97\u952E\u540D
  */</span>
 <span class="token string-property property">&quot;no-useless-computed-key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止出现没必要的字符串连接
+ * \u7981\u6B62\u51FA\u73B0\u6CA1\u5FC5\u8981\u7684\u5B57\u7B26\u4E32\u8FDE\u63A5
  */</span>
 <span class="token string-property property">&quot;no-useless-concat&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止出现没必要的 constructor
+ * \u7981\u6B62\u51FA\u73B0\u6CA1\u5FC5\u8981\u7684 constructor
  */</span>
 <span class="token string-property property">&quot;no-useless-constructor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止出现没必要的转义
+ * \u7981\u6B62\u51FA\u73B0\u6CA1\u5FC5\u8981\u7684\u8F6C\u4E49
  */</span>
 <span class="token string-property property">&quot;no-useless-escape&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止解构赋值时出现同样名字的的重命名，比如 let { foo: foo } = bar;
+ * \u7981\u6B62\u89E3\u6784\u8D4B\u503C\u65F6\u51FA\u73B0\u540C\u6837\u540D\u5B57\u7684\u7684\u91CD\u547D\u540D\uFF0C\u6BD4\u5982 let { foo: foo } = bar;
  */</span>
 <span class="token string-property property">&quot;no-useless-rename&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止没必要的 return
+ * \u7981\u6B62\u6CA1\u5FC5\u8981\u7684 return
  */</span>
 <span class="token string-property property">&quot;no-useless-return&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 var
+ * \u7981\u6B62\u4F7F\u7528 var
  */</span>
 <span class="token string-property property">&quot;no-var&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 void
+ * \u7981\u6B62\u4F7F\u7528 void
  */</span>
 <span class="token string-property property">&quot;no-void&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止注释中出现 TODO 和 FIXME
+ * \u7981\u6B62\u6CE8\u91CA\u4E2D\u51FA\u73B0 TODO \u548C FIXME
  */</span>
 <span class="token string-property property">&quot;no-warning-comments&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 with
- * @reason 编译阶段就会报错了
+ * \u7981\u6B62\u4F7F\u7528 with
+ * @reason \u7F16\u8BD1\u9636\u6BB5\u5C31\u4F1A\u62A5\u9519\u4E86
  */</span>
 <span class="token string-property property">&quot;no-with&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 允许连续空行
+ * \u5141\u8BB8\u8FDE\u7EED\u7A7A\u884C
  */</span>
 <span class="token string-property property">&quot;no-multiple-empty-lines&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 必须使用 a = {b} 而不是 a = {b: b}
+ * \u5FC5\u987B\u4F7F\u7528 a = {b} \u800C\u4E0D\u662F a = {b: b}
  */</span>
 <span class="token string-property property">&quot;object-shorthand&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -824,23 +806,23 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 对象文字的大括号内执行一致的间距，解构赋值和导入/导出说明符
+ * \u5BF9\u8C61\u6587\u5B57\u7684\u5927\u62EC\u53F7\u5185\u6267\u884C\u4E00\u81F4\u7684\u95F4\u8DDD\uFF0C\u89E3\u6784\u8D4B\u503C\u548C\u5BFC\u5165/\u5BFC\u51FA\u8BF4\u660E\u7B26
  */</span>
 <span class="token string-property property">&quot;object-curly-spacing&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;always&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止变量申明时用逗号一次申明多个
+ * \u7981\u6B62\u53D8\u91CF\u7533\u660E\u65F6\u7528\u9017\u53F7\u4E00\u6B21\u7533\u660E\u591A\u4E2A
  */</span>
 <span class="token string-property property">&quot;one-var&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;never&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 必须使用 x = x + y 而不是 x += y
+ * \u5FC5\u987B\u4F7F\u7528 x = x + y \u800C\u4E0D\u662F x += y
  */</span>
 <span class="token string-property property">&quot;operator-assignment&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 限制语句之间的空行规则，比如变量定义完之后必须要空行
+ * \u9650\u5236\u8BED\u53E5\u4E4B\u95F4\u7684\u7A7A\u884C\u89C4\u5219\uFF0C\u6BD4\u5982\u53D8\u91CF\u5B9A\u4E49\u5B8C\u4E4B\u540E\u5FC5\u987B\u8981\u7A7A\u884C
  */</span>
 <span class="token string-property property">&quot;padding-line-between-statements&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 回调函数必须使用箭头函数
+ * \u56DE\u8C03\u51FD\u6570\u5FC5\u987B\u4F7F\u7528\u7BAD\u5934\u51FD\u6570
  */</span>
 <span class="token string-property property">&quot;prefer-arrow-callback&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -850,12 +832,12 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 不强制 const 还是let
- * @reason 如果一个变量不会被重新赋值，最好使用const进行声明
+ * \u4E0D\u5F3A\u5236 const \u8FD8\u662Flet
+ * @reason \u5982\u679C\u4E00\u4E2A\u53D8\u91CF\u4E0D\u4F1A\u88AB\u91CD\u65B0\u8D4B\u503C\uFF0C\u6700\u597D\u4F7F\u7528const\u8FDB\u884C\u58F0\u660E
  */</span>
 <span class="token string-property property">&quot;prefer-const&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">destructuring</span><span class="token operator">:</span> <span class="token string">&quot;all&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 解构 对象
+ * \u89E3\u6784 \u5BF9\u8C61
  */</span>
 <span class="token string-property property">&quot;prefer-destructuring&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -865,29 +847,29 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 使用 ES2016 的语法 ** 替代 Math.pow
+ * \u4F7F\u7528 ES2016 \u7684\u8BED\u6CD5 ** \u66FF\u4EE3 Math.pow
  */</span>
 <span class="token string-property property">&quot;prefer-exponentiation-operator&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 使用 ES2018 中的正则表达式命名组
- * @reason 正则表达式已经较难理解了，没必要强制加上命名组
+ * \u4F7F\u7528 ES2018 \u4E2D\u7684\u6B63\u5219\u8868\u8FBE\u5F0F\u547D\u540D\u7EC4
+ * @reason \u6B63\u5219\u8868\u8FBE\u5F0F\u5DF2\u7ECF\u8F83\u96BE\u7406\u89E3\u4E86\uFF0C\u6CA1\u5FC5\u8981\u5F3A\u5236\u52A0\u4E0A\u547D\u540D\u7EC4
  */</span>
 <span class="token string-property property">&quot;prefer-named-capture-group&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 必须使用 0b11111011 而不是 parseInt()
+ * \u5FC5\u987B\u4F7F\u7528 0b11111011 \u800C\u4E0D\u662F parseInt()
  */</span>
 <span class="token string-property property">&quot;prefer-numeric-literals&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 必须使用 ... 而不是 Object.assign，除非 Object.assign 的第一个参数是一个变量
+ * \u5FC5\u987B\u4F7F\u7528 ... \u800C\u4E0D\u662F Object.assign\uFF0C\u9664\u975E Object.assign \u7684\u7B2C\u4E00\u4E2A\u53C2\u6570\u662F\u4E00\u4E2A\u53D8\u91CF
  */</span>
 <span class="token string-property property">&quot;prefer-object-spread&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * Promise 的 reject 中必须传入 Error 对象，而不是字面量
- * @reason Error 对象会自动存储堆栈跟踪，在调试时，通过它可以用来确定错误是从哪里来的
+ * Promise \u7684 reject \u4E2D\u5FC5\u987B\u4F20\u5165 Error \u5BF9\u8C61\uFF0C\u800C\u4E0D\u662F\u5B57\u9762\u91CF
+ * @reason Error \u5BF9\u8C61\u4F1A\u81EA\u52A8\u5B58\u50A8\u5806\u6808\u8DDF\u8E2A\uFF0C\u5728\u8C03\u8BD5\u65F6\uFF0C\u901A\u8FC7\u5B83\u53EF\u4EE5\u7528\u6765\u786E\u5B9A\u9519\u8BEF\u662F\u4ECE\u54EA\u91CC\u6765\u7684
  */</span>
 <span class="token string-property property">&quot;prefer-promise-reject-errors&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">allowEmptyReject</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 优先使用正则表达式字面量，而不是 RegExp 构造函数
+ * \u4F18\u5148\u4F7F\u7528\u6B63\u5219\u8868\u8FBE\u5F0F\u5B57\u9762\u91CF\uFF0C\u800C\u4E0D\u662F RegExp \u6784\u9020\u51FD\u6570
  */</span>
 <span class="token string-property property">&quot;prefer-regex-literals&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -896,58 +878,58 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 必须使用 ...args 而不是 arguments
+ * \u5FC5\u987B\u4F7F\u7528 ...args \u800C\u4E0D\u662F arguments
  */</span>
 <span class="token string-property property">&quot;prefer-rest-params&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 必须使用 ... 而不是 apply，比如 foo(...args)
+ * \u5FC5\u987B\u4F7F\u7528 ... \u800C\u4E0D\u662F apply\uFF0C\u6BD4\u5982 foo(...args)
  */</span>
 <span class="token string-property property">&quot;prefer-spread&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 必须使用模版字符串而不是字符串连接
+ * \u5FC5\u987B\u4F7F\u7528\u6A21\u7248\u5B57\u7B26\u4E32\u800C\u4E0D\u662F\u5B57\u7B26\u4E32\u8FDE\u63A5
  */</span>
 <span class="token string-property property">&quot;prefer-template&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 强制使用反撇号、双引号或单引号
+ * \u5F3A\u5236\u4F7F\u7528\u53CD\u6487\u53F7\u3001\u53CC\u5F15\u53F7\u6216\u5355\u5F15\u53F7
  */</span>
 <span class="token literal-property property">quotes</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;double&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * parseInt 必须传入第二个参数
+ * parseInt \u5FC5\u987B\u4F20\u5165\u7B2C\u4E8C\u4E2A\u53C2\u6570
  */</span>
 <span class="token literal-property property">radix</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止将 await 或 yield 的结果做为运算符的后面项
- * @reason 这样会导致不符合预期的结果
+ * \u7981\u6B62\u5C06 await \u6216 yield \u7684\u7ED3\u679C\u505A\u4E3A\u8FD0\u7B97\u7B26\u7684\u540E\u9762\u9879
+ * @reason \u8FD9\u6837\u4F1A\u5BFC\u81F4\u4E0D\u7B26\u5408\u9884\u671F\u7684\u7ED3\u679C
  * https://github.com/eslint/eslint/issues/11899
- * 在上面 issue 修复之前，关闭此规则
+ * \u5728\u4E0A\u9762 issue \u4FEE\u590D\u4E4B\u524D\uFF0C\u5173\u95ED\u6B64\u89C4\u5219
  */</span>
 <span class="token string-property property">&quot;require-atomic-updates&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * async 函数中必须存在 await 语句
+ * async \u51FD\u6570\u4E2D\u5FC5\u987B\u5B58\u5728 await \u8BED\u53E5
  */</span>
 <span class="token string-property property">&quot;require-await&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 正则表达式中必须要加上 u 标志
+ * \u6B63\u5219\u8868\u8FBE\u5F0F\u4E2D\u5FC5\u987B\u8981\u52A0\u4E0A u \u6807\u5FD7
  */</span>
 <span class="token string-property property">&quot;require-unicode-regexp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * generator 函数内必须有 yield
+ * generator \u51FD\u6570\u5185\u5FC5\u987B\u6709 yield
  */</span>
 <span class="token string-property property">&quot;require-yield&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 导入必须按规则排序
+ * \u5BFC\u5165\u5FC5\u987B\u6309\u89C4\u5219\u6392\u5E8F
  */</span>
 <span class="token string-property property">&quot;sort-imports&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 对象字面量的键名必须排好序
+ * \u5BF9\u8C61\u5B57\u9762\u91CF\u7684\u952E\u540D\u5FC5\u987B\u6392\u597D\u5E8F
  */</span>
 <span class="token string-property property">&quot;sort-keys&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 变量申明必须排好序
+ * \u53D8\u91CF\u7533\u660E\u5FC5\u987B\u6392\u597D\u5E8F
  */</span>
 <span class="token string-property property">&quot;sort-vars&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 注释的斜线或 * 后必须有空格
+ * \u6CE8\u91CA\u7684\u659C\u7EBF\u6216 * \u540E\u5FC5\u987B\u6709\u7A7A\u683C
  */</span>
 <span class="token string-property property">&quot;spaced-comment&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -960,23 +942,23 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 强制执行块前间距的一致性
+ * \u5F3A\u5236\u6267\u884C\u5757\u524D\u95F4\u8DDD\u7684\u4E00\u81F4\u6027
  */</span>
 <span class="token string-property property">&quot;space-before-blocks&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 在“function”定义的左括号前强制使用一致的间距
+ * \u5728\u201Cfunction\u201D\u5B9A\u4E49\u7684\u5DE6\u62EC\u53F7\u524D\u5F3A\u5236\u4F7F\u7528\u4E00\u81F4\u7684\u95F4\u8DDD
  */</span>
 <span class="token string-property property">&quot;space-before-function-paren&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止或强制使用括号内的空格（括号中的空格）
+ * \u7981\u6B62\u6216\u5F3A\u5236\u4F7F\u7528\u62EC\u53F7\u5185\u7684\u7A7A\u683C\uFF08\u62EC\u53F7\u4E2D\u7684\u7A7A\u683C\uFF09
  */</span>
 <span class="token string-property property">&quot;space-in-parens&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 需要在中缀运算符周围留出空格
+ * \u9700\u8981\u5728\u4E2D\u7F00\u8FD0\u7B97\u7B26\u5468\u56F4\u7559\u51FA\u7A7A\u683C
  */</span>
 <span class="token string-property property">&quot;space-infix-ops&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">int32Hint</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 要求或禁止在一元运算符之前/之后使用空格
+ * \u8981\u6C42\u6216\u7981\u6B62\u5728\u4E00\u5143\u8FD0\u7B97\u7B26\u4E4B\u524D/\u4E4B\u540E\u4F7F\u7528\u7A7A\u683C
  */</span>
 <span class="token string-property property">&quot;space-unary-ops&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
 <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -990,67 +972,67 @@
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 &#39;strict&#39;;
+ * \u7981\u6B62\u4F7F\u7528 &#39;strict&#39;;
  */</span>
 <span class="token literal-property property">strict</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;never&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 使用分号
+ * \u4F7F\u7528\u5206\u53F7
  */</span>
 <span class="token literal-property property">semi</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;never&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 创建 Symbol 时必须传入参数
+ * \u521B\u5EFA Symbol \u65F6\u5FC5\u987B\u4F20\u5165\u53C2\u6570
  */</span>
 <span class="token string-property property">&quot;symbol-description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 必须使用 isNaN(foo) 而不是 foo === NaN
+ * \u5FC5\u987B\u4F7F\u7528 isNaN(foo) \u800C\u4E0D\u662F foo === NaN
  */</span>
 <span class="token string-property property">&quot;use-isnan&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * typeof 表达式比较的对象必须是 &#39;undefined&#39;, &#39;object&#39;, &#39;boolean&#39;, &#39;number&#39;, &#39;string&#39;, &#39;function&#39;, &#39;symbol&#39;, 或 &#39;bigint&#39;
+ * typeof \u8868\u8FBE\u5F0F\u6BD4\u8F83\u7684\u5BF9\u8C61\u5FC5\u987B\u662F &#39;undefined&#39;, &#39;object&#39;, &#39;boolean&#39;, &#39;number&#39;, &#39;string&#39;, &#39;function&#39;, &#39;symbol&#39;, \u6216 &#39;bigint&#39;
  */</span>
 <span class="token string-property property">&quot;valid-typeof&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * var 必须在作用域的最前面
+ * var \u5FC5\u987B\u5728\u4F5C\u7528\u57DF\u7684\u6700\u524D\u9762
  */</span>
 <span class="token string-property property">&quot;vars-on-top&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 必须使用 if (foo === 5) 而不是 if (5 === foo)
+ * \u5FC5\u987B\u4F7F\u7528 if (foo === 5) \u800C\u4E0D\u662F if (5 === foo)
  */</span>
 <span class="token literal-property property">yoda</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span>
-</code></pre></div><h2 id="vue2-规则"><a class="header-anchor" href="#vue2-规则" aria-hidden="true">#</a> Vue2 规则</h2><p>参考 Vue 官方规则文档 <a href="http://eslint.vuejs.org/rules/" target="_blank" rel="noopener noreferrer">eslint.vuejs.org/rules/</a></p><div class="language-js"><pre><code><span class="token comment">/**
- * 限制自定义组件的 attrs属性风格
+</code></pre></div><h2 id="vue2-\u89C4\u5219"><a class="header-anchor" href="#vue2-\u89C4\u5219" aria-hidden="true">#</a> Vue2 \u89C4\u5219</h2><p>\u53C2\u8003 Vue \u5B98\u65B9\u89C4\u5219\u6587\u6863 <a href="http://eslint.vuejs.org/rules/" target="_blank" rel="noopener noreferrer">eslint.vuejs.org/rules/</a></p><div class="language-js"><pre><code><span class="token comment">/**
+ * \u9650\u5236\u81EA\u5B9A\u4E49\u7EC4\u4EF6\u7684 attrs\u5C5E\u6027\u98CE\u683C
  */</span>
 <span class="token string-property property">&quot;vue/attribute-hyphenation&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * &lt;script&gt; 标签必须有 lang 属性
+ * &lt;script&gt; \u6807\u7B7E\u5FC5\u987B\u6709 lang \u5C5E\u6027
  */</span>
 <span class="token string-property property">&quot;vue/block-lang&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 变量名必须是 camelCase 风格的
- * @reason 很多 api 或文件名都不是 camelCase 风格的
+ * \u53D8\u91CF\u540D\u5FC5\u987B\u662F camelCase \u98CE\u683C\u7684
+ * @reason \u5F88\u591A api \u6216\u6587\u4EF6\u540D\u90FD\u4E0D\u662F camelCase \u98CE\u683C\u7684
  */</span>
 <span class="token string-property property">&quot;vue/camelcase&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 支持在模版中使用 eslint-disable-next-line 等注释
+ * \u652F\u6301\u5728\u6A21\u7248\u4E2D\u4F7F\u7528 eslint-disable-next-line \u7B49\u6CE8\u91CA
  */</span>
 <span class="token string-property property">&quot;vue/comment-directive&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 组件的 name 命名规则 ， 默认启用中划线
- * @reason 这是官方建议的规范
+ * \u7EC4\u4EF6\u7684 name \u547D\u540D\u89C4\u5219 \uFF0C \u9ED8\u8BA4\u542F\u7528\u4E2D\u5212\u7EBF
+ * @reason \u8FD9\u662F\u5B98\u65B9\u5EFA\u8BAE\u7684\u89C4\u8303
  */</span>
 <span class="token string-property property">&quot;vue/component-definition-name-casing&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;kebab-case&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 此规则旨在为第一个属性强制实施一致的位置。
- * @reason 这是官方建议的规范
+ * \u6B64\u89C4\u5219\u65E8\u5728\u4E3A\u7B2C\u4E00\u4E2A\u5C5E\u6027\u5F3A\u5236\u5B9E\u65BD\u4E00\u81F4\u7684\u4F4D\u7F6E\u3002
+ * @reason \u8FD9\u662F\u5B98\u65B9\u5EFA\u8BAE\u7684\u89C4\u8303
  */</span>
 <span class="token string-property property">&quot;vue/first-attribute-linebreak&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * v-text 指令必须合法
+ * v-text \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5
  */</span>
 <span class="token string-property property">&quot;vue/valid-v-text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token string-property property">&quot;vue/html-indent&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 元素开始 &gt; 括号是否换行
+ * \u5143\u7D20\u5F00\u59CB &gt; \u62EC\u53F7\u662F\u5426\u6362\u884C
  */</span>
 <span class="token string-property property">&quot;vue/html-closing-bracket-newline&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -1060,23 +1042,23 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 要求或不允许在标记的右括号前加上空格
+ * \u8981\u6C42\u6216\u4E0D\u5141\u8BB8\u5728\u6807\u8BB0\u7684\u53F3\u62EC\u53F7\u524D\u52A0\u4E0A\u7A7A\u683C
  */</span>
 <span class="token string-property property">&quot;vue/html-closing-bracket-spacing&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 此规则旨在禁止缺少结束标记。
+ * \u6B64\u89C4\u5219\u65E8\u5728\u7981\u6B62\u7F3A\u5C11\u7ED3\u675F\u6807\u8BB0\u3002
  */</span>
 <span class="token string-property property">&quot;vue/html-end-tags&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 如果属性的引号与配置的引号不同，则此规则将报告该引号。
+ * \u5982\u679C\u5C5E\u6027\u7684\u5F15\u53F7\u4E0E\u914D\u7F6E\u7684\u5F15\u53F7\u4E0D\u540C\uFF0C\u5219\u6B64\u89C4\u5219\u5C06\u62A5\u544A\u8BE5\u5F15\u53F7\u3002
  */</span>
 <span class="token string-property property">&quot;vue/html-quotes&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;double&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">avoidEscape</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 此规则旨在强制将自闭合符号作为配置的样式。
+ * \u6B64\u89C4\u5219\u65E8\u5728\u5F3A\u5236\u5C06\u81EA\u95ED\u5408\u7B26\u53F7\u4F5C\u4E3A\u914D\u7F6E\u7684\u6837\u5F0F\u3002
  */</span>
 <span class="token string-property property">&quot;vue/html-self-closing&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 强制要求每行的最大属性数
+ * \u5F3A\u5236\u8981\u6C42\u6BCF\u884C\u7684\u6700\u5927\u5C5E\u6027\u6570
  */</span>
 <span class="token string-property property">&quot;vue/max-attributes-per-line&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -1090,63 +1072,63 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 差值表达式 中数据左右是否有间距
+ * \u5DEE\u503C\u8868\u8FBE\u5F0F \u4E2D\u6570\u636E\u5DE6\u53F3\u662F\u5426\u6709\u95F4\u8DDD
  */</span>
 <span class="token string-property property">&quot;vue/mustache-interpolation-spacing&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;always&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 在多行元素的内容之前和之后需要换行符
+ * \u5728\u591A\u884C\u5143\u7D20\u7684\u5185\u5BB9\u4E4B\u524D\u548C\u4E4B\u540E\u9700\u8981\u6362\u884C\u7B26
  */</span>
 <span class="token string-property property">&quot;vue/multiline-html-element-content-newline&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 不允许多个空格,标签attr属性中
+ * \u4E0D\u5141\u8BB8\u591A\u4E2A\u7A7A\u683C,\u6807\u7B7Eattr\u5C5E\u6027\u4E2D
  */</span>
 <span class="token string-property property">&quot;vue/no-multi-spaces&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 不允许在属性中的等号周围留空格
+ * \u4E0D\u5141\u8BB8\u5728\u5C5E\u6027\u4E2D\u7684\u7B49\u53F7\u5468\u56F4\u7559\u7A7A\u683C
  */</span>
 <span class="token string-property property">&quot;vue/no-spaces-around-equal-signs-in-attribute&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止从外部作用域中声明的阴影变量中声明变量
+ * \u7981\u6B62\u4ECE\u5916\u90E8\u4F5C\u7528\u57DF\u4E2D\u58F0\u660E\u7684\u9634\u5F71\u53D8\u91CF\u4E2D\u58F0\u660E\u53D8\u91CF
  */</span>
 <span class="token string-property property">&quot;vue/no-template-shadow&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 强制每个组件都应该再单独的文件中
+ * \u5F3A\u5236\u6BCF\u4E2A\u7EC4\u4EF6\u90FD\u5E94\u8BE5\u518D\u5355\u72EC\u7684\u6587\u4EF6\u4E2D
  */</span>
 <span class="token string-property property">&quot;vue/one-component-per-file&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 强制约束 定义的 props name为 驼峰命名
+ * \u5F3A\u5236\u7EA6\u675F \u5B9A\u4E49\u7684 props name\u4E3A \u9A7C\u5CF0\u547D\u540D
  */</span>
 <span class="token string-property property">&quot;vue/prop-name-casing&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * props 属性需要默认值
+ * props \u5C5E\u6027\u9700\u8981\u9ED8\u8BA4\u503C
  */</span>
 <span class="token string-property property">&quot;vue/require-default-prop&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * props 属性 需要type类型
+ * props \u5C5E\u6027 \u9700\u8981type\u7C7B\u578B
  */</span>
 <span class="token string-property property">&quot;vue/require-prop-types&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 差值表达式 前后是否需要换行符
+ * \u5DEE\u503C\u8868\u8FBE\u5F0F \u524D\u540E\u662F\u5426\u9700\u8981\u6362\u884C\u7B26
  */</span>
 <span class="token string-property property">&quot;vue/singleline-html-element-content-newline&quot;</span><span class="token operator">:</span> <span class="token string">&quot;warn&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 规定v-bind的写法（简写:key=“value”）
+ * \u89C4\u5B9Av-bind\u7684\u5199\u6CD5\uFF08\u7B80\u5199:key=\u201Cvalue\u201D\uFF09
  */</span>
 <span class="token string-property property">&quot;vue/v-bind-style&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- *规定v-on的写法（简写@click=“event”）
+ *\u89C4\u5B9Av-on\u7684\u5199\u6CD5\uFF08\u7B80\u5199@click=\u201Cevent\u201D\uFF09
     */</span>
 <span class="token string-property property">&quot;vue/v-on-style&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * slot 规则强制实施应使用速记或长格式的指令样式
+ * slot \u89C4\u5219\u5F3A\u5236\u5B9E\u65BD\u5E94\u4F7F\u7528\u901F\u8BB0\u6216\u957F\u683C\u5F0F\u7684\u6307\u4EE4\u6837\u5F0F
  */</span>
 <span class="token string-property property">&quot;vue/v-slot-style&quot;</span><span class="token operator">:</span> <span class="token string">&quot;warn&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 强制执行属性顺序,vue官方推荐的
+ * \u5F3A\u5236\u6267\u884C\u5C5E\u6027\u987A\u5E8F,vue\u5B98\u65B9\u63A8\u8350\u7684
  */</span>
 <span class="token string-property property">&quot;vue/attributes-order&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 页面根元素的书写顺序
+ * \u9875\u9762\u6839\u5143\u7D20\u7684\u4E66\u5199\u987A\u5E8F
  */</span>
 <span class="token string-property property">&quot;vue/component-tags-order&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -1155,32 +1137,32 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 不允许不必要的&lt;template&gt;
+ * \u4E0D\u5141\u8BB8\u4E0D\u5FC5\u8981\u7684&lt;template&gt;
  */</span>
 <span class="token string-property property">&quot;vue/no-lone-template&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止给 scoped slots 传递多个参数
+ * \u7981\u6B62\u7ED9 scoped slots \u4F20\u9012\u591A\u4E2A\u53C2\u6570
  */</span>
 <span class="token string-property property">&quot;vue/no-multiple-slot-args&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止使用 v-html
- * @reason 某些情况下还是可以使用的
+ * \u7981\u6B62\u4F7F\u7528 v-html
+ * @reason \u67D0\u4E9B\u60C5\u51B5\u4E0B\u8FD8\u662F\u53EF\u4EE5\u4F7F\u7528\u7684
  */</span>
 <span class="token string-property property">&quot;vue/no-v-html&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 此规则可确保在组件中保留声明的属性顺序
+ * \u6B64\u89C4\u5219\u53EF\u786E\u4FDD\u5728\u7EC4\u4EF6\u4E2D\u4FDD\u7559\u58F0\u660E\u7684\u5C5E\u6027\u987A\u5E8F
  */</span>
 <span class="token string-property property">&quot;vue/order-in-components&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在模版中用 this
+ * \u7981\u6B62\u5728\u6A21\u7248\u4E2D\u7528 this
  */</span>
 <span class="token string-property property">&quot;vue/this-in-template&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 要求组件命名是多字的
+ * \u8981\u6C42\u7EC4\u4EF6\u547D\u540D\u662F\u591A\u5B57\u7684
  */</span>
 <span class="token string-property property">&quot;vue/multi-word-component-names&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 对自定义事件名称强制实施特定大小写
+ * \u5BF9\u81EA\u5B9A\u4E49\u4E8B\u4EF6\u540D\u79F0\u5F3A\u5236\u5B9E\u65BD\u7279\u5B9A\u5927\u5C0F\u5199
  */</span>
 <span class="token string-property property">&quot;vue/custom-event-name-casing&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -1190,32 +1172,32 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * watch 中禁止使用箭头函数 , 怕this指向有问题
+ * watch \u4E2D\u7981\u6B62\u4F7F\u7528\u7BAD\u5934\u51FD\u6570 , \u6015this\u6307\u5411\u6709\u95EE\u9898
  */</span>
 <span class="token string-property property">&quot;vue/no-arrow-functions-in-watch&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 计算属性禁止包含异步方法
+ * \u8BA1\u7B97\u5C5E\u6027\u7981\u6B62\u5305\u542B\u5F02\u6B65\u65B9\u6CD5
  */</span>
 <span class="token string-property property">&quot;vue/no-async-in-computed-properties&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止data定义属性中直接访问计算属性
+ * \u7981\u6B62data\u5B9A\u4E49\u5C5E\u6027\u4E2D\u76F4\u63A5\u8BBF\u95EE\u8BA1\u7B97\u5C5E\u6027
  */</span>
 <span class="token string-property property">&quot;vue/no-computed-properties-in-data&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在组件上使用 模型上的自定义修饰符
- * @reason 在某些情况可能会出现自定义修饰符
+ * \u7981\u6B62\u5728\u7EC4\u4EF6\u4E0A\u4F7F\u7528 \u6A21\u578B\u4E0A\u7684\u81EA\u5B9A\u4E49\u4FEE\u9970\u7B26
+ * @reason \u5728\u67D0\u4E9B\u60C5\u51B5\u53EF\u80FD\u4F1A\u51FA\u73B0\u81EA\u5B9A\u4E49\u4FEE\u9970\u7B26
  */</span>
 <span class="token string-property property">&quot;vue/no-custom-modifiers-on-v-model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止重复的键名
+ * \u7981\u6B62\u91CD\u590D\u7684\u952E\u540D
  */</span>
 <span class="token string-property property">&quot;vue/no-dupe-keys&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- *  禁止在 v-if 和 v-else-if 中出现重复的测试表达式
+ *  \u7981\u6B62\u5728 v-if \u548C v-else-if \u4E2D\u51FA\u73B0\u91CD\u590D\u7684\u6D4B\u8BD5\u8868\u8FBE\u5F0F
  */</span>
 <span class="token string-property property">&quot;vue/no-dupe-v-else-if&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止出现重复的属性
+ * \u7981\u6B62\u51FA\u73B0\u91CD\u590D\u7684\u5C5E\u6027
  */</span>
 <span class="token string-property property">&quot;vue/no-duplicate-attributes&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -1225,23 +1207,23 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止模版中有多个根节点
+ * \u7981\u6B62\u6A21\u7248\u4E2D\u6709\u591A\u4E2A\u6839\u8282\u70B9
  */</span>
 <span class="token string-property property">&quot;vue/no-multiple-template-root&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止修改组件的 props
+ * \u7981\u6B62\u4FEE\u6539\u7EC4\u4EF6\u7684 props
  */</span>
 <span class="token string-property property">&quot;vue/no-mutating-props&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止出现语法错误
+ * \u7981\u6B62\u51FA\u73B0\u8BED\u6CD5\u9519\u8BEF
  */</span>
 <span class="token string-property property">&quot;vue/no-parsing-error&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止覆盖保留字
+ * \u7981\u6B62\u8986\u76D6\u4FDD\u7559\u5B57
  */</span>
 <span class="token string-property property">&quot;vue/no-reserved-keys&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在props中覆盖保留字
+ * \u7981\u6B62\u5728props\u4E2D\u8986\u76D6\u4FDD\u7559\u5B57
  */</span>
 <span class="token string-property property">&quot;vue/no-reserved-props&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -1250,80 +1232,80 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 组件的 data 属性的值必须是一个函数
+ * \u7EC4\u4EF6\u7684 data \u5C5E\u6027\u7684\u503C\u5FC5\u987B\u662F\u4E00\u4E2A\u51FD\u6570
  */</span>
 <span class="token string-property property">&quot;vue/no-shared-component-data&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在计算属性中对属性修改
+ * \u7981\u6B62\u5728\u8BA1\u7B97\u5C5E\u6027\u4E2D\u5BF9\u5C5E\u6027\u4FEE\u6539
  */</span>
 <span class="token string-property property">&quot;vue/no-side-effects-in-computed-properties&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在 &lt;textarea&gt; 中出现模版语法 {{message}}
+ * \u7981\u6B62\u5728 &lt;textarea&gt; \u4E2D\u51FA\u73B0\u6A21\u7248\u8BED\u6CD5 {{message}}
  */</span>
 <span class="token string-property property">&quot;vue/no-textarea-mustache&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止定义在 components 中的组件未使用
+ * \u7981\u6B62\u5B9A\u4E49\u5728 components \u4E2D\u7684\u7EC4\u4EF6\u672A\u4F7F\u7528
  */</span>
 <span class="token string-property property">&quot;vue/no-unused-components&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 模版中已定义的变量必须使用
+ * \u6A21\u7248\u4E2D\u5DF2\u5B9A\u4E49\u7684\u53D8\u91CF\u5FC5\u987B\u4F7F\u7528
  */</span>
 <span class="token string-property property">&quot;vue/no-unused-vars&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止在同一个元素上使用 v-if 和 v-for 指令
+ * \u7981\u6B62\u5728\u540C\u4E00\u4E2A\u5143\u7D20\u4E0A\u4F7F\u7528 v-if \u548C v-for \u6307\u4EE4
  */</span>
 <span class="token string-property property">&quot;vue/no-use-v-if-with-v-for&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止模版中使用未生效的属性
+ * \u7981\u6B62\u6A21\u7248\u4E2D\u4F7F\u7528\u672A\u751F\u6548\u7684\u5C5E\u6027
  */</span>
 <span class="token string-property property">&quot;vue/no-useless-template-attributes&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * template 不必带key，
- * @reason 因为带key无效的，要带的话只需要给他下面的元素带
+ * template \u4E0D\u5FC5\u5E26key\uFF0C
+ * @reason \u56E0\u4E3A\u5E26key\u65E0\u6548\u7684\uFF0C\u8981\u5E26\u7684\u8BDD\u53EA\u9700\u8981\u7ED9\u4ED6\u4E0B\u9762\u7684\u5143\u7D20\u5E26
  */</span>
 <span class="token string-property property">&quot;vue/no-v-for-template-key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止给 v-model 属性添加参数
+ * \u7981\u6B62\u7ED9 v-model \u5C5E\u6027\u6DFB\u52A0\u53C2\u6570
  */</span>
 <span class="token string-property property">&quot;vue/no-v-model-argument&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * &lt;component&gt; 必须有绑定的组件
+ * &lt;component&gt; \u5FC5\u987B\u6709\u7ED1\u5B9A\u7684\u7EC4\u4EF6
  */</span>
 <span class="token string-property property">&quot;vue/require-component-is&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * props 的取值必须是基本类型的构造函数，而不是字符串
+ * props \u7684\u53D6\u503C\u5FC5\u987B\u662F\u57FA\u672C\u7C7B\u578B\u7684\u6784\u9020\u51FD\u6570\uFF0C\u800C\u4E0D\u662F\u5B57\u7B26\u4E32
  */</span>
 <span class="token string-property property">&quot;vue/require-prop-type-constructor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * render 函数必须有返回值
+ * render \u51FD\u6570\u5FC5\u987B\u6709\u8FD4\u56DE\u503C
  */</span>
 <span class="token string-property property">&quot;vue/require-render-return&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- *  v-for 指令的元素必须有 v-bind:key
+ *  v-for \u6307\u4EE4\u7684\u5143\u7D20\u5FC5\u987B\u6709 v-bind:key
  */</span>
 <span class="token string-property property">&quot;vue/require-v-for-key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 的默认值必须匹配它的类型
+ * \u7684\u9ED8\u8BA4\u503C\u5FC5\u987B\u5339\u914D\u5B83\u7684\u7C7B\u578B
  */</span>
 <span class="token string-property property">&quot;vue/require-valid-default-prop&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 计算属性必须有返回值
+ * \u8BA1\u7B97\u5C5E\u6027\u5FC5\u987B\u6709\u8FD4\u56DE\u503C
  */</span>
 <span class="token string-property property">&quot;vue/return-in-computed-property&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 当一个节点上出现两个 v-on:click 时，其中一个必须为修饰符
+ * \u5F53\u4E00\u4E2A\u8282\u70B9\u4E0A\u51FA\u73B0\u4E24\u4E2A v-on:click \u65F6\uFF0C\u5176\u4E2D\u4E00\u4E2A\u5FC5\u987B\u4E3A\u4FEE\u9970\u7B26
  */</span>
 <span class="token string-property property">&quot;vue/use-v-on-exact&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * 禁止调用 Vue.nextTick 或 vm.$nextTick 时不使用 await
+ * \u7981\u6B62\u8C03\u7528 Vue.nextTick \u6216 vm.$nextTick \u65F6\u4E0D\u4F7F\u7528 await
  */</span>
 <span class="token string-property property">&quot;vue/valid-next-tick&quot;</span><span class="token operator">:</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * template 的根节点必须合法
+ * template \u7684\u6839\u8282\u70B9\u5FC5\u987B\u5408\u6CD5
  */</span>
 <span class="token string-property property">&quot;vue/valid-template-root&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token comment">/**
- * v-bind:foo.sync 指令必须合法 ， 一下都是校验合法性，就不一一注释了
+ * v-bind:foo.sync \u6307\u4EE4\u5FC5\u987B\u5408\u6CD5 \uFF0C \u4E00\u4E0B\u90FD\u662F\u6821\u9A8C\u5408\u6CD5\u6027\uFF0C\u5C31\u4E0D\u4E00\u4E00\u6CE8\u91CA\u4E86
  */</span>
 <span class="token string-property property">&quot;vue/valid-v-bind-sync&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token string-property property">&quot;vue/valid-v-bind&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
@@ -1339,8 +1321,4 @@
 <span class="token string-property property">&quot;vue/valid-v-pre&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token string-property property">&quot;vue/valid-v-show&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
 <span class="token string-property property">&quot;vue/valid-v-slot&quot;</span><span class="token operator">:</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
-</code></pre></div></div></div><footer class="page-footer" data-v-f7095a1c data-v-a6128342><div class="edit" data-v-a6128342><div class="edit-link" data-v-a6128342 data-v-17eda031><!----></div></div><div class="updated" data-v-a6128342><p class="last-updated" data-v-a6128342 data-v-5a2a6a2c><span class="prefix" data-v-5a2a6a2c>Last Updated:</span><span class="datetime" data-v-5a2a6a2c></span></p></div></footer><div class="next-and-prev-link" data-v-f7095a1c data-v-b7bd651c><div class="container" data-v-b7bd651c><div class="prev" data-v-b7bd651c><a class="link" href="/eslint/intro" data-v-b7bd651c><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-prev" data-v-b7bd651c><path d="M19,11H7.4l5.3-5.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-7,7c-0.1,0.1-0.2,0.2-0.2,0.3c-0.1,0.2-0.1,0.5,0,0.8c0.1,0.1,0.1,0.2,0.2,0.3l7,7c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L7.4,13H19c0.6,0,1-0.4,1-1S19.6,11,19,11z"></path></svg><span class="text" data-v-b7bd651c>介绍</span></a></div><div class="next" data-v-b7bd651c><a class="link" href="/stylelint/intro" data-v-b7bd651c><span class="text" data-v-b7bd651c>介绍</span><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-next" data-v-b7bd651c><path d="M19.9,12.4c0.1-0.2,0.1-0.5,0-0.8c-0.1-0.1-0.1-0.2-0.2-0.3l-7-7c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.3,5.3H5c-0.6,0-1,0.4-1,1s0.4,1,1,1h11.6l-5.3,5.3c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l7-7C19.8,12.6,19.9,12.5,19.9,12.4z"></path></svg></a></div></div></div><!--[--><!--]--></div></main></div><!----><!--]--></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"index.md\":\"d25bca6b\",\"cli_intro.md\":\"119c8906\",\"commitlint_intro.md\":\"3f998797\",\"guide_changelog.md\":\"d0ba44cb\",\"guide_intro.md\":\"be93d151\",\"eslint_intro.md\":\"bfc222a9\",\"eslint_rules.md\":\"ef4eafec\",\"stylelint_intro.md\":\"5041f394\",\"stylelint_rules.md\":\"5e22c719\",\"eslint_module_common.md\":\"7b5893fa\",\"eslint_module_typescript.md\":\"219491a9\",\"eslint_module_vue.md\":\"8518b5ab\"}")</script>
-    <script type="module" async src="/assets/app.62e41da6.js"></script>
-  </body>
-</html>
+</code></pre></div>__VP_STATIC_END__`,8),e=[o];function r(c,u,l,k,i,q){return a(),s("div",null,e)}var g=n(p,[["render",r]]);export{m as __pageData,g as default};
