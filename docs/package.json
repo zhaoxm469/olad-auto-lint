@@ -66,10 +66,5 @@
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "pretty-quick --staged"
-        }
     }
 }
