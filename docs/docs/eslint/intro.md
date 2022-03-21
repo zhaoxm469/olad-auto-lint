@@ -1,6 +1,6 @@
 # ESLint 规范
 
-ESLint 目前支持 `vue|typescript`
+此插件允许我们使用 ESLint 检查文件，以及文件中的 `JavaScript`|`Vue2` 代码。
 
 ## 安装
 
@@ -25,7 +25,7 @@ yarn add eslint-config-olad --D
 
 ```js
 module.exports = {
-  extends: ['@olad/lint//vue'],
+  extends: ['olad/vue2'],
 };
 ```
 
@@ -33,7 +33,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: ['@olad/lint/typescript'],
+  extends: ['olad'],
 };
 ```
 
