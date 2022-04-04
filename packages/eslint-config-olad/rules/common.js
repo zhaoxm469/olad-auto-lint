@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:09:52
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-03-20 22:09:03
+ * @LastEditTime: 2022-04-04 23:16:46
  * @Description: 公共规则配置，包含200+条规则，具体如下。文档 https://eslint.bootcss.com/docs/rules/
  */
 
@@ -958,7 +958,7 @@ module.exports = {
   /**
    * 在“function”定义的左括号前强制使用一致的间距
    */
-  "space-before-function-paren": "error",
+  "space-before-function-paren": "off",
   /**
    * 禁止或强制使用括号内的空格（括号中的空格）
    */
