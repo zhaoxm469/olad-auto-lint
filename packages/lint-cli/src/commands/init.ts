@@ -1,6 +1,5 @@
-import { ESLINT_PACKAGE_NAME, STYLE_LINT_PACKAGE_NAME, COMMIT_LINT_PACKAGE_NAME, ROOT_PATH } from '../config/consts';
+import { ESLINT_PACKAGE_NAME, STYLE_LINT_PACKAGE_NAME, COMMIT_LINT_PACKAGE_NAME, ROOT_PATH, ESLINT_TYPE } from '../config/consts';
 import { NpmInstallConfig, PackageJson, Lints, LintItem } from './../types/shared';
-import { eslintType } from './../config/eslintType';
 import Handlebars from 'handlebars'
 import { readFileSync, writeFileSync, existsSync, removeSync } from 'fs-extra';
 import { commandSync } from 'execa'
@@ -142,7 +141,7 @@ const setEslintTypePrompt = async (lints: Lints) => {
                     type: 'list',
                     name: 'type',
                     message: `请选择eslint规范类型:`,
-                    choices: eslintType
+                    choices: ESLINT_TYPE
                 }
             ])
 
@@ -171,99 +170,84 @@ const installHusky = (targetDir: string) => {
 
 
 
-const installStrategy = () => {
+const installStrategy = {
+    async eslint(lint: LintItem) {
 
-    return {
-        async eslint(lint: LintItem) {
+        startSpinner('开始初始化eslint')
 
-            startSpinner('开始初始化eslint')
+        // 移除eslint相关安装包
+        removeUserPackage(['eslint', 'prettier'])
 
-            // 移除eslint相关安装包
-            removeUserPackage(['eslint', 'prettier'])
+        // // 解决.eslintrc.js报错
+        // addFile('.eslintignore', '.eslintrc.js')
 
-            // addLintStaged({
-            //     "*.{js,jsx,json,ts,tsx,vue}": [
-            //         "prettier --write",
-            //         "eslint -cache --fix",
-            //         "git add"
-            //     ]
-            // })
+        // npmInstall({
+        //     targetFileName: '.eslintrc.js',
+        //     packageName: ESLINT_PACKAGE_NAME,
+        //     templateName: '.eslintrc.js',
+        //     eslintType: lint.eslintType!
+        // });
 
-            // 解决.eslintrc.js报错
-            addFile('.eslintignore', '.eslintrc.js')
+        succeedSpiner(green('eslint初始化成功!'))
+    },
+    async stylelint(lint: LintItem) {
+        startSpinner(`开始初始化stylelint`)
 
-            npmInstall({
-                targetFileName: '.eslintrc.js',
-                packageName: ESLINT_PACKAGE_NAME,
-                templateName: '.eslintrc.js',
-                eslintType: lint.eslintType!
-            });
+        removeUserPackage(["stylelint"])
 
-            succeedSpiner(green('eslint初始化成功!'))
-        },
-        async stylelint(lint: LintItem) {
-            startSpinner(`开始初始化stylelint`)
+        addLintStaged({
+            "src/**/*.sass": [
+                "stylelint --config  ./.stylelintrc --fix",
+                "git add"
+            ]
+        })
 
-            removeUserPackage('stylelint')
+        npmInstall({
+            targetFileName: '.stylelintrc.js',
+            packageName: STYLE_LINT_PACKAGE_NAME,
+            templateName: '.stylelintrc.js',
+            eslintType: lint.eslintType!
+        });
 
-            addLintStaged({
-                "src/**/*.sass": [
-                    "stylelint --config  ./.stylelintrc --fix",
-                    "git add"
-                ]
-            })
+        succeedSpiner(green('stylelint初始化成功!'))
+    },
+    async commitlint(lint: LintItem) {
+        // 移除eslint相关安装包
+        removeUserPackage(["commitlint"])
 
-            npmInstall({
-                targetFileName: '.stylelintrc.js',
-                packageName: STYLE_LINT_PACKAGE_NAME,
-                templateName: '.stylelintrc.js',
-                eslintType: lint.eslintType!
-            });
+        startSpinner(`开始初始化commitlint`)
+        installHusky(ROOT_PATH)
 
-            succeedSpiner(green('stylelint初始化成功!'))
-        },
-        async commitlint(lint: LintItem) {
-            // 移除eslint相关安装包
-            removeUserPackage('commitlint')
+        npmInstall({
+            targetFileName: '.commitlintrc.js',
+            packageName: COMMIT_LINT_PACKAGE_NAME,
+            templateName: '.commitlintrc.js',
+            eslintType: lint.eslintType!
+        });
 
-            startSpinner(`开始初始化commitlint`)
-            installHusky(ROOT_PATH)
-
-            npmInstall({
-                targetFileName: '.commitlintrc.js',
-                packageName: COMMIT_LINT_PACKAGE_NAME,
-                templateName: '.commitlintrc.js',
-                eslintType: lint.eslintType!
-            });
-
-            succeedSpiner(green('commitlint初始化成功!'))
-        }
+        succeedSpiner(green('commitlint初始化成功!'))
     }
 }
 
 
 // 根据用户选择的lint 去执行对应的策略方法
 const installLint = async (lints: Lints) => {
-    const strategy = installStrategy();
-    lints.forEach(lint => strategy[lint.lintName]?.(lint))
+    lints.forEach(lintItem => {
+        let lintName = lintItem.lintName.toLocaleLowerCase()
+        installStrategy[lintName]?.(lintItem)
+    })
 }
 
 
-
-
-
-
 const action = async () => {
-    // 获取规则询问
     const lints = await getLintOptionsPrompt();
 
-    // 设置eslint类型的规则
+    // 如果用户选择 Eslint ， 询问用户 安装哪种 Eslint 相对应的 依赖包
     if (lints.some(item => item.lintName === 'eslint')) await setEslintTypePrompt(lints);
 
     if (!lints.length) return info(green('退出命令，您没有选择要安装的规则工具包哦!'))
 
     try {
-        // 安装规则对应的文件依赖等
         await installLint(lints);
         info(green('规则安装成功!'))
     } catch (err) {

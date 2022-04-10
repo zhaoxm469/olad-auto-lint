@@ -1,3 +1,4 @@
+import { ESLINT_TYPE } from './../config/consts';
 export type PackageJson = {
     name: string,
     version: string,
@@ -5,7 +6,7 @@ export type PackageJson = {
     devDependencies: Recordable
 } & Recordable
 
-export type LintNames = 'eslint' | 'stylelint' | 'commitlint';
+export type LintNames = typeof ESLINT_TYPE[0]
 
 export type LintItem = {
     lintName: LintNames;
