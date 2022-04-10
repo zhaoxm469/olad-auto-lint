@@ -1,6 +1,6 @@
 {
   "name": "@olad/lint-cli",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2",
   "description": "CLI 命令行工具",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "./build",
