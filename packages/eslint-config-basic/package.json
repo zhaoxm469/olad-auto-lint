@@ -1,6 +1,6 @@
 {
   "name": "@olad/eslint-config-basic",
-  "version": "1.0.3-beta.2",
+  "version": "1.0.3-beta.3",
   "description": "ESLint config basic",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "index.js",
