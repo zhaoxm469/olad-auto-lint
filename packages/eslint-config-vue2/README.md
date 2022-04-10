@@ -1,6 +1,6 @@
 # ESLint 规范
 
-阿拉钉前端 ESLint 规范，目前支持 `js|typescript|vue2|vue3`
+阿拉钉前端 Vue2 ESLint 规范
 
 ## 安装
 
@@ -8,13 +8,13 @@
 
 ```bash
 # with pnpm
-pnpm add @olad/eslint-config -D
+pnpm add @olad/eslint-config-vue2 -D
 
 # with npm
-npm install @olad/eslint-config -D
+npm install @olad/eslint-config-vue2 -D
 
 # with yarn
-yarn add @olad/eslint-config --D
+yarn add @olad/eslint-config-vue2 --D
 ```
 
 ## 使用
@@ -23,34 +23,8 @@ yarn add @olad/eslint-config --D
 
 配置如下:
 
-- **js**
-
 ```js
 module.exports = {
-  extends: ["@olad"],
-};
-```
-
-- **typescript**
-
-```js
-module.exports = {
-  extends: ["@olad/eslint-config/typescript"],
-};
-```
-
-- **vue2**
-
-```js
-module.exports = {
-  extends: ["@olad/eslint-config/vue2"],
-};
-```
-
-- **vue3**
-
-```js
-module.exports = {
-  extends: ["@olad/eslint-config/vue3"],
-};
+  extends: ["@olad/eslint-config-vue2"],
+}
 ```

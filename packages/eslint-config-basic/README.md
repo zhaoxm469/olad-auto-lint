@@ -1,6 +1,6 @@
 # ESLint 规范
 
-阿拉钉前端 TypeScript ESLint 规范
+阿拉钉前端 JavaScript ESLint 规范
 
 ## 安装
 
@@ -8,13 +8,13 @@
 
 ```bash
 # with pnpm
-pnpm add @olad/eslint-config-typescript -D
+pnpm add @olad/eslint-config-basic -D
 
 # with npm
-npm install @olad/eslint-config-typescript -D
+npm install @olad/eslint-config-basic -D
 
 # with yarn
-yarn add @olad/eslint-config-typescript --D
+yarn add @olad/eslint-config-basic --D
 ```
 
 ## 使用
@@ -25,6 +25,6 @@ yarn add @olad/eslint-config-typescript --D
 
 ```js
 module.exports = {
-  extends: ["@olad/eslint-config-typescript"],
+  extends: ["@olad/eslint-config-basic"],
 }
 ```
