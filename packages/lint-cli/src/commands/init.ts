@@ -55,6 +55,7 @@ const checkAndRemoveOldPackage = async (packageName: string) => {
 const npmInstall = (confg: NpmInstallConfig) => {
 
     const { packageName, templateName, targetFileName, eslintType } = confg;
+
     const content = getTemplate(templateName)
 
     checkAndRemoveOldPackage(packageName);
@@ -78,7 +79,7 @@ const npmInstall = (confg: NpmInstallConfig) => {
 
 
 // 尝试移除当前项目内属于安全依赖列表的包
-const tryToRemovePackage = (safeDepList: string | RegExp) => {
+const removeUserPackage = (safeDepList: string[]) => {
     let deps = []
 
     const userPackage = getUserPackage();
@@ -92,7 +93,7 @@ const tryToRemovePackage = (safeDepList: string | RegExp) => {
     }
 
     deps.filter((dep) => {
-        return dep.includes(safeDepList)
+        return safeDepList.includes(dep)
     }).forEach((dep) => {
         commandSync(`npm uninstall ${dep}`, { stdio: 'inherit' })
     })
@@ -178,14 +179,15 @@ const installStrategy = () => {
             startSpinner('开始初始化eslint')
 
             // 移除eslint相关安装包
-            tryToRemovePackage('eslint')
+            removeUserPackage(['eslint', 'prettier'])
 
-            addLintStaged({
-                "*.{js,jsx,json,ts,tsx,vue}": [
-                    "eslint --fix",
-                    "git add"
-                ]
-            })
+            // addLintStaged({
+            //     "*.{js,jsx,json,ts,tsx,vue}": [
+            //         "prettier --write",
+            //         "eslint -cache --fix",
+            //         "git add"
+            //     ]
+            // })
 
             // 解决.eslintrc.js报错
             addFile('.eslintignore', '.eslintrc.js')
@@ -202,7 +204,7 @@ const installStrategy = () => {
         async stylelint(lint: LintItem) {
             startSpinner(`开始初始化stylelint`)
 
-            tryToRemovePackage('stylelint')
+            removeUserPackage('stylelint')
 
             addLintStaged({
                 "src/**/*.sass": [
@@ -222,7 +224,7 @@ const installStrategy = () => {
         },
         async commitlint(lint: LintItem) {
             // 移除eslint相关安装包
-            tryToRemovePackage('commitlint')
+            removeUserPackage('commitlint')
 
             startSpinner(`开始初始化commitlint`)
             installHusky(ROOT_PATH)

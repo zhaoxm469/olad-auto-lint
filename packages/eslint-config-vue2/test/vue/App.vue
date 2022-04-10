@@ -14,22 +14,22 @@
       alt="Vue logo"
       d="1"
       src="./assets/logo.png"
-    />
+    >
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
-  import HelloWorld from "./components/HelloWorld.vue";
-  const a = 123;
-  a = 4;
+import HelloWorld from "./components/HelloWorld.vue"
+const a = 123
+a = 4
 
-  export default {
-    name: "App",
-    components: {
-      HelloWorld,
-    },
-  };
+export default {
+  name: "app",
+  components: {
+    HelloWorld,
+  },
+}
 </script>
 
 <style>

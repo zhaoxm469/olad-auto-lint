@@ -6,7 +6,7 @@
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
   },
   "devDependencies": {
-    "@olad/eslint-config": "*",
+    "@olad/eslint-config-typescript": "*",
     "bumpp": "^7.1.1",
     "eslint": "^7.32.0"
   },

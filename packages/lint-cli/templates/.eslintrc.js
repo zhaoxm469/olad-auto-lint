@@ -1,4 +1,3 @@
-/* eslint-disable */
 module.exports = {
-  extends: ["olad/{{eslintType}}"],
+  extends: ["@olad/eslint-config/{{eslintType}}"],
 };

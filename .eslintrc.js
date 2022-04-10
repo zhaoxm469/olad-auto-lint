@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["@olad"],
+  extends: ["@olad/eslint-config-typescript"],
 }

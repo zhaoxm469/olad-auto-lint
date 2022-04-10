@@ -140,7 +140,8 @@ const installStrategy = () => {
             tryToRemovePackage('eslint');
             addLintStaged({
                 "*.{js,jsx,json,ts,tsx,vue}": [
-                    "eslint --fix",
+                    "prettier --write",
+                    "eslint -cache --fix",
                     "git add"
                 ]
             });

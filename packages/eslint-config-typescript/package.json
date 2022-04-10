@@ -1,7 +1,7 @@
 {
-  "name": "@olad/eslint-config",
+  "name": "@olad/eslint-config-typescript",
   "version": "1.0.3-beta.1",
-  "description": "ESLint config",
+  "description": "ESLint configuration for TypeScript",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "index.js",
   "directories": {
@@ -9,14 +9,9 @@
     "test": "__tests__"
   },
   "dependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.5.0",
-    "prettier": "^2.5.1",
-    "vue-eslint-parser": "^8.3.0"
+    "@olad/eslint-config-basic": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0"
   },
   "publishConfig": {
     "registry": "http://npm.nucarf.cn/",
