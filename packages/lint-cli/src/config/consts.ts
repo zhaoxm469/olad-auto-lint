@@ -2,7 +2,7 @@ export const ROOT_PATH = process.cwd()
 
 export const targetFile = 'private'
 
-export const ESLINT_PACKAGE_NAME = 'eslint-config-olad'
+export const ESLINT_PACKAGE_NAME = '@olad/eslint-config'
 
 export const COMMIT_LINT_PACKAGE_NAME = 'commitlint-config-olad'
 

@@ -1,25 +1,20 @@
-<!--
- * @Date: 2022-02-21 16:09:24
- * @LastEditors: zhaoxm
- * @LastEditTime: 2022-03-06 11:11:12
- * @Description:
--->
-
 # ESLint 规范
 
-阿拉钉前端 ESLint 规范，目前支持 `vue|typescript`
+阿拉钉前端 ESLint 规范，目前支持 `js|typescript|vue2|vue3`
 
 ## 安装
 
+* 推荐适用`pnpm`安装
+
 ```bash
 # with pnpm
-pnpm add eslint-config-olad -D
+pnpm add @olad/eslint-config -D
 
 # with npm
-npm install eslint-config-olad -D
+npm install @olad/eslint-config -D
 
 # with yarn
-yarn add eslint-config-olad --D
+yarn add @olad/eslint-config --D
 ```
 
 ## 使用
@@ -28,11 +23,11 @@ yarn add eslint-config-olad --D
 
 配置如下:
 
-- **vue**
+- **js**
 
 ```js
 module.exports = {
-  extends: ["@olad/lint/vue"],
+  extends: ["@olad"],
 };
 ```
 
@@ -40,13 +35,22 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: ["@olad/lint/typescript"],
+  extends: ["@olad/eslint-config/typescript"],
 };
 ```
 
-> 如果项目之前安装过 ESLint 相关的包，建议卸载，避免引入不必要的包。如`eslint`、`eslint-plugin-vue`、`@babel/eslint-parser`、`@typescript-eslint/eslint-plugin` 、`@typescript-eslint/parser`、`@vue/eslint-config-standard`、`@vue/eslint-config-typescript`、`eslint-config-react-app`、
-> `eslint-plugin-import`等，直接在 package.json 搜索**eslint**，相关的包全部卸载
+- **vue2**
 
-## 规范文档
+```js
+module.exports = {
+  extends: ["@olad/eslint-config/vue2"],
+};
+```
 
-后续完善...
+- **vue3**
+
+```js
+module.exports = {
+  extends: ["@olad/eslint-config/vue3"],
+};
+```
