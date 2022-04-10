@@ -1,101 +1,126 @@
-import { ESLINT_PACKAGE_NAME, STYLE_LINT_PACKAGE_NAME, COMMIT_LINT_PACKAGE_NAME, ROOT_PATH, ESLINT_TYPE } from '../config/consts';
-import { NpmInstallConfig, PackageJson, Lints, LintItem } from './../types/shared';
-import Handlebars from 'handlebars'
-import { readFileSync, writeFileSync, existsSync, removeSync } from 'fs-extra';
-import { commandSync } from 'execa'
-import { prompt } from 'inquirer'
-import { green } from 'chalk'
-import { join } from 'path'
-import { failSpinner, startSpinner, succeedSpiner } from '../utils/spinner';
-import { info } from '../utils/logger';
+import { choices, PACKNAME_ESLINT_NAME } from "./../config/consts"
+import { ESLINT_PACKAGE_NAME, STYLE_LINT_PACKAGE_NAME, COMMIT_LINT_PACKAGE_NAME, ROOT_PATH, ESLINT_TYPE } from "../config/consts"
+import { NpmInstallConfig, PackageJson, Lints, LintItem } from "./../types/shared"
+import Handlebars from "handlebars"
+import { readFileSync, writeFileSync, existsSync, removeSync } from "fs-extra"
+import { commandSync } from "execa"
+import { prompt } from "inquirer"
+import { green } from "chalk"
+import { join } from "path"
+import { failSpinner, startSpinner, succeedSpiner } from "../utils/spinner"
+import { info } from "../utils/logger"
 
-const USER_PCK_PATH = `${ROOT_PATH}/package.json`;
+const USER_PCK_PATH = `${ROOT_PATH}/package.json`
 
 // 获取用户package.json文件内容
 const getUserPackage = () => {
-    const packContent = readFileSync(USER_PCK_PATH, 'utf-8')
+  const packContent = readFileSync(USER_PCK_PATH, "utf-8")
 
-    const pckResult: PackageJson = JSON.parse(packContent)
-    return pckResult
+  const pckResult: PackageJson = JSON.parse(packContent)
+  return pckResult
 }
 
 const writeUserPck = (content) => {
-    writeFileSync(USER_PCK_PATH, JSON.stringify(content, null, 2), 'utf8')
+  writeFileSync(USER_PCK_PATH, JSON.stringify(content, null, 2), "utf8")
 }
 
 const addLintStaged = (config: Object) => {
-    const userPackage = getUserPackage();
-    userPackage['lint-staged'] = Object.assign(userPackage['lint-staged'] || {}, config)
-    writeUserPck(userPackage);
+  const userPackage = getUserPackage()
+  userPackage["lint-staged"] = Object.assign(userPackage["lint-staged"] || {}, config)
+  writeUserPck(userPackage)
 }
 
-const getTemplate = (templateName) => {
-    const templatePath = join(__dirname, `../../templates/${templateName}`);
-    const content = readFileSync(templatePath, 'utf-8')
-    return content;
+const getTemplateContent = (options) => {
+  const templatePath = join(__dirname, `../../templates/${options.templateName}`)
+  const content = readFileSync(templatePath, "utf-8")
+  const contentResult = Handlebars.compile(content)(options)
+  return contentResult
 }
 
 // 往用户目录写入文件
 const addFile = (filename: string, content: string) => {
-    writeFileSync(`${ROOT_PATH}/${filename}`, content, 'utf8')
+  writeFileSync(`${ROOT_PATH}/${filename}`, content, "utf8")
 }
 
 // 检查并移除旧的lint包
-const checkAndRemoveOldPackage = async (packageName: string) => {
+const checkAndRemoveOldPackage = async (packName: string) => {
 
-    const userPackage = getUserPackage();
+    
+  const userPackage = getUserPackage()
 
-    if (JSON.stringify(userPackage).includes(packageName)) {
-        commandSync(`npm uninstall ${packageName}`, { stdio: 'inherit' })
-    }
+  if (JSON.stringify(userPackage).includes(packName)) {
+
+    console.log("\n")
+    startSpinner("移除旧的lint包")
+
+    commandSync(`npm uninstall ${packName}`, { stdio: "inherit" })
+  }
 }
 
 // 安装依赖
 const npmInstall = (confg: NpmInstallConfig) => {
 
-    const { packageName, templateName, targetFileName, eslintType } = confg;
+  const packName = PACKNAME_ESLINT_NAME[confg.packName]
+    
+  // 移除旧包
+  checkAndRemoveOldPackage(packName)
 
-    const content = getTemplate(templateName)
+  //  安装新包
+  console.log("\n")
+  
+  startSpinner(`正在安装依赖: ${packName}`)
 
-    checkAndRemoveOldPackage(packageName);
+  // 执行shell 命令
+  commandSync(`npm i ${packName} -D`, { stdio: "inherit" })
 
-    if (existsSync(`${ROOT_PATH}/${targetFileName}`)) removeSync(`${ROOT_PATH}/${targetFileName}`);
-
-    startSpinner(`正在安装依赖: ${packageName}`)
-
-    commandSync(`npm i ${packageName} -D`, { stdio: 'inherit' })
-
-    succeedSpiner(`${packageName}安装完成`)
-
-    if (eslintType) {
-        const contentResult = Handlebars.compile(content)({ eslintType })
-        writeFileSync(targetFileName, contentResult)
-    } else {
-        console.log(join(ROOT_PATH, targetFileName))
-        writeFileSync(targetFileName, content)
-    }
 }
+
+// const npmInstall = (confg: NpmInstallConfig) => {
+
+//     const { packageName, templateName, targetFileName, eslintType } = confg
+
+//     const content = getTemplate(templateName)
+
+//     checkAndRemoveOldPackage(packageName)
+
+//     if (existsSync(`${ROOT_PATH}/${targetFileName}`)) removeSync(`${ROOT_PATH}/${targetFileName}`)
+
+//     startSpinner(`正在安装依赖: ${packageName}`)
+
+//     commandSync(`npm i ${packageName} -D`, { stdio: "inherit" })
+
+//     succeedSpiner(`${packageName}安装完成`)
+
+//     if (eslintType) {
+//       const contentResult = Handlebars.compile(content)({ eslintType })
+//       writeFileSync(targetFileName, contentResult)
+//     } else {
+//       console.log(join(ROOT_PATH, targetFileName))
+//       writeFileSync(targetFileName, content)
+//     }
+//   }
 
 
 // 尝试移除当前项目内属于安全依赖列表的包
 const removeUserPackage = (safeDepList: string[]) => {
-    let deps = []
+  let deps = []
 
-    const userPackage = getUserPackage();
+  const userPackage = getUserPackage()
 
-    if (userPackage.hasOwnProperty('dependencies')) {
-        deps = deps.concat(Object.keys(userPackage.dependencies))
-    }
+  if (userPackage.hasOwnProperty("dependencies")) {
+    deps = deps.concat(Object.keys(userPackage.dependencies))
+  }
 
-    if (userPackage.hasOwnProperty('devDependencies')) {
-        deps = deps.concat(Object.keys(userPackage.devDependencies))
-    }
+  if (userPackage.hasOwnProperty("devDependencies")) {
+    deps = deps.concat(Object.keys(userPackage.devDependencies))
+  }
 
-    deps.filter((dep) => {
-        return safeDepList.includes(dep)
-    }).forEach((dep) => {
-        commandSync(`npm uninstall ${dep}`, { stdio: 'inherit' })
-    })
+  deps.filter((dep) => {
+    return safeDepList.includes(dep)
+  }).forEach((dep) => {
+    console.log(`removeUserPackage 移除依赖${dep}`)
+    commandSync(`npm uninstall ${dep}`, { stdio: "inherit" })
+  })
 }
 
 
@@ -103,161 +128,153 @@ const removeUserPackage = (safeDepList: string[]) => {
 
 // 添加规则询问
 const getLintOptionsPrompt = async (): Promise<Lints> => {
-    const { lints } = await prompt([
-        {
-            type: 'checkbox',
-            name: 'lints',
-            message: `请选择要初始化的规范 (默认全选，空格键切换选中态，回车确认):`,
-            choices: [
-                {
-                    name: 'eslint',
-                    checked: true
-                },
-                {
-                    name: 'stylelint',
-                    checked: true
-                }, {
-                    name: 'commitlint',
-                    checked: true
-                }
-            ]
-        }
-    ])
+  const { lints } = await prompt([
+    {
+      type: "checkbox",
+      name: "lints",
+      message: "请选择要初始化的规范 (默认全选，空格键切换选中态，回车确认):",
+      choices
+    }
+  ])
 
-    return lints.map(item => {
-        return {
-            lintName: item
-        }
-    })
+  return lints.map(item => {
+    return {
+      lintName: item
+    }
+  })
 }
 
 // 设置eslint类型
-const setEslintTypePrompt = async (lints: Lints) => {
-    for (let lint of lints) {
+const setEslintTypePrompt = async (lint: LintItem) => {
 
-        if (lint.lintName.includes('eslint')) {
-            const { type } = await prompt([
-                {
-                    type: 'list',
-                    name: 'type',
-                    message: `请选择eslint规范类型:`,
-                    choices: ESLINT_TYPE
-                }
-            ])
-
-            lint.eslintType = type;
-
-            return;
-        }
+    
+  const { type } = await prompt([
+    {
+      type: "list",
+      name: "type",
+      message: "请选择eslint规范类型:",
+      choices: ESLINT_TYPE
     }
+  ])
+
+  lint.eslintType = type
 }
 
 const installHusky = (targetDir: string) => {
-    // startSpinner(`installing husky`)
-    commandSync(`npm install husky --save-dev`, { stdio: 'inherit' });
+  // startSpinner(`installing husky`)
+  commandSync("npm install husky --save-dev", { stdio: "inherit" })
 
-    const userPackage = getUserPackage();
+  const userPackage = getUserPackage()
 
-    userPackage.husky = {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
+  userPackage.husky = {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  }
 
-    writeUserPck(userPackage);
+  writeUserPck(userPackage)
 }
+
 
 
 
 
 const installStrategy = {
-    async eslint(lint: LintItem) {
+  async eslint(lint: LintItem) {
 
-        startSpinner('开始初始化eslint')
+    console.log("\n")
+    startSpinner("开始初始化eslint")
 
-        // 移除eslint相关安装包
-        removeUserPackage(['eslint', 'prettier'])
+    removeUserPackage(["eslint", "prettier"])
 
-        // // 解决.eslintrc.js报错
-        // addFile('.eslintignore', '.eslintrc.js')
+    npmInstall({
+      packName: lint.eslintType
+    })
 
-        // npmInstall({
-        //     targetFileName: '.eslintrc.js',
-        //     packageName: ESLINT_PACKAGE_NAME,
-        //     templateName: '.eslintrc.js',
-        //     eslintType: lint.eslintType!
-        // });
+    const eslintrcJsContent = getTemplateContent({
+      templateName:"eslintrc.js",
+      eslintType:lint.eslintType
+    })
 
-        succeedSpiner(green('eslint初始化成功!'))
-    },
-    async stylelint(lint: LintItem) {
-        startSpinner(`开始初始化stylelint`)
+    addFile(".eslintrc.js",eslintrcJsContent)
 
-        removeUserPackage(["stylelint"])
+    const prettierrcContent = getTemplateContent({
+      templateName:".prettierrc"
+    })
 
-        addLintStaged({
-            "src/**/*.sass": [
-                "stylelint --config  ./.stylelintrc --fix",
-                "git add"
-            ]
-        })
+    addFile(".prettierrc",prettierrcContent)
+ 
+    succeedSpiner(green("eslint初始化成功!"))
 
-        npmInstall({
-            targetFileName: '.stylelintrc.js',
-            packageName: STYLE_LINT_PACKAGE_NAME,
-            templateName: '.stylelintrc.js',
-            eslintType: lint.eslintType!
-        });
+  },
+  async stylelint(lint: LintItem) {
+    startSpinner("开始初始化stylelint")
 
-        succeedSpiner(green('stylelint初始化成功!'))
-    },
-    async commitlint(lint: LintItem) {
-        // 移除eslint相关安装包
-        removeUserPackage(["commitlint"])
+    removeUserPackage(["stylelint"])
 
-        startSpinner(`开始初始化commitlint`)
-        installHusky(ROOT_PATH)
+    addLintStaged({
+      "src/**/*.sass": [
+        "stylelint --config  ./.stylelintrc --fix",
+        "git add"
+      ]
+    })
 
-        npmInstall({
-            targetFileName: '.commitlintrc.js',
-            packageName: COMMIT_LINT_PACKAGE_NAME,
-            templateName: '.commitlintrc.js',
-            eslintType: lint.eslintType!
-        });
+    npmInstall({
+      targetFileName: ".stylelintrc.js",
+      packageName: STYLE_LINT_PACKAGE_NAME,
+      templateName: ".stylelintrc.js",
+      eslintType: lint.eslintType!
+    })
 
-        succeedSpiner(green('commitlint初始化成功!'))
-    }
+    succeedSpiner(green("stylelint初始化成功!"))
+  },
+  async commitlint(lint: LintItem) {
+    // 移除eslint相关安装包
+    removeUserPackage(["commitlint"])
+
+    startSpinner("开始初始化commitlint")
+    installHusky(ROOT_PATH)
+
+    npmInstall({
+      targetFileName: ".commitlintrc.js",
+      packageName: COMMIT_LINT_PACKAGE_NAME,
+      templateName: ".commitlintrc.js",
+      eslintType: lint.eslintType!
+    })
+
+    succeedSpiner(green("commitlint初始化成功!"))
+  }
 }
 
 
 // 根据用户选择的lint 去执行对应的策略方法
 const installLint = async (lints: Lints) => {
-    lints.forEach(lintItem => {
-        let lintName = lintItem.lintName.toLocaleLowerCase()
-        installStrategy[lintName]?.(lintItem)
-    })
+  lints.forEach(lintItem => {
+    const { lintName } = lintItem
+    installStrategy[lintName]?.(lintItem)
+  })
 }
 
 
 const action = async () => {
-    const lints = await getLintOptionsPrompt();
+  const lints = await getLintOptionsPrompt()
 
-    // 如果用户选择 Eslint ， 询问用户 安装哪种 Eslint 相对应的 依赖包
-    if (lints.some(item => item.lintName === 'eslint')) await setEslintTypePrompt(lints);
+  // 如果用户选择 Eslint ， 询问用户 安装哪种 Eslint 相对应的 依赖包
+  if (lints.some(item => item.lintName === "eslint")) await setEslintTypePrompt(lints[0])
 
-    if (!lints.length) return info(green('退出命令，您没有选择要安装的规则工具包哦!'))
+  if (!lints.length) return info(green("退出命令，您没有选择要安装的规则工具包哦!"))
 
-    try {
-        await installLint(lints);
-        info(green('规则安装成功!'))
-    } catch (err) {
-        failSpinner(err)
-        return
-    }
+  try {
+    await installLint(lints)
+    info(green("规则安装成功!"))
+  } catch (err) {
+    failSpinner(err)
+    return
+  }
 }
 
 export default {
-    command: 'init',
-    description: '初始化lint规范',
-    action,
+  command: "init",
+  description: "初始化lint规范",
+  action,
 }

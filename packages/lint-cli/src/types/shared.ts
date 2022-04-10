@@ -1,4 +1,5 @@
-import { ESLINT_TYPE } from './../config/consts';
+import { PACKAGE_NAMES } from "./../config/consts"
+
 export type PackageJson = {
     name: string,
     version: string,
@@ -6,18 +7,18 @@ export type PackageJson = {
     devDependencies: Recordable
 } & Recordable
 
-export type LintNames = typeof ESLINT_TYPE[0]
+export type lintNameType = keyof typeof PACKAGE_NAMES
 
 export type LintItem = {
-    lintName: LintNames;
-    eslintType?: string;
+    lintName: lintNameType;
+    eslintType?:string
 }
 
 export type Lints = LintItem[];
 
 export type NpmInstallConfig = {
-    packageName: string;
-    templateName: string;
-    targetFileName: string;
-    eslintType: string;
+    packName: string ;
+    // templateName: string;
+    // targetFileName: string;
+    // eslintType: string;
 }
