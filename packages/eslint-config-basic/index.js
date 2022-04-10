@@ -1,10 +1,11 @@
 /*
  * @Date: 2022-02-21 16:09:24
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-04-10 21:04:56
+ * @LastEditTime: 2022-04-11 00:26:16
  * @Description: 公共配置
  */
 
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const rules = require("./rules.js")
 
 module.exports = {
@@ -26,7 +27,7 @@ module.exports = {
     navigator: "readonly",
     window: "readonly",
   },
-  plugins: ["html"],
+  plugins: ["html","prettier"],
   ignorePatterns: [
     "*.min.*",
     "CHANGELOG.md",
