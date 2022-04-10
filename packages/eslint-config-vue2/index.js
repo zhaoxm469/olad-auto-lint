@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const vueRules = require("./rules.js")
 
 module.exports = {
@@ -6,7 +7,7 @@ module.exports = {
   parserOptions: {
     parser: "babel-eslint",
     ecmaVersion: 2018,
-    sourceType: "module",
+    sourceType: "module"
   },
   plugins: ["vue", "prettier"],
   rules: {
