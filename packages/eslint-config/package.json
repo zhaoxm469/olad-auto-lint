@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "ESLint config",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
-  "homepage": "https://github.com/zhaoxm469/olad-auto-lint#readme",
   "main": "index.js",
   "directories": {
     "lib": "lib",
@@ -20,7 +19,8 @@
     "vue-eslint-parser": "^8.3.0"
   },
   "publishConfig": {
-    "registry": "http://npm.nucarf.cn"
+    "registry": "http://npm.nucarf.cn/",
+    "access": "public"
   },
   "repository": {
     "type": "git",

@@ -1,11 +1,12 @@
 {
   "name": "@olad/commitlint-config",
-  "version": "0.0.13",
+  "version": "0.0.1",
   "description": "阿拉钉前端git提交规范",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "index.js",
   "publishConfig": {
-    "registry": "http://npm.nucarf.cn/"
+    "registry": "http://npm.nucarf.cn/",
+    "access": "public"
   },
   "repository": {
     "type": "git",
