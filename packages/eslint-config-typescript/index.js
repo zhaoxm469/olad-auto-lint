@@ -1,13 +1,14 @@
 /*
  * @Date: 2022-02-21 16:09:24
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-04-10 20:39:45
+ * @LastEditTime: 2022-04-10 22:25:52
  * @Description:入口规则
  */
 
-import rules from "./rules"
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const rules = require("./rules")
 
-export default {
+module.exports = {
   extends: [
     "plugin:@typescript-eslint/recommended",
     "@olad/eslint-config-basic",
