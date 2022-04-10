@@ -1,10 +1,9 @@
 {
-  "name": "eslint-config-olad",
-  "version": "0.0.26",
+  "name": "@olad/eslint-config",
+  "version": "0.0.1",
   "description": "ESLint config",
-  "author": "zhaoxm",
+  "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "homepage": "https://github.com/zhaoxm469/olad-auto-lint#readme",
-  "license": "ISC",
   "main": "index.js",
   "directories": {
     "lib": "lib",
@@ -21,14 +20,10 @@
     "vue-eslint-parser": "^8.3.0"
   },
   "publishConfig": {
-    "registry": "http://npm.nucarf.cn/"
+    "registry": "http://npm.nucarf.cn"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhaoxm469/olad-auto-lint.git"
-  },
-  "bugs": {
-    "url": "https://github.com/zhaoxm469/olad-auto-lint/issues"
-  },
-  "gitHead": "7d49ad955d4b9dfb68ae0d0da238ca38d3b39be7"
+  }
 }

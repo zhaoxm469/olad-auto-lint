@@ -1,10 +1,8 @@
 {
-  "name": "commitlint-config-olad",
+  "name": "@olad/commitlint-config",
   "version": "0.0.13",
-  "description": "阿拉钉git提交规范",
-  "author": "zhaoxm",
-  "homepage": "https://github.com/zhaoxm469/olad-auto-lint#readme",
-  "license": "ISC",
+  "description": "阿拉钉前端git提交规范",
+  "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "index.js",
   "publishConfig": {
     "registry": "http://npm.nucarf.cn/"
@@ -17,11 +15,7 @@
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0"
   },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  },
   "bugs": {
     "url": "https://github.com/zhaoxm469/olad-auto-lint/issues"
-  },
-  "gitHead": "7d49ad955d4b9dfb68ae0d0da238ca38d3b39be7"
+  }
 }

@@ -1,7 +1,8 @@
 {
-  "name": "olad-lint-cli",
+  "name": "@olad/lint-cli",
   "version": "0.0.13",
-  "description": "olad-lint cli工具",
+  "description": "CLI 命令行工具",
+  "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "./build",
   "scripts": {
     "dev": "tsc --watch",
@@ -10,7 +11,7 @@
     "build": "npm install && rimraf ./build && npm run scan-eslint-type && npm run scan-deps && tsc --build ./tsconfig.json"
   },
   "bin": {
-    "olad-lint": "./bin/olad-lint.js"
+    "o-lint": "./bin/olad-lint.js"
   },
   "files": [
     "dist",
@@ -22,8 +23,6 @@
     "olad-lint",
     "olading"
   ],
-  "author": "zhaoxm",
-  "license": "ISC",
   "dependencies": {
     "@babel/preset-typescript": "^7.15.0",
     "chalk": "^4.1.2",
@@ -66,6 +65,5 @@
   },
   "publishConfig": {
     "registry": "http://npm.nucarf.cn/"
-  },
-  "gitHead": "7d49ad955d4b9dfb68ae0d0da238ca38d3b39be7"
+  }
 }

@@ -34,8 +34,34 @@ const getTemplate = (templateName) => {
 const addFile = (filename, content) => {
     (0, fs_extra_1.writeFileSync)(`${consts_1.ROOT_PATH}/${filename}`, content, 'utf8');
 };
+// 检查并移除旧的lint包
+const checkAndRemoveOldPackage = async (packageName) => {
+    const userPackage = getUserPackage();
+    if (JSON.stringify(userPackage).includes(packageName)) {
+        (0, execa_1.commandSync)(`npm uninstall ${packageName}`, { stdio: 'inherit' });
+    }
+};
+// 安装依赖
+const npmInstall = (confg) => {
+    const { packageName, templateName, targetFileName, eslintType } = confg;
+    const content = getTemplate(templateName);
+    checkAndRemoveOldPackage(packageName);
+    if ((0, fs_extra_1.existsSync)(`${consts_1.ROOT_PATH}/${targetFileName}`))
+        (0, fs_extra_1.removeSync)(`${consts_1.ROOT_PATH}/${targetFileName}`);
+    (0, spinner_1.startSpinner)(`正在安装依赖: ${packageName}`);
+    (0, execa_1.commandSync)(`npm i ${packageName} -D`, { stdio: 'inherit' });
+    (0, spinner_1.succeedSpiner)(`${packageName}安装完成`);
+    if (eslintType) {
+        const contentResult = handlebars_1.default.compile(content)({ eslintType });
+        (0, fs_extra_1.writeFileSync)(targetFileName, contentResult);
+    }
+    else {
+        console.log((0, path_1.join)(consts_1.ROOT_PATH, targetFileName));
+        (0, fs_extra_1.writeFileSync)(targetFileName, content);
+    }
+};
 // 尝试移除当前项目内属于安全依赖列表的包
-const tryToRemovePackage = (safeDepList = []) => {
+const tryToRemovePackage = (safeDepList) => {
     let deps = [];
     const userPackage = getUserPackage();
     if (userPackage.hasOwnProperty('dependencies')) {
@@ -45,17 +71,10 @@ const tryToRemovePackage = (safeDepList = []) => {
         deps = deps.concat(Object.keys(userPackage.devDependencies));
     }
     deps.filter((dep) => {
-        return safeDepList.includes(dep);
+        return dep.includes(safeDepList);
     }).forEach((dep) => {
         (0, execa_1.commandSync)(`npm uninstall ${dep}`, { stdio: 'inherit' });
     });
-};
-// 检查并移除旧的lint包
-const checkAndRemoveOldPackage = async (packageName) => {
-    const userPackage = getUserPackage();
-    if (JSON.stringify(userPackage).includes(packageName)) {
-        (0, execa_1.commandSync)(`npm uninstall ${packageName}`, { stdio: 'inherit' });
-    }
 };
 // 添加规则询问
 const getLintOptionsPrompt = async () => {
@@ -102,15 +121,23 @@ const setEslintTypePrompt = async (lints) => {
         }
     }
 };
-// 根据用户选择的lint 去执行对应的策略方法
-const installLint = async (lints) => {
-    const strategy = installStrategy();
-    lints.forEach(lint => strategy[lint.lintName] && strategy[lint.lintName](lint));
+const installHusky = (targetDir) => {
+    // startSpinner(`installing husky`)
+    (0, execa_1.commandSync)(`npm install husky --save-dev`, { stdio: 'inherit' });
+    const userPackage = getUserPackage();
+    userPackage.husky = {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    };
+    writeUserPck(userPackage);
 };
 const installStrategy = () => {
     return {
         async eslint(lint) {
             (0, spinner_1.startSpinner)('开始初始化eslint');
+            // 移除eslint相关安装包
+            tryToRemovePackage('eslint');
             addLintStaged({
                 "*.{js,jsx,json,ts,tsx,vue}": [
                     "eslint --fix",
@@ -129,8 +156,9 @@ const installStrategy = () => {
         },
         async stylelint(lint) {
             (0, spinner_1.startSpinner)(`开始初始化stylelint`);
+            tryToRemovePackage('stylelint');
             addLintStaged({
-                "src/**/*.less": [
+                "src/**/*.sass": [
                     "stylelint --config  ./.stylelintrc --fix",
                     "git add"
                 ]
@@ -144,6 +172,8 @@ const installStrategy = () => {
             (0, spinner_1.succeedSpiner)((0, chalk_1.green)('stylelint初始化成功!'));
         },
         async commitlint(lint) {
+            // 移除eslint相关安装包
+            tryToRemovePackage('commitlint');
             (0, spinner_1.startSpinner)(`开始初始化commitlint`);
             installHusky(consts_1.ROOT_PATH);
             npmInstall({
@@ -156,44 +186,23 @@ const installStrategy = () => {
         }
     };
 };
-// 安装依赖
-const npmInstall = (confg) => {
-    const { packageName, templateName, targetFileName, eslintType } = confg;
-    const content = getTemplate(templateName);
-    checkAndRemoveOldPackage(packageName);
-    if ((0, fs_extra_1.existsSync)(`${consts_1.ROOT_PATH}/${targetFileName}`))
-        (0, fs_extra_1.removeSync)(`${consts_1.ROOT_PATH}/${targetFileName}`);
-    (0, spinner_1.startSpinner)(`正在安装依赖: ${packageName}`);
-    (0, execa_1.commandSync)(`npm i ${packageName} -D`, { stdio: 'inherit' });
-    (0, spinner_1.succeedSpiner)(`${packageName}安装完成`);
-    if (eslintType) {
-        const contentResult = handlebars_1.default.compile(content)({ eslintType });
-        (0, fs_extra_1.writeFileSync)(targetFileName, contentResult);
-    }
-    else {
-        (0, fs_extra_1.writeFileSync)(content, (0, path_1.join)(consts_1.ROOT_PATH, targetFileName));
-    }
-};
-const installHusky = (targetDir) => {
-    // startSpinner(`installing husky`)
-    (0, execa_1.commandSync)(`npm install husky --save-dev`, { stdio: 'inherit' });
-    const userPackage = getUserPackage();
-    userPackage.husky = {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
-    };
-    writeUserPck(userPackage);
+// 根据用户选择的lint 去执行对应的策略方法
+const installLint = async (lints) => {
+    const strategy = installStrategy();
+    lints.forEach(lint => strategy[lint.lintName]?.(lint));
 };
 const action = async () => {
     // 获取规则询问
     const lints = await getLintOptionsPrompt();
     // 设置eslint类型的规则
-    await setEslintTypePrompt(lints);
+    if (lints.some(item => item.lintName === 'eslint'))
+        await setEslintTypePrompt(lints);
+    if (!lints.length)
+        return (0, logger_1.info)((0, chalk_1.green)('退出命令，您没有选择要安装的规则工具包哦!'));
     try {
         // 安装规则对应的文件依赖等
         await installLint(lints);
-        (0, logger_1.info)((0, chalk_1.green)('初始化成功!'));
+        (0, logger_1.info)((0, chalk_1.green)('规则安装成功!'));
     }
     catch (err) {
         (0, spinner_1.failSpinner)(err);

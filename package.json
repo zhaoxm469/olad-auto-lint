@@ -1,11 +1,9 @@
 {
-    "name": "root",
-    "private": true,
-    "scripts": {
-        "publish": "lerna publish"
-    },
-    "devDependencies": {
-        "husky": "^7.0.4",
-        "lerna": "^4.0.0"
-    }
+  "name": "@olad/lint-monorepo",
+  "private": true,
+  "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
+  "scripts": {
+    "lint": "eslint .",
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
+  }
 }

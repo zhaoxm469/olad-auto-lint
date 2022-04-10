@@ -4,7 +4,6 @@ import { error } from './utils/logger';
 import { program } from 'commander'
 
 function init() {
-
     const commandPaths = getCommandPaths();
 
     commandPaths.forEach((commandPath) => {
