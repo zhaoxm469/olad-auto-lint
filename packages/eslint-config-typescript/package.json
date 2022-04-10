@@ -1,6 +1,6 @@
 {
   "name": "@olad/eslint-config-typescript",
-  "version": "1.0.3",
+  "version": "1.0.4-beta.1",
   "description": "ESLint configuration for TypeScript",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "index.js",
