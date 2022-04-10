@@ -1,6 +1,6 @@
 # 规则
 
-eslint-config-olad 插件 ，根据以下自定义规则帮助我们检查文件中的代码规范以及风格
+@olad/eslint-config 插件 ，根据以下自定义规则帮助我们检查文件中的代码规范以及风格
 
 ## JavaScript 公共规则
 
