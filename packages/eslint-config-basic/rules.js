@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:09:52
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-04-04 23:16:46
+ * @LastEditTime: 2022-04-11 10:40:42
  * @Description: 公共规则配置，包含200+条规则，具体如下。文档 https://eslint.bootcss.com/docs/rules/
  */
 
@@ -971,14 +971,10 @@ module.exports = {
    * 要求或禁止在一元运算符之前/之后使用空格
    */
   "space-unary-ops": [
-    2,
+    "error",
     {
       words: true,
       nonwords: false,
-      overrides: {
-        new: false,
-        "++": true,
-      },
     },
   ],
   /**
