@@ -129,7 +129,6 @@ const installHusky = (targetDir) => {
 };
 const installStrategy = {
     async eslint(lint) {
-        console.log("\n");
         (0, spinner_1.startSpinner)("开始初始化eslint");
         removeUserPackage(["eslint", "prettier"]);
         npmInstall({
@@ -144,6 +143,7 @@ const installStrategy = {
             templateName: ".prettierrc"
         });
         addFile(".prettierrc", prettierrcContent);
+        console.log("\n");
         (0, spinner_1.succeedSpiner)((0, chalk_1.green)("eslint初始化成功!"));
     },
     async stylelint(lint) {
@@ -193,7 +193,7 @@ const action = async () => {
         return (0, logger_1.info)((0, chalk_1.green)("退出命令，您没有选择要安装的规则工具包哦!"));
     try {
         await installLint(lints);
-        (0, logger_1.info)((0, chalk_1.green)("规则安装成功!"));
+        // info(green("规则安装成功!"))
     }
     catch (err) {
         (0, spinner_1.failSpinner)(err);

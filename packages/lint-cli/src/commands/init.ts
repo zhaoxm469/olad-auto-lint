@@ -182,7 +182,6 @@ const installHusky = (targetDir: string) => {
 const installStrategy = {
   async eslint(lint: LintItem) {
 
-    console.log("\n")
     startSpinner("开始初始化eslint")
 
     removeUserPackage(["eslint", "prettier"])
@@ -204,6 +203,7 @@ const installStrategy = {
 
     addFile(".prettierrc",prettierrcContent)
  
+    console.log("\n")
     succeedSpiner(green("eslint初始化成功!"))
 
   },
@@ -266,7 +266,7 @@ const action = async () => {
 
   try {
     await installLint(lints)
-    info(green("规则安装成功!"))
+    // info(green("规则安装成功!"))
   } catch (err) {
     failSpinner(err)
     return
