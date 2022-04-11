@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:09:24
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-04-11 23:24:11
+ * @LastEditTime: 2022-04-11 23:31:33
  * @Description: 公共配置
  */
 
@@ -21,13 +21,13 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: ["plugin:prettier/recommended"],
+  extends: ["plugin"],
   globals: {
     document: "readonly",
     navigator: "readonly",
     window: "readonly",
   },
-  plugins: ["html", "prettier"],
+  plugins: ["html", "plugin"],
   ignorePatterns: [
     "*.min.*",
     "CHANGELOG.md",
