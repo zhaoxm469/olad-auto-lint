@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:09:24
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-04-11 00:26:16
+ * @LastEditTime: 2022-04-11 23:24:11
  * @Description: 公共配置
  */
 
@@ -21,13 +21,13 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: ["prettier"],
+  extends: ["plugin:prettier/recommended"],
   globals: {
     document: "readonly",
     navigator: "readonly",
     window: "readonly",
   },
-  plugins: ["html","prettier"],
+  plugins: ["html", "prettier"],
   ignorePatterns: [
     "*.min.*",
     "CHANGELOG.md",
@@ -46,5 +46,5 @@ module.exports = {
     "!.vscode",
   ],
   parser: "babel-eslint",
-  rules
+  rules,
 }
