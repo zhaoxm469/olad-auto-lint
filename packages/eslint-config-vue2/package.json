@@ -4,10 +4,6 @@
   "description": "ESLint config for Vue 2",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
   "dependencies": {
     "@olad/eslint-config-basic": "workspace:*",
     "babel-eslint": "^10.1.0",
