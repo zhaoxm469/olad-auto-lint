@@ -2,7 +2,7 @@
 const rules = require("./rules.js")
 
 module.exports = {
-  parser: require.resolve("vue-eslint-parser"),
+  parser: "vue-eslint-parser",
   extends: ["@olad/eslint-config-basic"],
   parserOptions: {
     ecmaVersion: 2018,
