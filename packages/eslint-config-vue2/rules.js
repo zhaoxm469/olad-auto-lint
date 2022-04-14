@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:08:54
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-04-11 23:22:49
+ * @LastEditTime: 2022-04-15 00:15:57
  * @Description:
  */
 /**
@@ -69,18 +69,7 @@ module.exports = {
   /**
    * 此规则旨在强制将自闭合符号作为配置的样式。
    */
-  "vue/html-self-closing": [
-    "error",
-    {
-      html: {
-        void: "always",
-        normal: "never",
-        component: "always",
-      },
-      svg: "always",
-      math: "always",
-    },
-  ],
+  "vue/html-self-closing": "off",
   /**
    * 强制要求每行的最大属性数
    */
