@@ -17,8 +17,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhaoxm469/olad-auto-lint.git"
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.1.0"
   }
 }
