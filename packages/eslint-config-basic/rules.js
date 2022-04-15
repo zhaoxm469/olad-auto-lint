@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:09:52
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-04-11 10:40:42
+ * @LastEditTime: 2022-04-15 14:45:27
  * @Description: 公共规则配置，包含200+条规则，具体如下。文档 https://eslint.bootcss.com/docs/rules/
  */
 
@@ -486,6 +486,7 @@ module.exports = {
   "no-magic-numbers": [
     "error",
     {
+      ignore: [1, 0, -1],
       ignoreArrayIndexes: true,
     },
   ],
