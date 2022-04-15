@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:08:54
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-04-15 09:52:08
+ * @LastEditTime: 2022-04-15 14:32:29
  * @Description:
  */
 /**
@@ -66,21 +66,6 @@ module.exports = {
    * 如果属性的引号与配置的引号不同，则此规则将报告该引号。
    */
   "vue/html-quotes": ["error", "double", { avoidEscape: false }],
-  /**
-   * 此规则旨在强制将自闭合符号作为配置的样式。
-   */
-  "vue/html-self-closing": [
-    "error",
-    {
-      html: {
-        void: "never",
-        normal: "always",
-        component: "always",
-      },
-      svg: "always",
-      math: "always",
-    },
-  ],
   /**
    * 强制要求每行的最大属性数
    */
