@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:09:24
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-04-10 22:25:52
+ * @LastEditTime: 2022-04-20 16:02:33
  * @Description:入口规则
  */
 
@@ -10,8 +10,9 @@ const rules = require("./rules")
 
 module.exports = {
   extends: [
-    "plugin:@typescript-eslint/recommended",
     "@olad/eslint-config-basic",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
   ],
   parserOptions: {
     ecmaVersion: 2020,
