@@ -1,6 +1,6 @@
 {
   "name": "@olad/eslint-config-basic",
-  "version": "0.0.2-beta.2",
+  "version": "0.0.1",
   "description": "ESLint config basic",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "prettier": "^2.5.1"
   },
   "publishConfig": {
-    "registry": "http://npm.nucarf.cn/",
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "repository": {
