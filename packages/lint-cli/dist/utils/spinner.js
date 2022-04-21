@@ -8,15 +8,15 @@ const startSpinner = (text) => {
     const msg = `${text}...\n`;
     spinner.start(msg);
     spinner.stopAndPersist({
-        symbol: '✨',
+        symbol: "✨",
         text: msg,
     });
 };
 exports.startSpinner = startSpinner;
 const succeedSpiner = (text) => {
     spinner.stopAndPersist({
-        symbol: '🎉',
-        text: `${text}\n`
+        symbol: "🎉",
+        text: `${text}\n`,
     });
 };
 exports.succeedSpiner = succeedSpiner;

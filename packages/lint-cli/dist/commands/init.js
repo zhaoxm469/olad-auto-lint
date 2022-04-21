@@ -82,7 +82,7 @@ const removeUserPackage = (safeDepList) => {
         deps = deps.concat(Object.keys(userPackage.devDependencies));
     }
     deps.filter((dep) => {
-        return safeDepList.includes(dep);
+        return safeDepList.some(safeDep => dep.includes(safeDep));
     }).forEach((dep) => {
         console.log(`removeUserPackage 移除依赖${dep}`);
         (0, execa_1.commandSync)(`npm uninstall ${dep}`, { stdio: "inherit" });
@@ -95,12 +95,12 @@ const getLintOptionsPrompt = async () => {
             type: "checkbox",
             name: "lints",
             message: "请选择要初始化的规范 (默认全选，空格键切换选中态，回车确认):",
-            choices: consts_1.choices
-        }
+            choices: consts_1.choices,
+        },
     ]);
     return lints.map(item => {
         return {
-            lintName: item
+            lintName: item,
         };
     });
 };
@@ -111,40 +111,58 @@ const setEslintTypePrompt = async (lint) => {
             type: "list",
             name: "type",
             message: "请选择eslint规范类型:",
-            choices: consts_2.ESLINT_TYPE
-        }
+            choices: consts_2.ESLINT_TYPE,
+        },
     ]);
     lint.eslintType = type;
 };
-const installHusky = (targetDir) => {
-    // startSpinner(`installing husky`)
+const installHusky = () => {
+    console.log("\n");
+    (0, spinner_1.startSpinner)("installing husky + lint-staged");
     (0, execa_1.commandSync)("npm install husky --save-dev", { stdio: "inherit" });
-    const userPackage = getUserPackage();
-    userPackage.husky = {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
-    };
-    writeUserPck(userPackage);
+    (0, execa_1.sync)("npm", ["set-script", "prepare", "husky install"], { stdio: "inherit" });
+    (0, execa_1.sync)("npx", ["husky", "install"], { stdio: "inherit" });
+    (0, execa_1.commandSync)("npm run prepare", { stdio: "inherit" });
+    (0, execa_1.sync)("npx", ["husky", "add", ".husky/pre-commit", "npx lint-staged"], { stdio: "inherit" });
+    (0, spinner_1.succeedSpiner)((0, chalk_1.green)("husky + lint-staged ， 初始化成功!"));
 };
 const installStrategy = {
     async eslint(lint) {
         (0, spinner_1.startSpinner)("开始初始化eslint");
+        // 移除相关依赖
         removeUserPackage(["eslint", "prettier"]);
+        // 安装依赖
         npmInstall({
-            packName: lint.eslintType
+            packName: lint.eslintType,
         });
+        (0, spinner_1.succeedSpiner)(`\n${(0, chalk_1.green)("eslint初始化成功!")}`);
+        // 获取eslint 配置模板
         const eslintrcJsContent = getTemplateContent({
             templateName: "eslintrc.js",
-            eslintType: lint.eslintType
+            eslintType: lint.eslintType,
         });
+        // 添加.eslintrc.js 文件
         addFile(".eslintrc.js", eslintrcJsContent);
+        // 获取.preettierrc.js 模板
         const prettierrcContent = getTemplateContent({
-            templateName: ".prettierrc"
+            templateName: ".prettierrc",
         });
+        // 添加.prettierrc 文件
         addFile(".prettierrc", prettierrcContent);
-        console.log("\n");
-        (0, spinner_1.succeedSpiner)((0, chalk_1.green)("eslint初始化成功!"));
+        const userPackage = getUserPackage();
+        // 删除eslintConfig 字段
+        delete userPackage.eslintConfig;
+        // 新增lint修复命令
+        userPackage.scripts.lint = "eslint --ext .js,.vue src";
+        // 添加script 命令
+        writeUserPck(userPackage);
+        // 添加husky配置
+        addLintStaged({
+            "*.{js,jsx,json,ts,tsx,vue}": [
+                "eslint --cache --fix",
+                "git add",
+            ],
+        });
     },
     async stylelint(lint) {
         (0, spinner_1.startSpinner)("开始初始化stylelint");
@@ -152,14 +170,14 @@ const installStrategy = {
         addLintStaged({
             "src/**/*.sass": [
                 "stylelint --config  ./.stylelintrc --fix",
-                "git add"
-            ]
+                "git add",
+            ],
         });
         npmInstall({
             targetFileName: ".stylelintrc.js",
             packageName: consts_2.STYLE_LINT_PACKAGE_NAME,
             templateName: ".stylelintrc.js",
-            eslintType: lint.eslintType
+            eslintType: lint.eslintType,
         });
         (0, spinner_1.succeedSpiner)((0, chalk_1.green)("stylelint初始化成功!"));
     },
@@ -172,10 +190,17 @@ const installStrategy = {
             targetFileName: ".commitlintrc.js",
             packageName: consts_2.COMMIT_LINT_PACKAGE_NAME,
             templateName: ".commitlintrc.js",
-            eslintType: lint.eslintType
+            eslintType: lint.eslintType,
         });
         (0, spinner_1.succeedSpiner)((0, chalk_1.green)("commitlint初始化成功!"));
-    }
+    },
+    // husk() {
+    //   commandSync("npm i husky -D", { stdio: "inherit" })
+    //   commandSync("npm set-script prepare \"husky install\"", { stdio: "inherit" })
+    //   commandSync("npx husky add .husky/pre-commit \"npx lint-staged\"", { stdio: "inherit" })
+    //   commandSync("git add .husky/pre-commit", { stdio: "inherit" })
+    //   console.log("12313")
+    // }
 };
 // 根据用户选择的lint 去执行对应的策略方法
 const installLint = async (lints) => {
@@ -185,6 +210,8 @@ const installLint = async (lints) => {
     });
 };
 const action = async () => {
+    // installHusky()
+    // return
     const lints = await getLintOptionsPrompt();
     // 如果用户选择 Eslint ， 询问用户 安装哪种 Eslint 相对应的 依赖包
     if (lints.some(item => item.lintName === "eslint"))
@@ -193,15 +220,38 @@ const action = async () => {
         return (0, logger_1.info)((0, chalk_1.green)("退出命令，您没有选择要安装的规则工具包哦!"));
     try {
         await installLint(lints);
-        // info(green("规则安装成功!"))
+        (0, logger_1.info)((0, chalk_1.green)("规范依赖安装完成!"));
     }
     catch (err) {
         (0, spinner_1.failSpinner)(err);
         return;
     }
 };
-exports.default = {
-    command: "init",
-    description: "初始化lint规范",
-    action,
-};
+class Init {
+    command = "init";
+    description = "初始化规范依赖";
+    options = [
+        {
+            name: "eslint",
+            description: "是否安装 eslint",
+            type: "boolean",
+            default: true,
+        },
+        {
+            name: "stylelint",
+            description: "是否安装 stylelint",
+            type: "boolean",
+            default: true,
+        },
+        {
+            name: "commitlint",
+            description: "是否安装 commitlint",
+            type: "boolean",
+            default: true,
+        },
+    ];
+    async action() {
+        await action();
+    }
+}
+exports.default = Init;
