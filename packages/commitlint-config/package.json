@@ -1,0 +1,22 @@
+{
+  "name": "@olad/commitlint-config",
+  "version": "0.0.4",
+  "description": "阿拉钉前端git提交规范",
+  "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
+  "main": "index.js",
+  "publishConfig": {
+    "!": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaoxm469/olad-auto-lint.git"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/zhaoxm469/olad-auto-lint/issues"
+  }
+}

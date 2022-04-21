@@ -1,17 +1,44 @@
+/*
+ * @Date: 2022-02-21 16:09:24
+ * @LastEditors: zhaoxm
+ * @LastEditTime: 2022-04-10 23:28:01
+ */
 export const ROOT_PATH = process.cwd()
 
-export const targetFile = 'private'
+export const targetFile = "private"
 
-export const ESLINT_PACKAGE_NAME = 'eslint-config-olad'
+// ESLINT
+export const ESLINT_VUE2 = "@olad/eslint-config-vue2"
+export const ESLINT_VUE3 = "@olad/eslint-config-vue3"
+export const ESLINT_TYPESCRIPT = "@olad/eslint-config-typescript"
 
-export const COMMIT_LINT_PACKAGE_NAME = 'commitlint-config-olad'
+// COMMITLINT
+export const COMMIT_LINT_PACKAGE_NAME = "@olad/commitlint-config"
 
-export const STYLE_LINT_PACKAGE_NAME = 'stylelint-config-olad'
+// STYLELINT
+export const STYLE_LINT_PACKAGE_NAME = "@olad/stylelint-config-olad"
 
-export const safeDependencies = ['eslint', 'commitlint', 'stylelint']
+export const ESLINT_TYPE = ["vue2", "vue3", "typescript"]
 
-export const VERSION_ENUM = {
-    UNINSTALLED: Symbol(),
-    NEW: Symbol(),
-    OLD: Symbol()
+export const PACKNAME_ESLINT_NAME = {
+  vue2: ESLINT_VUE2,
+  vue3: ESLINT_VUE3,
+  typescript: ESLINT_VUE3,
 }
+
+export const PACKAGE_NAMES = {
+  eslint:PACKNAME_ESLINT_NAME,
+  stylelint: STYLE_LINT_PACKAGE_NAME,
+  commitlint: COMMIT_LINT_PACKAGE_NAME,
+}
+
+export const choices = [{
+  name: "eslint",
+  checked: true
+}, {
+  name: "stylelint",
+  checked: false
+}, {
+  name: "commitlint",
+  checked: false
+}]
