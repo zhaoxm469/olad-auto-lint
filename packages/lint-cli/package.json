@@ -1,6 +1,6 @@
 {
   "name": "@olad/lint-cli",
-  "version": "0.0.2",
+  "version": "2.0.4",
   "description": "CLI 命令行工具",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "./build",
@@ -45,7 +45,6 @@
     "typescript": "^4.4.3"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
     "access": "public"
   }
 }

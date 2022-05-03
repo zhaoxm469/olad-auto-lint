@@ -1,24 +1,23 @@
 {
-  "name": "@olad/eslint-config-ts",
+  "name": "@olad/eslint-config-vue3",
   "version": "2.0.4",
-  "description": "",
+  "description": "ESLint config for Vue3",
   "license": "MIT",
   "author": "zhaoxm",
   "main": "index.js",
   "files": [
     "index.js"
   ],
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {
-    "eslint": ">=7.4.0",
-    "typescript": ">=3.9"
-  },
   "dependencies": {
     "@olad/eslint-config-basic": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^5.17.0",
-    "@typescript-eslint/parser": "^5.17.0"
+    "@olad/eslint-config-ts": "workspace:*",
+    "eslint-plugin-vue": "^8.5.0"
   },
   "devDependencies": {
     "eslint": "^8.12.0"

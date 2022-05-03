@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:08:54
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-02 15:49:01
+ * @LastEditTime: 2022-05-03 13:25:56
  * @Description:
  */
 /**
@@ -45,6 +45,14 @@ module.exports = {
   "vue/valid-v-text": "error",
   // eslint-disable-next-line no-magic-numbers
   "vue/html-indent": ["error", 2],
+  // if else 风格
+  "brace-style": ["error", "1tbs"],
+  // 关键字前后空格 if  () => if()
+  "keyword-spacing": ["error", { before: true, after: true }],
+  // 对象取值不能有空格 obj  .  foo => obj.foo
+  "no-whitespace-before-property": "error",
+  // 最大连续空行
+  "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }],
   /**
    * 元素开始 > 括号是否换行
    */
@@ -331,4 +339,4 @@ module.exports = {
   "vue/valid-v-pre": "error",
   "vue/valid-v-show": "error",
   "vue/valid-v-slot": "error",
-}
+};

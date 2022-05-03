@@ -1,11 +1,9 @@
 /*
  * @Date: 2022-02-21 16:09:52
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-04-15 14:45:27
+ * @LastEditTime: 2022-05-03 16:01:20
  * @Description: 公共规则配置，包含200+条规则，具体如下。文档 https://eslint.bootcss.com/docs/rules/
  */
-
-/* eslint-disable no-magic-numbers */
 
 module.exports = {
   /**
@@ -483,13 +481,7 @@ module.exports = {
    * @reason 常量或者参数，不用魔法数字或者字符串,代码更容易看懂，代码逻辑更清晰。看到代码就知道意义。代码维护和优化更容易。
    * 某些情况指定数字用作数组的索引是否是可以的
    */
-  "no-magic-numbers": [
-    "error",
-    {
-      ignore: [1, 0, -1],
-      ignoreArrayIndexes: true,
-    },
-  ],
+  "no-magic-numbers": "off",
   /**
    * 禁止正则表达式中使用肉眼无法区分的特殊字符
    * @reason 某些特殊字符很难看出差异，最好不要在正则中使用
@@ -801,10 +793,18 @@ module.exports = {
    * @reason 编译阶段就会报错了
    */
   "no-with": "off",
-  /**
-   * 允许连续空行
-   */
-  "no-multiple-empty-lines": 0,
+  // 最大连续空行
+  "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }],
+  // if else 风格
+  "brace-style": ["error", "1tbs"],
+  // 关键字前后空格 if  () => if()
+  "keyword-spacing": ["error", { before: true, after: true }],
+  "semi-spacing": ["error", { before: false, after: true }],
+  "space-infix-ops": "error",
+  "space-unary-ops": ["error", { words: true, nonwords: false }],
+  "rest-spread-spacing": ["error", "never"],
+  "template-curly-spacing": ["error", "never"],
+
   /**
    * 必须使用 a = {b} 而不是 a = {b: b}
    */
@@ -816,6 +816,9 @@ module.exports = {
       avoidQuotes: true,
     },
   ],
+  // 逗号前后的空格  [1,     2,  3  ,4] => [1, 2, 4, 4]
+  "comma-spacing": ["error", { before: false, after: true }],
+
   /**
    * 对象文字的大括号内执行一致的间距，解构赋值和导入/导出说明符
    */
@@ -963,7 +966,7 @@ module.exports = {
   /**
    * 禁止或强制使用括号内的空格（括号中的空格）
    */
-  "space-in-parens": "off",
+  "space-in-parens": ["error", "never"],
   /**
    * 需要在中缀运算符周围留出空格
    */

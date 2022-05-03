@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-olad",
-  "version": "0.0.2",
+  "version": "2.0.4",
   "description": "阿拉钉前端Style规范，目前支持 `css|scss`",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "license": "ISC",
@@ -9,7 +9,6 @@
   ],
   "main": "index.js",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "dependencies": {

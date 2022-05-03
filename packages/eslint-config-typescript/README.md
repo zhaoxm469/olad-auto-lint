@@ -4,17 +4,17 @@
 
 ## 安装
 
-* 推荐适用`pnpm`安装
+- 推荐适用`pnpm`安装
 
 ```bash
 # with pnpm
-pnpm add @olad/eslint-config-typescript -D
+pnpm add @olad/eslint-config-ts -D
 
 # with npm
-npm install @olad/eslint-config-typescript -D
+npm install @olad/eslint-config-ts -D
 
 # with yarn
-yarn add @olad/eslint-config-typescript --D
+yarn add @olad/eslint-config-ts --D
 ```
 
 ## 使用
@@ -25,6 +25,6 @@ yarn add @olad/eslint-config-typescript --D
 
 ```js
 module.exports = {
-  extends: ["@olad/eslint-config-typescript"],
-}
+  extends: ["@olad/eslint-config-ts"],
+};
 ```
