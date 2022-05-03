@@ -1,18 +1,22 @@
 {
   "name": "@olad/eslint-config-vue2",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "ESLint config for Vue 2",
   "author": "zhaoxm",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "@olad/eslint-config-basic": "workspace:*",
-    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.5.0",
     "vue-eslint-parser": "^8.3.0"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
     "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.12.0"
   }
 }
