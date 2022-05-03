@@ -2,7 +2,7 @@
 /*
  * @Date: 2022-02-21 16:09:52
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-03 16:01:20
+ * @LastEditTime: 2022-05-03 22:38:31
  * @Description: 100 个强大的 ESLint 规则 https://github.com/sindresorhus/eslint-plugin-unicorn
  */
 
@@ -19,7 +19,7 @@ module.exports = {
   // 入参对象不进行设置默认值
   "unicorn/no-object-as-default-parameter": "off",
   // 不允许赋值this
-  "no-this-assignment":"off",
+  "unicorn/no-this-assignment":"off",
   "unicorn/prefer-dom-node-text-content": "off",
     
   // unicorn error
@@ -57,7 +57,6 @@ module.exports = {
   "unicorn/no-process-exit": "error",
   "unicorn/no-static-only-class": "error",
   "unicorn/no-thenable": "error",
-  "unicorn/no-this-assignment": "error",
   "unicorn/no-unreadable-array-destructuring": "error",
   "unicorn/no-unreadable-iife": "error",
   "unicorn/no-unsafe-regex": "off",
@@ -115,7 +114,10 @@ module.exports = {
   // TODO: Enable this by default when targeting Node.js 14.
   "unicorn/prefer-top-level-await": "off",
   "unicorn/prefer-type-error": "error",
-  "unicorn/prevent-abbreviations": "error",
+  "unicorn/prevent-abbreviations": ["error", {
+    // 忽略文件名的检查
+    checkFilenames:false,
+  }],
   "unicorn/relative-url-style": "error",
   "unicorn/require-array-join-separator": "error",
   "unicorn/require-number-to-fixed-digits-argument": "error",
