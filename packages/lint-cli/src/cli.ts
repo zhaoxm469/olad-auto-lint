@@ -9,7 +9,7 @@ function init() {
   commandPaths.forEach((commandPath) => {
     const CommandModule = require(commandPath).default
     const { command, description, action } = new CommandModule()
-    console.log({ command,description,action })
+    console.log({ command, description, action })
     program.command(command).description(description).action(action)
   })
 

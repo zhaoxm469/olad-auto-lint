@@ -1,31 +1,24 @@
 {
-  "name": "@olad/eslint-config-typescript",
-  "version": "0.0.4",
-  "description": "ESLint configuration for TypeScript",
-  "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
+  "name": "@olad/eslint-config-ts",
+  "version": "2.0.4",
+  "description": "",
+  "license": "MIT",
+  "author": "zhaoxm",
   "main": "index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "peerDependencies": {
     "eslint": ">=7.4.0",
     "typescript": ">=3.9"
   },
-  "devDependencies": {
-    "eslint": "^8.12.0"
-  },
   "dependencies": {
     "@olad/eslint-config-basic": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^5.18.0",
-    "@typescript-eslint/parser": "^5.18.0"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhaoxm469/olad-auto-lint.git"
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "^8.12.0"
   }
 }

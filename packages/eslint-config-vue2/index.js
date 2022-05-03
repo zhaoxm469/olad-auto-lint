@@ -1,12 +1,8 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const rules = require("./rules.js")
 
 module.exports = {
   parser: "vue-eslint-parser",
   extends: ["@olad/eslint-config-basic"],
-  parserOptions: {
-    sourceType: "module",
-  },
   plugins: ["vue"],
   rules: {
     ...rules,

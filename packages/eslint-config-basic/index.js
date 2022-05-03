@@ -1,33 +1,32 @@
 /*
  * @Date: 2022-02-21 16:09:24
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-04-11 23:34:35
+ * @LastEditTime: 2022-05-03 22:15:13
  * @Description: 公共配置
  */
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
 const rules = require("./rules.js")
+const unicorn = require("./unicorn.js")
 
 module.exports = {
   env: {
     browser: true,
+    amd: true,
     node: true,
-    es6: true,
+    es2021: true,
   },
   parserOptions: {
-    ecmaVersion: 12,
     sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
   },
-  extends: ["prettier"],
   globals: {
     document: "readonly",
     navigator: "readonly",
     window: "readonly",
   },
-  plugins: ["html", "prettier"],
+  plugins: ["html", "promise", "import", "unicorn"],
   ignorePatterns: [
     "*.min.*",
     "CHANGELOG.md",
@@ -45,6 +44,45 @@ module.exports = {
     "!.vitepress",
     "!.vscode",
   ],
-  parser: "babel-eslint",
-  rules,
+  rules: {
+    ...rules,
+    ...unicorn,
+    // 强制使用一致的参数名和顺序。
+    "promise/param-names": "error",
+    // 报告任何无效的导出，即同名的再导出
+    "import/export": "error",
+    // 确保所有导入出现在其他语句之前
+    "import/first": "error",
+    // 报告在多个地方重复导入同一模块
+    "import/no-duplicates": "error",
+    // 禁止命名默认导出
+    "import/no-named-default": "error",
+  },
+  overrides: [
+    {
+      files: ["*.d.ts"],
+      rules: {
+        "import/no-duplicates": "off",
+      },
+    },
+    {
+      files: ["*.js"],
+      rules: {
+        "@typescript-eslint/no-var-requires": "off",
+        "unicorn/prefer-module":"off",
+      },
+    },
+    {
+      files: ["scripts/**/*.*", "cli.*"],
+      rules: {
+        "no-console": "off",
+      },
+    },
+    {
+      files: ["*.test.ts", "*.test.js", "*.spec.ts", "*.spec.js"],
+      rules: {
+        "no-unused-expressions": "off",
+      },
+    },
+  ],
 }

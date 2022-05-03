@@ -1,0 +1,19 @@
+{
+  "name": "@olad/eslint-config",
+  "version": "2.0.4",
+  "author": "zhaoxm",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@olad/eslint-config-basic": "workspace:*",
+    "@olad/eslint-config-vue3":"workspace:*",
+    "@olad/eslint-config-react":"workspace:*",
+    "eslint": "^8.12.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  }
+}
