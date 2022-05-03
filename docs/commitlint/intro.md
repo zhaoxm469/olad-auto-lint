@@ -1,8 +1,14 @@
 # 介绍
 
-CommitLint 规范，统一格式的提交记录，更清晰和易读。
+commitlint 可共享配置，用于对 git commit message 进行校验，统一格式的提交记录，更清晰和易读。
 
-## 安装
+## 安装依赖
+
+:::warning
+
+如果项目之前安装过 CommitLint 相关的包，建议卸载，避免引入不必要的包。如`@commitlint/cli`、`@commitlint/config-conventional`等，直接在 package.json 搜索**commitlint**，相关的包全部卸载
+
+:::
 
 ```bash
 # with npm
@@ -15,9 +21,9 @@ yarn add @olad/commitlint-config --dev
 pnpm add @olad/commitlint-config --dev
 ```
 
-## 使用
+## 如何使用
 
-在你的工程根目录下创建一个`.commitlintrc.js`配置文件
+在你的工程根目录下创建一个`.commitlint.config.js`配置文件
 
 配置如下即可:
 
@@ -25,6 +31,28 @@ pnpm add @olad/commitlint-config --dev
 module.exports = {
   extends: '@olad/commitlint-config',
 };
+```
+
+## 设置 git hook
+
+可通过 [husky](https://www.npmjs.com/package/husky) 设置在 git commit 时触发 commitlint。
+
+首先安装husky：
+
+```bash
+npm install husky -D
+```
+
+然后在 中增加：package.json
+
+```bash
+{
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
 ```
 
 ## 示例
@@ -61,7 +89,3 @@ git commit -a -m 'feat(cli): xxxxx'
 | test      | 新增测试用例或是更新现有测试                                                     |
 | revert    | 回滚某个更早之前的提交                                                           |
 | chore     | 不属于以上类型的其他类型(日常事务)                                               |
-
-## 注意事项
-
-如果项目之前安装过 CommitLint 相关的包，建议卸载，避免引入不必要的包。如`@commitlint/cli`、`@commitlint/config-conventional`等，直接在 package.json 搜索**commitlint**，相关的包全部卸载

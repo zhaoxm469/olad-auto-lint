@@ -41,7 +41,7 @@ o-lint init
 我们除了使用命令行工具注入依赖，还可以手动安装指定依赖包到项目，进行相关配置。
 
 :::warning
-如果项目之前安装过 ESLint 相关的包，建议卸载，避免出现版本不一致导致的问题。如`eslint`、`eslint-plugin-vue`、`@babel/eslint-parser`、`@typescript-eslint/eslint-plugin` 、`@typescript-eslint/parser`、`@vue/eslint-config-standard`、`@vue/eslint-config-typescript`、
+如果项目之前安装过 ESLint 相关的包，建议卸载。如`eslint`、`eslint-plugin-vue`、`@babel/eslint-parser`、`@typescript-eslint/eslint-plugin` 、`@typescript-eslint/parser`、`@vue/eslint-config-standard`、`@vue/eslint-config-typescript`、
 `eslint-plugin-import`等，直接在 package.json 搜索**eslint**，相关的包全部卸载
 :::
 

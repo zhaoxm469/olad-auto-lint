@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-05-02 16:53:27
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-03 14:17:13
+ * @LastEditTime: 2022-05-04 00:31:12
  * @Description: 侧边栏路由
  */
 
@@ -27,7 +27,11 @@ export const sidebar: SidebarConfig = {
     },
     {
       text: "StyleLint",
-      children: ["/stylelint/intro.md", "/cli/implementation.md"],
+      children: ["/stylelint/intro.md", "/stylelint/rules.md"],
+    },
+    {
+      text: "VsCode配置",
+      children: ["/vscode/intro.md"],
     },
   ],
 };

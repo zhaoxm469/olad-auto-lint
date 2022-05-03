@@ -2,7 +2,7 @@
 
 这里主要对规范包内的规则进行了简单的说明
 
-## JavaScript Base
+## JavaScript
 
 共计 209 条规则，启用规则 131 条
 
@@ -1012,7 +1012,7 @@ yoda: "error"
 
 ## Vue2
 
-参考 Vue 官方规则文档 eslint.vuejs.org/rules/
+规则描述详见文档：[eslint-plugin-vue](https://eslint.vuejs.org/rules/)
 
 ```js
 /**
@@ -1321,7 +1321,7 @@ yoda: "error"
  */
 "vue/valid-template-root": "error",
 /**
- * v-bind:foo.sync 指令必须合法 ， 一下都是校验合法性，就不一一注释了
+ * 校验合法性
  */
 "vue/valid-v-bind-sync": "error",
 "vue/valid-v-bind": "error",
@@ -1341,6 +1341,167 @@ yoda: "error"
 
 ## Vue3
 
+继承 vue3-recommended 规则
+
+规则描述详见文档：[eslint-plugin-vue](https://eslint.vuejs.org/rules/)
+
+```js
+'vue/component-tags-order': 'warn',
+'vue/no-lone-template': 'warn',
+'vue/no-multiple-slot-args': 'warn',
+'vue/no-v-html': 'warn',
+'vue/order-in-components': 'warn',
+'vue/this-in-template': 'warn'
+'vue/attribute-hyphenation': 'warn',
+'vue/component-definition-name-casing': 'warn',
+'vue/first-attribute-linebreak': 'warn',
+'vue/html-closing-bracket-newline': 'warn',
+'vue/html-closing-bracket-spacing': 'warn',
+'vue/html-end-tags': 'warn',
+'vue/html-indent': 'warn',
+'vue/html-quotes': 'warn',
+'vue/html-self-closing': 'warn',
+'vue/max-attributes-per-line': 'warn',
+'vue/multiline-html-element-content-newline': 'warn',
+'vue/mustache-interpolation-spacing': 'warn',
+'vue/no-multi-spaces': 'warn',
+'vue/no-spaces-around-equal-signs-in-attribute': 'warn',
+'vue/no-template-shadow': 'warn',
+'vue/one-component-per-file': 'warn',
+'vue/prop-name-casing': 'warn',
+'vue/require-default-prop': 'warn',
+'vue/require-explicit-emits': 'warn',
+'vue/require-prop-types': 'warn',
+'vue/singleline-html-element-content-newline': 'warn',
+'vue/v-bind-style': 'warn',
+'vue/v-on-event-hyphenation': 'warn',
+'vue/v-on-style': 'warn',
+'vue/v-slot-style': 'warn',
+"vue/component-tags-order": [
+    "error",
+    {
+    order: ["script", "template", "style"],
+    },
+],
+ "@typescript-eslint/no-unused-vars": "off",
+// 强制文件命名规范,
+"unicorn/filename-case":["error", {
+    "case": "kebabCase",
+}],
+"vue/html-self-closing": [
+    "error",
+    {
+    html: {
+        void: "never",
+        normal: "always",
+        component: "always",
+    },
+    svg: "always",
+    math: "always",
+    },
+],
+"vue/no-multiple-slot-args": ["error"],
+"vue/order-in-components": ["error"],
+"vue/this-in-template": ["error"],
+"vue/attribute-hyphenation": ["error"],
+"vue/component-definition-name-casing": ["error"],
+"vue/html-closing-bracket-newline": ["error"],
+"vue/html-closing-bracket-spacing": ["error"],
+"vue/html-end-tags": ["error"],
+"vue/html-indent": ["error"],
+"vue/html-quotes": ["error"],
+"vue/multiline-html-element-content-newline": ["error"],
+"vue/mustache-interpolation-spacing": ["error"],
+"vue/no-multi-spaces": ["error"],
+"vue/no-spaces-around-equal-signs-in-attribute": ["error"],
+"vue/no-template-shadow": ["error"],
+"vue/one-component-per-file": ["error"],
+"vue/prop-name-casing": ["error"],
+"vue/require-default-prop": ["error"],
+"vue/require-explicit-emits": ["error"],
+"vue/require-prop-types": ["error"],
+"vue/singleline-html-element-content-newline": ["error"],
+"vue/v-bind-style": ["error"],
+"vue/v-on-style": ["error"],
+"vue/v-slot-style": ["error"],
+"vue/attributes-order": "error",
+"vue/max-attributes-per-line": "off",
+"vue/multi-word-component-names": "off",
+
+// reactivity transform
+"vue/no-setup-props-destructure": "off",
+
+"vue/component-tags-order": [
+    "error",
+    {
+    order: ["script", "template", "style"],
+    },
+],
+},
+```
+
 ## TypeScript
 
+继承 typescript-eslint/recommended 和 import/typescript
+
+```js
+"import/named": "off",
+
+// TS
+"@typescript-eslint/semi": ["error", "never"],
+"@typescript-eslint/ban-ts-comment": [
+    "error",
+    { "ts-ignore": "allow-with-description" },
+],
+"@typescript-eslint/member-delimiter-style": [
+    "error",
+    { multiline: { delimiter: "none" } },
+],
+"@typescript-eslint/type-annotation-spacing": ["error", {}],
+"@typescript-eslint/consistent-type-imports": [
+    "error",
+    { prefer: "type-imports", disallowTypeAnnotations: false },
+],
+"@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+"@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
+"@typescript-eslint/prefer-ts-expect-error": "error",
+
+// Override JS
+"no-useless-constructor": "off",
+indent: "off",
+"@typescript-eslint/indent": ["error", 2],
+"no-unused-vars": "off",
+"@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+"no-redeclare": "off",
+"@typescript-eslint/no-redeclare": "error",
+"no-use-before-define": "off",
+"@typescript-eslint/no-use-before-define": [
+    "error",
+    { functions: false, classes: false, variables: true },
+],
+"brace-style": "off",
+"@typescript-eslint/brace-style": [
+    "error",
+    "stroustrup",
+    { allowSingleLine: true },
+],
+"comma-dangle": "off",
+"@typescript-eslint/comma-dangle": ["error", "always-multiline"],
+"object-curly-spacing": "off",
+"@typescript-eslint/object-curly-spacing": ["error", "always"],
+
+// off
+"@typescript-eslint/camelcase": "off",
+"@typescript-eslint/explicit-function-return-type": "off",
+"@typescript-eslint/explicit-member-accessibility": "off",
+"@typescript-eslint/no-explicit-any": "off",
+"@typescript-eslint/no-parameter-properties": "off",
+"@typescript-eslint/no-empty-interface": "off",
+"@typescript-eslint/ban-ts-ignore": "off",
+"@typescript-eslint/no-empty-function": "off",
+"@typescript-eslint/no-non-null-assertion": "off",
+"@typescript-eslint/explicit-module-boundary-types": "off",
+"@typescript-eslint/ban-types": "off",
+"@typescript-eslint/no-namespace": "off",
+```
 ##
