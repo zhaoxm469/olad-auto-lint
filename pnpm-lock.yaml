@@ -109,17 +109,22 @@ importers:
 
   packages/lint-cli:
     specifiers:
-      '@babel/preset-typescript': ^7.15.0
+      '@babel/preset-typescript': ^7.16.7
+      '@olad/eslint-config': workspace:*
       '@types/fs-extra': ^9.0.13
       '@types/inquirer': ^8.2.0
+      '@types/node': ^17.0.31
       chalk: ^4.1.2
       commander: ^8.2.0
       compressing: ^1.5.1
+      core@: link:babel/core@
+      core@7.0.0: link:babel/core@7.0.0
       execa: ^5.1.1
       fs-extra: ^10.0.0
       globby: ^11.0.4
       handlebars: ^4.7.7
       inquirer: ^8.1.5
+      lodash: ^4.17.21
       minimatch: ^3.0.4
       ora: ^5.4.1
       pacote: ^12.0.2
@@ -128,14 +133,19 @@ importers:
       typescript: ^4.4.3
     dependencies:
       '@babel/preset-typescript': registry.npmmirror.com/@babel/preset-typescript/7.16.7
+      '@olad/eslint-config': link:../eslint-config
+      '@types/node': 17.0.31
       chalk: registry.npmmirror.com/chalk/4.1.2
       commander: registry.npmmirror.com/commander/8.3.0
       compressing: registry.npmmirror.com/compressing/1.5.1
+      core@: link:babel/core@
+      core@7.0.0: link:babel/core@7.0.0
       execa: registry.npmmirror.com/execa/5.1.1
       fs-extra: registry.npmmirror.com/fs-extra/10.0.1
       globby: registry.npmmirror.com/globby/11.1.0
       handlebars: registry.npmmirror.com/handlebars/4.7.7
       inquirer: registry.npmmirror.com/inquirer/8.2.2
+      lodash: 4.17.21
       minimatch: registry.npmmirror.com/minimatch/3.1.2
       ora: registry.npmmirror.com/ora/5.4.1
       pacote: registry.npmmirror.com/pacote/12.0.3
@@ -143,7 +153,7 @@ importers:
       '@types/fs-extra': registry.npmmirror.com/@types/fs-extra/9.0.13
       '@types/inquirer': registry.npmmirror.com/@types/inquirer/8.2.1
       rimraf: registry.npmmirror.com/rimraf/3.0.2
-      ts-node: registry.npmmirror.com/ts-node/10.7.0_typescript@4.6.3
+      ts-node: registry.npmmirror.com/ts-node/10.7.0_3a73bf628b8c5d45a6e82b4576678d54
       typescript: registry.npmmirror.com/typescript/4.6.3
 
   packages/stylelint-config:
@@ -233,6 +243,9 @@ packages:
   /@types/minimist/1.2.2:
     resolution: {integrity: sha1-7nceK6Sz3Fs3KTXVSf2WF780W4w=}
     dev: false
+
+  /@types/node/17.0.31:
+    resolution: {integrity: sha512-AR0x5HbXGqkEx9CadRH3EBYx/VkiUgZIhP4wvPn/+5KIsgpNoyFaRlVe0Zlx9gRtg8fA06a9tskE2MSN7TcG4Q==}
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha1-0zV0eaD9/dWQf+Z+F+CoXJBuEwE=}
@@ -3067,7 +3080,7 @@ packages:
     name: '@types/fs-extra'
     version: 9.0.13
     dependencies:
-      '@types/node': registry.npmmirror.com/@types/node/17.0.23
+      '@types/node': 17.0.31
     dev: true
 
   registry.npmmirror.com/@types/inquirer/8.2.1:
@@ -3118,12 +3131,6 @@ packages:
     version: 0.7.31
     dev: true
 
-  registry.npmmirror.com/@types/node/17.0.23:
-    resolution: {integrity: sha512-UxDxWn7dl97rKVeVS61vErvw086aCYhDLyvRQZ5Rk65rZKepaFdm53GeqXaKBuOhED4e9uWq34IC3TdSdJJ2Gw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-17.0.23.tgz}
-    name: '@types/node'
-    version: 17.0.23
-    dev: true
-
   registry.npmmirror.com/@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz}
     name: '@types/normalize-package-data'
@@ -3141,7 +3148,7 @@ packages:
     name: '@types/through'
     version: 0.0.30
     dependencies:
-      '@types/node': registry.npmmirror.com/@types/node/17.0.23
+      '@types/node': 17.0.31
     dev: true
 
   registry.npmmirror.com/@vitejs/plugin-vue/2.3.1_vite@2.9.6+vue@3.2.33:
@@ -5605,7 +5612,7 @@ packages:
       cli-width: registry.npmmirror.com/cli-width/3.0.0
       external-editor: registry.npmmirror.com/external-editor/3.1.0
       figures: registry.npmmirror.com/figures/3.2.0
-      lodash: registry.npmmirror.com/lodash/4.17.21
+      lodash: 4.17.21
       mute-stream: registry.npmmirror.com/mute-stream/0.0.8
       ora: registry.npmmirror.com/ora/5.4.1
       run-async: registry.npmmirror.com/run-async/2.4.1
@@ -7615,7 +7622,7 @@ packages:
     version: 4.0.0
     dev: true
 
-  registry.npmmirror.com/ts-node/10.7.0_typescript@4.6.3:
+  registry.npmmirror.com/ts-node/10.7.0_3a73bf628b8c5d45a6e82b4576678d54:
     resolution: {integrity: sha512-TbIGS4xgJoX2i3do417KSaep1uRAW/Lu+WAL2doDHC0D6ummjirVOXU5/7aiZotbQ5p1Zp9tP7U6cYhA0O7M8A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ts-node/-/ts-node-10.7.0.tgz}
     id: registry.npmmirror.com/ts-node/10.7.0
     name: ts-node
@@ -7637,6 +7644,7 @@ packages:
       '@tsconfig/node12': registry.npmmirror.com/@tsconfig/node12/1.0.9
       '@tsconfig/node14': registry.npmmirror.com/@tsconfig/node14/1.0.1
       '@tsconfig/node16': registry.npmmirror.com/@tsconfig/node16/1.0.2
+      '@types/node': 17.0.31
       acorn: registry.npmmirror.com/acorn/8.7.0
       acorn-walk: registry.npmmirror.com/acorn-walk/8.2.0
       arg: registry.npmmirror.com/arg/4.1.3
