@@ -9,13 +9,13 @@ stylelint 规范，目前支持`css|scss`
 
 ```bash
 # with npm
-npm install stylelint-config-olad -D
+npm install @olad/stylelint-config -D
 
 # with yarn
-yarn add stylelint-config-olad -D
+yarn add @olad/stylelint-config -D
 
 # with pnpm
-pnpm add stylelint-config-olad -D
+pnpm add @olad/stylelint-config -D
 ```
 
 ## 使用
@@ -26,7 +26,7 @@ pnpm add stylelint-config-olad -D
 
 ```js
 module.exports = {
-  extends: 'stylelint-config-olad',
+  extends: '@olad/stylelint-config',
 };
 ```
 

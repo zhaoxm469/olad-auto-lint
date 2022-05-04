@@ -1,6 +1,6 @@
 # ESLint 规范
 
-阿拉钉前端 Vue2 ESLint 规范
+阿拉钉前端  ESLint 规范合计
 
 ## 安装
 
@@ -8,13 +8,13 @@
 
 ```bash
 # with pnpm
-pnpm add @olad/eslint-config-vue2 -D
+pnpm add @olad/eslint-config -D
 
 # with npm
-npm install @olad/eslint-config-vue2 -D
+npm install @olad/eslint-config -D
 
 # with yarn
-yarn add @olad/eslint-config-vue2 --D
+yarn add @olad/eslint-config --D
 ```
 
 ## 使用
@@ -25,6 +25,6 @@ yarn add @olad/eslint-config-vue2 --D
 
 ```js
 module.exports = {
-  extends: ["@olad/eslint-config-vue2"],
+  extends: ["@olad/eslint-config"],
 }
 ```

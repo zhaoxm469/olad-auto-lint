@@ -1,6 +1,6 @@
 {
   "name": "@olad/eslint-config-vue2",
-  "version": "2.0.7",
+  "version": "0.0.1",
   "description": "ESLint config for Vue 2",
   "author": "zhaoxm",
   "main": "index.js",

@@ -1,13 +1,13 @@
-## CommitLint 规范
+# CommitLint 规范
 
 阿拉钉前端 CommitLint 规范
 
 ## 安装
 
 ```shell
-npm install commitlint-config-olad -D
+npm install @olad/commitlint-config -D
 # OR
-yarn add commitlint-config-olad --dev
+yarn add @olad/commitlint-config --dev
 ```
 
 ## 使用
@@ -18,7 +18,7 @@ yarn add commitlint-config-olad --dev
 
 ```js
 module.exports = {
-  extends: "commitlint-config-olad",
+  extends: "@olad/commitlint-config",
 };
 ```
 
@@ -26,11 +26,9 @@ module.exports = {
 
 如果项目之前安装过 CommitLint 相关的包，建议卸载，避免引入不必要的包。如`@commitlint/cli`、`@commitlint/config-conventional`等，直接在 package.json 搜索**commitlint**，相关的包全部卸载
 
-#### 规范
+## 示例
 
 格式： `<type>[(scope)]: <description>`
-
-示例
 
 ```bash
 git commit -a -m 'build: xxxxx'
