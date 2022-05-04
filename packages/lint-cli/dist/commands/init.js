@@ -72,23 +72,19 @@ class Init {
         userPackage_1.userPackage.install(eslintPackName);
         // 添加用户目录添加相关模板配置文件
         userProject_1.userProject
-            .addTemplateFile('templates/.eslintrc.js.hbs', {
+            .addTemplateFile('.', 'templates/.eslintrc.js.hbs', {
             packageName: eslintPackName,
         })
-            .addTemplateFile('templates/.eslintignore.hbs');
+            .addTemplateFile('.', 'templates/.eslintignore.hbs');
         userPackage_1.userPackage
             // 添加Script命令
-            .appendScript("lint:eslint", `eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix`)
+            .appendScript("lint:eslint", `eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,js,ts,tsx}\" --fix`)
             // 添加LintStaged
             .appendLintStaged('*.{js,jsx,ts,tsx}', [
-            "eslint --fix",
-            "prettier --write",
-            "git add"
+            "eslint --fix"
         ])
             .appendLintStaged("*.vue", [
-            "eslint --fix",
-            "prettier --write",
-            "git add"
+            "eslint --fix"
         ]);
         (0, spinner_1.succeedSpinier)((0, chalk_1.green)("EslLint ， 初始化成功!\n"));
     }
@@ -100,22 +96,18 @@ class Init {
             .install(const_1.STYLE_LINT_PACKAGE_NAME);
         // 添加用户目录添加相关模板配置文件
         userProject_1.userProject
-            .addTemplateFile('templates/stylelint.config.js.hbs', {
+            .addTemplateFile('.', 'templates/stylelint.config.js.hbs', {
             packageName: const_1.STYLE_LINT_PACKAGE_NAME,
         })
-            .addTemplateFile('templates/.stylelintignore.hbs');
+            .addTemplateFile('.', 'templates/.stylelintignore.hbs');
         // 注入Script命令
         userPackage_1.userPackage
             .appendScript("lint:stylelint", `stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/`)
             .appendLintStaged("*.vue", [
-            "eslint --fix",
-            "prettier --write",
-            "git add"
+            "eslint --fix"
         ])
-            .appendLintStaged("*.{scss,less,styl,html}", [
-            "stylelint --fix",
-            "prettier --write",
-            "git add"
+            .appendLintStaged("*.{scss,css,less,styl,html}", [
+            "stylelint --fix"
         ]);
         (0, spinner_1.succeedSpinier)((0, chalk_1.green)("StyleLint ， 初始化成功!\n"));
     }
@@ -131,11 +123,14 @@ class Init {
         (0, execa_1.sync)("npm", ["set-script", "prepare", "husky install"], { stdio: "inherit" });
         (0, execa_1.sync)("npx", ["husky", "install"], { stdio: "inherit" });
         (0, execa_1.commandSync)("npm run prepare", { stdio: "inherit" });
-        (0, execa_1.sync)("npx", ["husky", "add", ".husky/pre-commit", "npx lint-staged"], { stdio: "inherit" });
+        console.log('\n');
         (0, spinner_1.succeedSpinier)((0, chalk_1.green)("husky + lint-staged ， 初始化成功!"));
         userPackage_1.userPackage.install(const_1.COMMIT_LINT_PACKAGE_NAME);
         userProject_1.userProject
-            .addTemplateFile('templates/commitlint.config.js.hbs', {
+            .addTemplateFile('./.husky', 'templates/husky/commit-msg.hbs')
+            .addTemplateFile('./.husky', 'templates/husky/common.sh.hbs')
+            .addTemplateFile('./.husky', 'templates/husky/pre-commit.hbs')
+            .addTemplateFile('.', 'templates/commitlint.config.js.hbs', {
             packageName: const_1.COMMIT_LINT_PACKAGE_NAME,
         });
     }

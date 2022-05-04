@@ -1,6 +1,6 @@
 {
   "name": "@olad/eslint-config",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "author": "zhaoxm",
   "main": "index.js",
   "license": "MIT",

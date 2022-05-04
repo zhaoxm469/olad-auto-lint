@@ -64,7 +64,7 @@ class UserPackage {
         const packageJSon = JSON.parse(JSON.stringify(this.packageContent))
 
         if (packageJSon["lint-staged"]) {
-            packageJSon[keyName] = stagedContent
+            packageJSon["lint-staged"][keyName] = stagedContent
         } else {
             packageJSon["lint-staged"] = {
                 [keyName]: stagedContent

@@ -1,4 +1,4 @@
-import { writeFileSync ,readFileSync} from "fs-extra"
+import { writeFileSync, readFileSync } from "fs-extra"
 import { ROOT_PATH } from "../config/const"
 import { currentProjectRoot } from "."
 import Handlebars from "handlebars"
@@ -17,12 +17,12 @@ class UserProject {
      * @param { Recordable } data 模板中替换的数据
      * @return { UserProject }
      */
-    addTemplateFile (templateFile:string,data:Recordable={}){
-        const templateContent = readFileSync(resolve(currentProjectRoot,templateFile), "utf-8")
+    addTemplateFile(output: string = '', templateFile: string, data: Recordable = {}) {
+        const templateContent = readFileSync(resolve(currentProjectRoot, templateFile), "utf-8")
         const contentResult = Handlebars.compile(templateContent)(data)
-        const templateFileName = templateFile.replace(/(templates\/|\.hbs)/g,'')
-        const outputUserPath = join(this.userRootPath,templateFileName)
-        writeFileSync(outputUserPath,contentResult, "utf8")
+        const templateFileName = templateFile.slice(templateFile.lastIndexOf('/') + 1, -4)
+        const outputUserPath = join(this.userRootPath, output, templateFileName)
+        writeFileSync(outputUserPath, contentResult, "utf8")
         return this
     }
 }
