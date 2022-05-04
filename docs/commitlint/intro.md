@@ -1,5 +1,20 @@
 # 介绍
 
+在开发的过程中，Git 每次提交代码，都需要写Commit message 。如果没有对 Commit message 进行规范，会造成很多的麻烦。
+
+比如：
+
+- 每个人的 Commit message 风格不同，格式凌乱，查看就不太方便。
+- 有一些commit 没有写 message，事后就很难知道对应修改的作用。
+
+所以说规范的 Commit message 是很有必要的。也是有很多的好处的，比如：
+
+- 可以统一团队的Git commit 日志风格
+- 方便日后查阅， Reviewing Code等
+- 可以帮助我们写好 Changelog
+
+## 说明
+
 commitlint 可共享配置，用于对 git commit message 进行校验，统一格式的提交记录，更清晰和易读。
 
 ## 安装依赖
@@ -43,23 +58,68 @@ module.exports = {
 npm install husky -D
 ```
 
-然后在 中增加：package.json
+进行一系列的初始化
 
 ```bash
-{
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  }
-}
+npm set-script prepare husky install
+
+npx husky install 
+
+npm run prepare
 ```
 
-## 示例
+向 `.husky` 目录 添加 commit-msg , common.sh , pre-commit 文件
+
+commit-msg 文件 写入
+
+```bash
+#!/bin/sh
+
+# shellcheck source=./_/husky.sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx --no-install commitlint --edit "$1"
+```
+
+commit-msg 文件内容
+
+```bash
+#!/bin/sh
+
+# shellcheck source=./_/husky.sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx --no-install commitlint --edit "$1"
+```
+
+common.sh 文件内容
+
+```bash
+#!/bin/sh
+command_exists () {
+  command -v "$1" >/dev/null 2>&1
+}
+
+# Workaround for Windows 10, Git Bash and Yarn
+if command_exists winpty && test -t 1; then
+  exec < /dev/tty
+fi
+```
+
+pre-commit 文件内容
+
+```bash
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+. "$(dirname "$0")/common.sh"
+
+[ -n "$CI" ] && exit 0
+
+```
+
+## GIT提交示例
 
 格式： `<type>[(scope)]: <description>`
-
-示例
 
 ```bash
 git commit -a -m 'build: xxxxx'

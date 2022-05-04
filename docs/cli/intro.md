@@ -1,6 +1,6 @@
 # 介绍
 
-代码规范 CLI 工具
+代码规范注入 CLI 工具
 
 通过此工具可以把相关规范快速集成到项目当中去，减少需繁琐的手动配置。
 
@@ -40,7 +40,7 @@ yarn global upgrade --latest @olad/o-lint
 
 ## 使用
 
-o-lint 提供了三个命令，init、init-git-hooks 和 upgrade，下面分别介绍这三个命令
+o-lint 提供了两个命令，init 和 upgrade，下面分别介绍这两个命令
 
 ```bash
 o-lint init
@@ -48,10 +48,17 @@ o-lint init
 
 随后命令行会列举可选的规范类型，目前包括 eslint、stylelint 及 commitlint，默认全选，使用上下键切换目标选项，空格键可切换选中态，回车确认。
 
+![o-lint init](/init.png)
+
+如果选中包含 `EsLint` 规则， 会进行二次询问  
+
+![o-lint init](/eslint.png)
+
+继续回车 会进行安相关规则的配置安装
+
 ## 命令介绍
 
 | 命令          | 说明                     |
 | ------------- | ------------------------ |
 | init          | 选择安装对应规范的依赖   |
 | update        | 更新 lint 依赖 |
-| init-git-hook | 安装 git-hook |
