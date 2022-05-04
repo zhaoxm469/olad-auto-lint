@@ -1,39 +1,32 @@
-# 介绍
+# StyleLint 规范
 
 stylelint 规范，目前支持`css|scss`
 
 使用`stylelint`官方代码风格`stylelint-config-standard`  
-
 该风格是 `stylelint`汲取了`GitHub`、`Google`、`Airbnb`等，使用`stylelint-order`强制按照某个顺序进行编码。
 
-## 安装依赖
-
-:::warning
-
-如果项目之前安装过 Stylelint 相关的包，建议卸载，避免引入不必要的包。如`@stylelint`、`stylelint-config-standard`、`stylelint-order`等，直接在 package.json 搜索**stylelint**，相关的包全部卸载
-
-:::
+## 安装
 
 ```bash
 # with npm
-npm install @olad/stylelint-config -D
+npm install stylelint-config-olad -D
 
 # with yarn
-yarn add @olad/stylelint-config -D
+yarn add stylelint-config-olad -D
 
 # with pnpm
-pnpm add @olad/stylelint-config -D
+pnpm add stylelint-config-olad -D
 ```
 
-## 如何使用
+## 使用
 
-在你的工程根目录下创建一个`.stylelintrc`配置文件
+在你的工程根目录下创建一个`.stylelintrc.js`配置文件
 
 配置如下即可:
 
 ```js
 module.exports = {
-  extends: '@olad/stylelint-config',
+  extends: 'stylelint-config-olad',
 };
 ```
 
@@ -50,3 +43,7 @@ module.exports = {
 "scss.validate": true,
 "stylelint.enable": true,
 ```
+
+## 注意事项
+
+如果项目之前安装过 Stylelint 相关的包，建议卸载，避免引入不必要的包。如`@stylelint`、`stylelint-config-standard`、`stylelint-order`等，直接在 package.json 搜索**stylelint**，相关的包全部卸载
