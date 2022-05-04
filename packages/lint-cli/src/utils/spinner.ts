@@ -1,18 +1,18 @@
-import * as ora from "ora"
 import * as chalk from "chalk"
+import * as ora from "ora"
 
 const spinner = ora()
 
 export const startSpinner = (text?: string) => {
-  const msg = `${text}...\n`
-  spinner.start(msg)
+  const message = `${text}...\n`
+  spinner.start(message)
   spinner.stopAndPersist({
     symbol: "✨",
-    text: msg,
+    text: message,
   })
 }
 
-export const succeedSpiner = (text?: string) => {
+export const succeedSpinier = (text?: string) => {
   spinner.stopAndPersist({
     symbol: "🎉",
     text: `${text}\n`,

@@ -1,6 +1,5 @@
 import * as chalk from "chalk"
 
-
 export const warn = (text: string) => {
   console.log(chalk.yellow(`\n${text}\n`))
 }

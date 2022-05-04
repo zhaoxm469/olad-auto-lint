@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:09:24
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-03 22:15:13
+ * @LastEditTime: 2022-05-04 16:45:12
  * @Description: 公共配置
  */
 
@@ -46,7 +46,6 @@ module.exports = {
   ],
   rules: {
     ...rules,
-    ...unicorn,
     // 强制使用一致的参数名和顺序。
     "promise/param-names": "error",
     // 报告任何无效的导出，即同名的再导出
@@ -68,8 +67,9 @@ module.exports = {
     {
       files: ["*.js"],
       rules: {
+        ...unicorn,
+        "unicorn/prefer-module": "off",
         "@typescript-eslint/no-var-requires": "off",
-        "unicorn/prefer-module":"off",
       },
     },
     {

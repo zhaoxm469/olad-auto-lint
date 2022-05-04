@@ -5,9 +5,9 @@ class InitGitHook {
     description = "初始化git hooks";
     action = async () => {
         // 初始化husky
-        await initHusky();
-        // 初始化commitlint
-        await initCommitlint();
+        // await initHusky()
+        // // 初始化commitlint
+        // await initCommitlint()
     };
 }
 exports.default = InitGitHook;

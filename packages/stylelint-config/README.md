@@ -6,13 +6,13 @@
 
 ```bash
 # with npm
-npm install stylelint-config-olad -D
+npm install @olad/stylelint-config -D
 
 # with yarn
-yarn add stylelint-config-olad -D
+yarn add @olad/stylelint-config -D
 
 # with pnpm
-pnpm add stylelint-config-olad -D
+pnpm add @olad/stylelint-config -D
 ```
 
 ## 使用
@@ -23,7 +23,7 @@ pnpm add stylelint-config-olad -D
 
 ```js
 module.exports = {
-  extends: "stylelint-config-olad",
+  extends: "@olad/stylelint-config",
 };
 ```
 
@@ -44,13 +44,3 @@ module.exports = {
 ## 注意事项
 
 如果项目之前安装过 Stylelint 相关的包，建议卸载，避免引入不必要的包。如`@stylelint`、`stylelint-config-standard`、`stylelint-order`等，直接在 package.json 搜索**stylelint**，相关的包全部卸载
-
-#### 规范
-
-使用`stylelint`官方代码风格`stylelint-config-standard`；该风格是 `stylelint`汲取了`GitHub`、`Google`、`Airbnb`等；使用`stylelint-order`强制按照某个顺序进行编码
-
-目的：
-
-- 增加 css 代码的重用性和易于维护性
-- 统一规范、提高协作效率
-- 提升渲染性能

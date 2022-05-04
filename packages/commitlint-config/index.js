@@ -2,27 +2,26 @@ module.exports = {
   extends: ["@commitlint/config-conventional"],
   rules: {
     // <type> 不能为空
-    "scope-empty": ["error", "always"],
+    "scope-empty": [2, "always"],
     // <type> 不能为空
-    "type-empty": ["error", "never"],
+    "type-empty": [2, "never"],
     // <type>格式小写
-    "type-case": ["error", "always", "lower-case"],
+    "type-case": [2, "always", "lower-case"],
     // <scope> 格式 小写
-    "scope-case": ["error", "always", "lower-case"],
+    "scope-case": [2, "always", "lower-case"],
     // <subject> 不能为空
-    "subject-empty": ["error", "never"],
+    "subject-empty": [2, "never"],
     // <subject> 以.为结束标志
-    "subject-full-stop": ["error", "never", "."],
-    "subject-case": ["error", "never", []],
+    "subject-full-stop": [2, "never", "."],
+    "subject-case": [2, "never", []],
     // body换行
-    "body-leading-blank": ["error", "always"],
+    "body-leading-blank": [2, "always"],
     // <footer> 以空行开头
     "footer-leading-blank": [1, "always"],
     // header 最长72
-    // eslint-disable-next-line no-magic-numbers
-    "header-max-length": ["error", "never", 72],
+    "header-max-length": [2, "never", 72],
     "type-enum": [
-      "error",
+      2,
       "always",
       [
         // 编译相关的修改，例如发布版本、对项目构建或者依赖的改动

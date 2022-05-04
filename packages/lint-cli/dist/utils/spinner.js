@@ -1,25 +1,25 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.failSpinner = exports.succeedSpiner = exports.startSpinner = void 0;
-const ora = require("ora");
+exports.failSpinner = exports.succeedSpinier = exports.startSpinner = void 0;
 const chalk = require("chalk");
+const ora = require("ora");
 const spinner = ora();
 const startSpinner = (text) => {
-    const msg = `${text}...\n`;
-    spinner.start(msg);
+    const message = `${text}...\n`;
+    spinner.start(message);
     spinner.stopAndPersist({
         symbol: "✨",
-        text: msg,
+        text: message,
     });
 };
 exports.startSpinner = startSpinner;
-const succeedSpiner = (text) => {
+const succeedSpinier = (text) => {
     spinner.stopAndPersist({
         symbol: "🎉",
         text: `${text}\n`,
     });
 };
-exports.succeedSpiner = succeedSpiner;
+exports.succeedSpinier = succeedSpinier;
 const failSpinner = (text) => {
     spinner.fail(chalk.red(text));
 };

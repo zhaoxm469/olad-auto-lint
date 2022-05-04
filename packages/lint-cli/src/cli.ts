@@ -5,12 +5,12 @@ import { program } from "commander"
 
 function init() {
   const commandPaths = getCommandPaths()
-  
+
   commandPaths.forEach((commandPath) => {
     const CommandModule = require(commandPath).default
-    const { command, description, action } = new CommandModule()
-    console.log({ command, description, action })
-    program.command(command).description(description).action(action)
+    const commandModule = new CommandModule()
+    const { command, description, action } = commandModule
+    program.command(command).description(description).action(action.bind(commandModule))
   })
 
   program.version(version)

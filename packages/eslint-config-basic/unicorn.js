@@ -2,26 +2,26 @@
 /*
  * @Date: 2022-02-21 16:09:52
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-03 22:38:31
+ * @LastEditTime: 2022-05-04 16:44:20
  * @Description: 100 个强大的 ESLint 规则 https://github.com/sindresorhus/eslint-plugin-unicorn
  */
 
 module.exports = {
   // unicorn off 
   // 强制对长度使用 === 0 来判断
-  "unicorn/explicit-length-check": "off",  
+  "unicorn/explicit-length-check": "off",
   // 强制文件夹命名规范,后续可以根据需求再开放出来
-  "unicorn/filename-case":"off",
+  "unicorn/filename-case": "off",
   // 复杂情况不使用 reduce 
-  "unicorn/no-array-reduce":"off",
+  "unicorn/no-array-reduce": "off",
   // 不使用null复制
   "unicorn/no-null": "off",
   // 入参对象不进行设置默认值
   "unicorn/no-object-as-default-parameter": "off",
   // 不允许赋值this
-  "unicorn/no-this-assignment":"off",
+  "unicorn/no-this-assignment": "off",
   "unicorn/prefer-dom-node-text-content": "off",
-    
+
   // unicorn error
   "unicorn/better-regex": "error",
   "unicorn/catch-error-name": "error",
@@ -91,7 +91,6 @@ module.exports = {
   "unicorn/prefer-math-trunc": "error",
   "unicorn/prefer-modern-dom-apis": "error",
   "unicorn/prefer-modern-math-apis": "error",
-  "unicorn/prefer-module": "error",
   "unicorn/prefer-native-coercion-functions": "error",
   "unicorn/prefer-negative-index": "error",
   "unicorn/prefer-node-protocol": "error",
@@ -116,7 +115,7 @@ module.exports = {
   "unicorn/prefer-type-error": "error",
   "unicorn/prevent-abbreviations": ["error", {
     // 忽略文件名的检查
-    checkFilenames:false,
+    checkFilenames: false,
   }],
   "unicorn/relative-url-style": "error",
   "unicorn/require-array-join-separator": "error",

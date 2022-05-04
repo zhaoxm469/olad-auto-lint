@@ -1,25 +1,25 @@
 /*
  * @Date: 2022-02-21 08:48:11
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-04-20 16:34:44
+ * @LastEditTime: 2022-05-04 21:00:23
  * @Description: 更新版本
  */
 
 import chalk from "chalk"
-import { failSpinner, startSpinner, succeedSpiner } from "./../utils/spinner"
+import { failSpinner, startSpinner, succeedSpinier } from "./../utils/spinner"
 
 export default class Upgrade implements ACommands {
 
-  public readonly  command = "upgrade"
+  public readonly command = "upgrade"
 
   public readonly description = "升级规范包相关依赖"
 
-  action = async() => {
+  action = async () => {
     try {
       startSpinner("正在更新。。。")
-    
-      succeedSpiner(chalk.green("更新成功!"))
-    
+
+      succeedSpinier(chalk.green("更新成功!"))
+
     }
     catch (err) {
       failSpinner(err)

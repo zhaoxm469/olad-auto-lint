@@ -8,9 +8,9 @@ function init() {
     const commandPaths = (0, index_1.getCommandPaths)();
     commandPaths.forEach((commandPath) => {
         const CommandModule = require(commandPath).default;
-        const { command, description, action } = new CommandModule();
-        console.log({ command, description, action });
-        commander_1.program.command(command).description(description).action(action);
+        const commandModule = new CommandModule();
+        const { command, description, action } = commandModule;
+        commander_1.program.command(command).description(description).action(action.bind(commandModule));
     });
     commander_1.program.version(package_json_1.version);
     commander_1.program.arguments("[command]").action((cmd) => {
