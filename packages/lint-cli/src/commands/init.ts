@@ -40,7 +40,7 @@ export default class Init implements ACommands {
     },
   ]
 
-  async action() {
+  action = async () => {
     const { lints } = await prompt([
       {
         type: "checkbox",
@@ -138,6 +138,7 @@ export default class Init implements ACommands {
       .uninstall(/commitlint/)
       // 安装依赖
       .install('husky')
+     
 
     // 一系列husky + lint-staged 初始化操作
     startSpinner("installing husky + lint-staged")
@@ -148,7 +149,10 @@ export default class Init implements ACommands {
     console.log('\n');
     succeedSpinier(green("husky + lint-staged ， 初始化成功!"))
 
+      // 写入Script脚本
     userPackage.install(COMMIT_LINT_PACKAGE_NAME)
+
+    userPackage.appendScript("lint:lint-staged","lint-staged")
 
     userProject
       .addTemplateFile('./.husky', 'templates/husky/commit-msg.hbs')
@@ -157,6 +161,8 @@ export default class Init implements ACommands {
       .addTemplateFile('.', 'templates/commitlint.config.js.hbs', {
         packageName: COMMIT_LINT_PACKAGE_NAME,
       })
+
+    succeedSpinier(green("CommitLint ， 初始化成功!\n"))
   }
 
 }
