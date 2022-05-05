@@ -37,7 +37,7 @@ class Init {
             value: const_1.ESLINT_VUE2,
         },
     ];
-    async action() {
+    action = async () => {
         const { lints } = await (0, inquirer_1.prompt)([
             {
                 type: "checkbox",
@@ -56,7 +56,7 @@ class Init {
         ]);
         for (const item of lints)
             await this[item]();
-    }
+    };
     async eslint() {
         const { eslintPackName } = await (0, inquirer_1.prompt)([
             {
@@ -125,7 +125,9 @@ class Init {
         (0, execa_1.commandSync)("npm run prepare", { stdio: "inherit" });
         console.log('\n');
         (0, spinner_1.succeedSpinier)((0, chalk_1.green)("husky + lint-staged ， 初始化成功!"));
+        // 写入Script脚本
         userPackage_1.userPackage.install(const_1.COMMIT_LINT_PACKAGE_NAME);
+        userPackage_1.userPackage.appendScript("lint:lint-staged", "lint-staged");
         userProject_1.userProject
             .addTemplateFile('./.husky', 'templates/husky/commit-msg.hbs')
             .addTemplateFile('./.husky', 'templates/husky/common.sh.hbs')
@@ -133,6 +135,7 @@ class Init {
             .addTemplateFile('.', 'templates/commitlint.config.js.hbs', {
             packageName: const_1.COMMIT_LINT_PACKAGE_NAME,
         });
+        (0, spinner_1.succeedSpinier)((0, chalk_1.green)("CommitLint ， 初始化成功!\n"));
     }
 }
 exports.default = Init;

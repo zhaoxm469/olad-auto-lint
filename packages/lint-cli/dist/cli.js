@@ -4,13 +4,20 @@ const package_json_1 = require("../package.json");
 const index_1 = require("./utils/index");
 const logger_1 = require("./utils/logger");
 const commander_1 = require("commander");
+const userPackage_1 = require("./utils/userPackage");
+const spinner_1 = require("./utils/spinner");
 function init() {
     const commandPaths = (0, index_1.getCommandPaths)();
     commandPaths.forEach((commandPath) => {
         const CommandModule = require(commandPath).default;
         const commandModule = new CommandModule();
         const { command, description, action } = commandModule;
-        commander_1.program.command(command).description(description).action(action.bind(commandModule));
+        commander_1.program.command(command).description(description).action(() => {
+            if (!userPackage_1.userPackage.isHasPackageJson) {
+                return (0, spinner_1.failSpinner)('请确保在项目根目录下存在 package.json 文件');
+            }
+            return action(commandModule);
+        });
     });
     commander_1.program.version(package_json_1.version);
     commander_1.program.arguments("[command]").action((cmd) => {
