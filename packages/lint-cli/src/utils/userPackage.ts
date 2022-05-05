@@ -4,7 +4,7 @@ import { USER_PCK_PATH } from "../config/const"
 import { PackageJson } from "../types/shared"
 import { readFileSync } from "fs-extra"
 import { commandSync } from "execa"
-import { writeFileSync } from "fs"
+import { writeFileSync,existsSync } from "fs"
 
 
 class UserPackage {
@@ -19,6 +19,10 @@ class UserPackage {
 
         const pckResult: PackageJson = JSON.parse(packContent)
         return pckResult
+    }
+
+    get isHasPackageJson() {
+        return existsSync(this.userPackPath)
     }
 
     get dependenciesAndDevDependencies() {
@@ -87,7 +91,7 @@ class UserPackage {
 
         console.log('\n');
         succeedSpinier(`${packageName} 安装成功`)
-
+        return this
     }
 
     uninstall(packageName: RegExp | string | string[]) {
