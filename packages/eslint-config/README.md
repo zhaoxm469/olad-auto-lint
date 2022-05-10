@@ -1,10 +1,12 @@
 # ESLint 规范
 
-阿拉钉前端  ESLint 规范合计
+阿拉钉前端 ESLint 规范合集
+
+支持 `Vue3`、`React`、`TypeScript`、`JavaScript` 文件的校验
 
 ## 安装
 
-* 推荐适用`pnpm`安装
+- 推荐适用`pnpm`安装
 
 ```bash
 # with pnpm

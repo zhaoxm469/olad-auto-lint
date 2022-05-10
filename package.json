@@ -2,19 +2,22 @@
   "name": "@olad/lint-monorepo",
   "private": true,
   "author": "zhaoxm",
+  "packageManager": "pnpm@7.0.0",
   "scripts": {
+    "clean": "rm -rf node_modules **/*/node_modules",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress dev docs",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public",
     "publish": "bumpp package.json packages/*/package.json  && pnpm -r publish --access public --no-git-check"
   },
   "devDependencies": {
-    "@olad/eslint-config": "*",
+    "@olad/eslint-config": "workspace:*",
     "@vuepress/client": "^2.0.0-beta.42",
     "bumpp": "^7.1.1",
     "eslint": "^7.32.0",
+    "typescript": "^4.6.4",
     "vue": "^3.2.33",
     "vuepress": "^2.0.0-beta.42"
   },
-  "version": "0.0.2"
+  "version": "2.0.9"
 }

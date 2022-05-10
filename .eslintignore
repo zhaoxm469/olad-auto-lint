@@ -1,7 +1,8 @@
 !.vuepress/
 !.*.js
-.cache/
+*/.cache/
 .temp/
 node_modules/
 lib/
+dist
 dist/

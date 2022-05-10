@@ -4,7 +4,7 @@
 
 ## 安装
 
-* 推荐适用`pnpm`安装
+- 推荐适用`pnpm`安装
 
 ```bash
 # with pnpm

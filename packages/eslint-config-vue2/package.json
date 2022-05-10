@@ -1,12 +1,12 @@
 {
   "name": "@olad/eslint-config-vue2",
-  "version": "0.0.2",
+  "version": "2.0.9",
   "description": "ESLint config for Vue 2",
   "author": "zhaoxm",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@olad/eslint-config-basic": "workspace:*",
+    "@olad/eslint-config-ts": "workspace:*",
     "eslint-plugin-vue": "^8.5.0",
     "vue-eslint-parser": "^8.3.0"
   },

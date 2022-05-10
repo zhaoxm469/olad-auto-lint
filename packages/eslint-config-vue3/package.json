@@ -1,6 +1,6 @@
 {
   "name": "@olad/eslint-config-vue3",
-  "version": "0.0.2",
+  "version": "2.0.9",
   "description": "ESLint config for Vue3",
   "license": "MIT",
   "author": "zhaoxm",
@@ -15,7 +15,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@olad/eslint-config-basic": "workspace:*",
     "@olad/eslint-config-ts": "workspace:*",
     "eslint-plugin-vue": "^8.5.0"
   },

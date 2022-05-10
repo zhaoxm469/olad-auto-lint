@@ -14,13 +14,13 @@
 
 ```bash
 # with pnpm
-pnpm add -g @olad/o-lint
+pnpm add -g @olad/auto-lint
 
 # with yarn
-yarn global add @olad/o-lint
+yarn global add @olad/auto-lint
 
 # with npm
-npm i -g  @olad/o-lint
+npm i -g  @olad/auto-lint
 ```
 
 你可以在终端输入命令 `o-lint`来验证是否安装成功

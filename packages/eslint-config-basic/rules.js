@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:09:52
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-03 16:01:20
+ * @LastEditTime: 2022-05-07 00:23:49
  * @Description: 公共规则配置，包含200+条规则，具体如下。文档 https://eslint.bootcss.com/docs/rules/
  */
 
@@ -430,7 +430,7 @@ module.exports = {
    * 禁止在类之外的地方使用 this
    * @reason 只允许在 class 中使用 this
    */
-  "no-invalid-this": "error",
+  "no-invalid-this": "off",
   /**
    * 禁止使用特殊空白符（比如全角空格），除非是出现在字符串、正则表达式或模版字符串中
    */
@@ -800,8 +800,6 @@ module.exports = {
   // 关键字前后空格 if  () => if()
   "keyword-spacing": ["error", { before: true, after: true }],
   "semi-spacing": ["error", { before: false, after: true }],
-  "space-infix-ops": "error",
-  "space-unary-ops": ["error", { words: true, nonwords: false }],
   "rest-spread-spacing": ["error", "never"],
   "template-curly-spacing": ["error", "never"],
 

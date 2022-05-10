@@ -24,7 +24,7 @@ pnpm add @olad/stylelint-config -D
 ```js
 module.exports = {
   extends: "@olad/stylelint-config",
-};
+}
 ```
 
 如果你使用 vscode 编辑器，建议安装`stylelint`插件，并在设置配置文件`settings.json`中配置如下，在代码编写时会实时提示，保存是会自动修复

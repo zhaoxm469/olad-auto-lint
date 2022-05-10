@@ -28,7 +28,7 @@ olad-auto-lint 是针对公司内部 完全定制化的 前端代码规范解决
 
 | 包名                    | 功能                 | 包地址 |
 | ----------------------- | -------------------- | ------ |
-| @olad/commitlint-config | 提供 CommitLint 规范 |        |
-| @olad/stylelint-config  | 提供 StyleLint 规范  |        |
-| @olad/eslint-config     | 提供 EsLint 规范     |        |
-| @olad/o-lint            | 命令行工具           |        |
+| @olad/commitlint-config | 提供 CommitLint 规范 |   <https://www.npmjs.com/package/@olad/commitlint-config>     |
+| @olad/stylelint-config  | 提供 StyleLint 规范  |   <https://www.npmjs.com/package/@olad/stylelint-config>      |
+| @olad/eslint-config     | 提供 EsLint 规范     |   <https://www.npmjs.com/package/@olad/eslint-config>      |
+| @olad/auto-lint            | 命令行工具           |    <https://www.npmjs.com/package/@olad/auto-lint>              |

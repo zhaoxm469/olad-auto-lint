@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["@olad/eslint-config-basic", "plugin:react/recommended", "@olad/eslint-config-ts"],
+  extends: ["plugin:react/recommended", "@olad/eslint-config-ts"],
   settings: {
     react: {
       version: "17.0",

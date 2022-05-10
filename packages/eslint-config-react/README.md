@@ -1,6 +1,6 @@
 # ESLint 规范
 
-阿拉钉前端 TypeScript ESLint 规范
+阿拉钉前端 React ESLint 规范
 
 ## 安装
 
@@ -8,13 +8,13 @@
 
 ```bash
 # with pnpm
-pnpm add @olad/eslint-config-ts -D
+pnpm add @olad/eslint-config-react -D
 
 # with npm
-npm install @olad/eslint-config-ts -D
+npm install @olad/eslint-config-react -D
 
 # with yarn
-yarn add @olad/eslint-config-ts --D
+yarn add @olad/eslint-config-react --D
 ```
 
 ## 使用
@@ -25,6 +25,6 @@ yarn add @olad/eslint-config-ts --D
 
 ```js
 module.exports = {
-  extends: ["@olad/eslint-config-ts"],
+  extends: ["@olad/eslint-config-react"],
 }
 ```

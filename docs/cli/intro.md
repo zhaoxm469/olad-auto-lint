@@ -8,13 +8,13 @@
 
 ```bash
 # with pnpm
-pnpm add -g @olad/o-lint
+pnpm add -g @olad/auto-lint
 
 # with yarn
-yarn global add @olad/o-lint
+yarn global add @olad/auto-lint
 
 # with npm
-npm i -g  @olad/o-lint
+npm i -g  @olad/auto-lint
 ```
 
 ## 校验是否安装成功
@@ -29,13 +29,13 @@ o-lint
 
 ```bash
 # pnpm yarn
-pnpm global upgrade --latest @olad/o-lint
+pnpm global upgrade --latest @olad/auto-lint
 
 # with npm
-npm upgrade -g @olad/o-lint
+npm upgrade -g @olad/auto-lint
 
 # with yarn
-yarn global upgrade --latest @olad/o-lint
+yarn global upgrade --latest @olad/auto-lint
 ```
 
 ## 使用
@@ -54,7 +54,7 @@ o-lint init
 
 ![o-lint init](/eslint.png)
 
-继续回车 会进行安相关规则的配置安装
+继续回车，会自动安装对应的依赖包，以及自动向根项目注入相关配置文件。
 
 ## 命令介绍
 

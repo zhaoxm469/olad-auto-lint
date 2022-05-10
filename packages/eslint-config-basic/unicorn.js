@@ -2,17 +2,17 @@
 /*
  * @Date: 2022-02-21 16:09:52
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-04 16:44:20
+ * @LastEditTime: 2022-05-08 21:55:00
  * @Description: 100 个强大的 ESLint 规则 https://github.com/sindresorhus/eslint-plugin-unicorn
  */
 
 module.exports = {
-  // unicorn off 
+  // unicorn off
   // 强制对长度使用 === 0 来判断
   "unicorn/explicit-length-check": "off",
   // 强制文件夹命名规范,后续可以根据需求再开放出来
   "unicorn/filename-case": "off",
-  // 复杂情况不使用 reduce 
+  // 复杂情况不使用 reduce
   "unicorn/no-array-reduce": "off",
   // 不使用null复制
   "unicorn/no-null": "off",
@@ -33,7 +33,7 @@ module.exports = {
   "unicorn/escape-case": "error",
   "unicorn/expiring-todo-comments": "error",
   "unicorn/import-index": "off",
-  "unicorn/import-style": "error",
+  "unicorn/import-style": "off",
   "unicorn/new-for-builtins": "error",
   "unicorn/no-abusive-eslint-disable": "error",
   "unicorn/no-array-callback-reference": "error",

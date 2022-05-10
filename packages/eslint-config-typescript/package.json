@@ -1,6 +1,6 @@
 {
   "name": "@olad/eslint-config-ts",
-  "version": "0.0.2",
+  "version": "2.0.9",
   "description": "",
   "license": "MIT",
   "author": "zhaoxm",
@@ -19,6 +19,7 @@
     "@olad/eslint-config-basic": "workspace:*",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
-    "eslint": "^8.12.0"
+    "eslint": "^8.12.0",
+    "typescript": "^4.6.4"
   }
 }

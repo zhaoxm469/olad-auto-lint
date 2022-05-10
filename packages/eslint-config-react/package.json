@@ -1,6 +1,6 @@
 {
   "name": "@olad/eslint-config-react",
-  "version": "0.0.2",
+  "version": "2.0.9",
   "description": "",
   "keywords": [],
   "license": "MIT",
@@ -19,7 +19,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@olad/eslint-config-basic": "workspace:*",
     "@olad/eslint-config-ts": "workspace:*",
     "eslint-plugin-react": "^7.29.4"
   },

@@ -1,6 +1,6 @@
 {
   "name": "@olad/eslint-config-basic",
-  "version": "0.0.2",
+  "version": "2.0.9",
   "description": "ESLint config basic",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "index.js",
@@ -8,6 +8,7 @@
     "eslint": "^8.12.0",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-markdown": "^2.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-unicorn": "^42.0.0"
   },

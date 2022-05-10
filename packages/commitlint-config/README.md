@@ -19,7 +19,7 @@ yarn add @olad/commitlint-config --dev
 ```js
 module.exports = {
   extends: "@olad/commitlint-config",
-};
+}
 ```
 
 ## 注意事项

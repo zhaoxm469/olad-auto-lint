@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:09:24
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-04 16:45:12
+ * @LastEditTime: 2022-05-07 00:23:19
  * @Description: 公共配置
  */
 
@@ -17,10 +17,14 @@ module.exports = {
   },
   parserOptions: {
     sourceType: "module",
+    ecmaVersion: 2022,
     ecmaFeatures: {
       jsx: true,
     },
   },
+  extends:[
+    "plugin:markdown/recommended",
+  ],
   globals: {
     document: "readonly",
     navigator: "readonly",
@@ -65,7 +69,7 @@ module.exports = {
       },
     },
     {
-      files: ["*.js"],
+      files: ["*.js", "*.ts"],
       rules: {
         ...unicorn,
         "unicorn/prefer-module": "off",
@@ -82,6 +86,22 @@ module.exports = {
       files: ["*.test.ts", "*.test.js", "*.spec.ts", "*.spec.js"],
       rules: {
         "no-unused-expressions": "off",
+      },
+    },
+    {
+      files: ["**/*.md/*.*"],
+      rules: {
+        "@typescript-eslint/no-redeclare": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "import/no-unresolved": "off",
+        "no-alert": "off",
+        "no-console": "off",
+        "no-restricted-imports": "off",
+        "no-undef": "off",
+        "no-unused-expressions": "off",
+        "no-unused-vars": "off",
       },
     },
   ],

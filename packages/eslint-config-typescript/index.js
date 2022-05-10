@@ -11,12 +11,10 @@ module.exports = {
       node: { extensions: [".js", ".jsx", ".mjs", ".ts", ".tsx", ".d.ts"] },
     },
   },
-  overrides: basic.overrides,
   rules: {
     "import/named": "off",
 
     // TS
-    "@typescript-eslint/semi": ["error", "never"],
     "@typescript-eslint/ban-ts-comment": [
       "error",
       { "ts-ignore": "allow-with-description" },
@@ -71,4 +69,5 @@ module.exports = {
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/no-namespace": "off",
   },
+  overrides: basic.overrides,
 }

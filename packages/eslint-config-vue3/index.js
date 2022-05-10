@@ -29,7 +29,7 @@ module.exports = {
       },
     },
   ],
-  extends: ["@olad/eslint-config-basic", "@olad/eslint-config-ts", "plugin:vue/vue3-recommended"],
+  extends: ["plugin:vue/vue3-recommended", "@olad/eslint-config-ts"],
   rules: {
     "vue/no-multiple-slot-args": ["error"],
     "vue/order-in-components": ["error"],
