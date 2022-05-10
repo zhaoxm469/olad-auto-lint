@@ -4,9 +4,7 @@ import { userPackage } from "../utils/userPackage"
 import { userProject } from "../utils/userProject"
 import { commandSync, sync } from "execa"
 import { prompt } from "inquirer"
-import { green } from "chalk"
-
-var a = 123
+import chalk from "chalk"
 
 export default class Init implements ACommands {
   readonly command = "init"
@@ -43,23 +41,23 @@ export default class Init implements ACommands {
   ]
 
   action = async () => {
-    const { lints } = await prompt([
+    const { lints } = await prompt<{ lints: string[] }>([
       {
         type: "checkbox",
         name: "lints",
         message: "请选择要初始化的规范 (默认全选，空格键切换选中态，回车确认):",
         choices: this.choices,
         validate: async (value) => {
-          if (!value.length) throw Error("至少选择一项哦")
+          if (!value.length) throw new Error("至少选择一项哦")
           return true
         },
         filter(value) {
-          return value.map(item => item.toLocaleLowerCase())
+          return value.map((item: string) => item.toLocaleLowerCase())
         },
       },
     ])
 
-    for (const item of lints) await this[item]()
+    for (const item of lints) await (this as any)[item]()
 
   }
 
@@ -82,23 +80,23 @@ export default class Init implements ACommands {
 
     // 添加用户目录添加相关模板配置文件
     userProject
-      .addTemplateFile('.', 'templates/.eslintrc.js.hbs', {
+      .addTemplateFile(".", "templates/.eslintrc.js.hbs", {
         packageName: eslintPackName,
       })
-      .addTemplateFile('.', 'templates/.eslintignore.hbs')
+      .addTemplateFile(".", "templates/.eslintignore.hbs")
 
     userPackage
       // 添加Script命令
-      .appendScript("lint:eslint", `eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,js,ts,tsx}\" --fix`)
+      .appendScript("lint:eslint", "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,js,ts,tsx}\" --fix")
       // 添加LintStaged
-      .appendLintStaged('*.{js,jsx,ts,tsx}', [
-        "eslint --fix"
+      .appendLintStaged("*.{js,jsx,ts,tsx}", [
+        "eslint --fix",
       ])
       .appendLintStaged("*.vue", [
-        "eslint --fix"
+        "eslint --fix",
       ])
 
-    succeedSpinier(green("EslLint ， 初始化成功!\n"))
+    succeedSpinier(chalk.green("EslLint ， 初始化成功!\n"))
 
   }
 
@@ -110,25 +108,24 @@ export default class Init implements ACommands {
       // 安装依赖
       .install(STYLE_LINT_PACKAGE_NAME)
 
-
     // 添加用户目录添加相关模板配置文件
     userProject
-      .addTemplateFile('.', 'templates/stylelint.config.js.hbs', {
+      .addTemplateFile(".", "templates/stylelint.config.js.hbs", {
         packageName: STYLE_LINT_PACKAGE_NAME,
       })
-      .addTemplateFile('.', 'templates/.stylelintignore.hbs')
+      .addTemplateFile(".", "templates/.stylelintignore.hbs")
 
     // 注入Script命令
     userPackage
-      .appendScript("lint:stylelint", `stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/`)
+      .appendScript("lint:stylelint", "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/")
       .appendLintStaged("*.vue", [
-        "eslint --fix"
+        "eslint --fix",
       ])
       .appendLintStaged("*.{scss,css,less,styl,html}", [
-        "stylelint --fix"
+        "stylelint --fix",
       ])
 
-    succeedSpinier(green("StyleLint ， 初始化成功!\n"))
+    succeedSpinier(chalk.green("StyleLint ， 初始化成功!\n"))
 
   }
 
@@ -139,8 +136,7 @@ export default class Init implements ACommands {
       .uninstall(/husky/)
       .uninstall(/commitlint/)
       // 安装依赖
-      .install('husky')
-
+      .install("husky")
 
     // 一系列husky + lint-staged 初始化操作
     startSpinner("installing husky + lint-staged")
@@ -148,23 +144,23 @@ export default class Init implements ACommands {
     sync("npx", ["husky", "install"], { stdio: "inherit" })
     commandSync("npm run prepare", { stdio: "inherit" })
 
-    console.log('\n');
-    succeedSpinier(green("husky + lint-staged ， 初始化成功!"))
+    console.log("\n")
+    succeedSpinier(chalk.green("husky + lint-staged ， 初始化成功!"))
 
-      // 写入Script脚本
+    // 写入Script脚本
     userPackage.install(COMMIT_LINT_PACKAGE_NAME)
 
-    userPackage.appendScript("lint:lint-staged","lint-staged")
+    userPackage.appendScript("lint:lint-staged", "lint-staged")
 
     userProject
-      .addTemplateFile('./.husky', 'templates/husky/commit-msg.hbs')
-      .addTemplateFile('./.husky', 'templates/husky/common.sh.hbs')
-      .addTemplateFile('./.husky', 'templates/husky/pre-commit.hbs')
-      .addTemplateFile('.', 'templates/commitlint.config.js.hbs', {
+      .addTemplateFile("./.husky", "templates/husky/commit-msg.hbs")
+      .addTemplateFile("./.husky", "templates/husky/common.sh.hbs")
+      .addTemplateFile("./.husky", "templates/husky/pre-commit.hbs")
+      .addTemplateFile(".", "templates/commitlint.config.js.hbs", {
         packageName: COMMIT_LINT_PACKAGE_NAME,
       })
 
-    succeedSpinier(green("CommitLint ， 初始化成功!\n"))
+    succeedSpinier(chalk.green("CommitLint ， 初始化成功!\n"))
   }
 
 }

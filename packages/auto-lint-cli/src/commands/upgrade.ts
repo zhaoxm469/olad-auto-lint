@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 08:48:11
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-06 22:18:44
+ * @LastEditTime: 2022-05-07 00:33:48
  * @Description: 更新版本
  */
 import { COMMIT_LINT_PACKAGE_NAME, ESLINT_ALL, ESLINT_VUE2, STYLE_LINT_PACKAGE_NAME } from "../config/const"
@@ -19,10 +19,10 @@ export default class Upgrade implements ACommands {
     try {
       startSpinner("正在更新。。。")
 
-      const packages = [ESLINT_VUE2,ESLINT_ALL,COMMIT_LINT_PACKAGE_NAME,STYLE_LINT_PACKAGE_NAME]
+      const packages = [ESLINT_VUE2, ESLINT_ALL, COMMIT_LINT_PACKAGE_NAME, STYLE_LINT_PACKAGE_NAME]
 
-      for(let pckName of packages) {
-        if(userPackage.dependenciesAndDevDependencies.includes(pckName)){
+      for (const pckName of packages) {
+        if (userPackage.dependenciesAndDevDependencies.includes(pckName)) {
           userPackage
             .uninstall(pckName)
             .install(pckName)
@@ -32,8 +32,8 @@ export default class Upgrade implements ACommands {
       succeedSpinier(chalk.green("更新成功!"))
 
     }
-    catch (err) {
-      failSpinner(err)
+    catch (error) {
+      failSpinner(error as string)
       return
     }
   }

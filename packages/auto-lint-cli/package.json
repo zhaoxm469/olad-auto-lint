@@ -1,15 +1,15 @@
 {
   "name": "@olad/auto-lint",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "CLI 命令行工具",
   "author": "Zhaoxm",
   "main": "./build",
   "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc --build ./tsconfig.json"
+    "lint": "eslint --ext .ts,.js .",
+    "build": "unbuild"
   },
   "bin": {
-    "o-lint": "./bin/olad-lint.js"
+    "o-lint": "index.js"
   },
   "files": [
     "dist",
@@ -23,7 +23,6 @@
     "auto-lint"
   ],
   "dependencies": {
-    "boxen": "^6.2.1",
     "chalk": "^4.1.2",
     "commander": "^8.2.0",
     "compressing": "^1.5.1",
@@ -32,16 +31,19 @@
     "globby": "^11.0.4",
     "handlebars": "^4.7.7",
     "inquirer": "^8.1.5",
+    "jiti": "^1.13.0",
     "minimatch": "^3.0.4",
     "ora": "^5.4.1"
   },
   "devDependencies": {
-    "@types/node": "^17.0.31",
-    "@olad/eslint-config-ts": "workspace:*",
-    "@olad/eslint-config-basic": "workspace:*",
     "@olad/eslint-config": "workspace:*",
+    "@olad/eslint-config-basic": "workspace:*",
+    "@olad/eslint-config-ts": "workspace:*",
     "@types/fs-extra": "^9.0.13",
-    "@types/inquirer": "^8.2.0"
+    "@types/inquirer": "^8.2.0",
+    "@types/node": "^17.0.31",
+    "boxen": "^6.2.1",
+    "unbuild": "^0.7.4"
   },
   "publishConfig": {
     "access": "public"

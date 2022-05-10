@@ -5,8 +5,15 @@ declare module "*.json"
 declare interface ACommands {
   command: string
   description: string
-  action: (...args: any[]) => any
+  action: (...arguments_: any[]) => any
 }
+
+declare type PackageJson = {
+  name: string
+  version: string
+  dependencies: Recordable
+  devDependencies: Recordable
+} & Recordable
 
 declare interface LintItem {
   lintName: string
@@ -14,7 +21,6 @@ declare interface LintItem {
 }
 
 declare interface Lints extends Array<LintItem> {}
-
 declare interface UserPackage {
   dependencies?: Recordable
   devDependencies?: Recordable

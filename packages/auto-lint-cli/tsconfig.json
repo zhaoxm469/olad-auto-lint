@@ -2,35 +2,25 @@
     "compilerOptions": {
         "target": "ESNext",
         "moduleResolution": "node",
-        "module": "commonjs",
-        "emitDecoratorMetadata": true,
+        "module": "ESNext",
         "strict": true,
         "forceConsistentCasingInFileNames": true,
-        "experimentalDecorators": true,
-        "allowSyntheticDefaultImports": true,
-        "alwaysStrict": true,
         "sourceMap": false,
         "noEmit": false,
+        "allowSyntheticDefaultImports":true,
         "noEmitHelpers": false,
         "importHelpers": false,
         "strictNullChecks": false,
         "allowUnreachableCode": true,
-        "typeRoots": [
-            "./node_modules/@types"
-        ],
-        "outDir": "./dist",
-        "rootDir": "./src"
+        "removeComments":true
     },
     "exclude": [
         "node_modules",
         "build",
         "**/*.test.ts",
         "temp",
-        "scripts",
         "./src/__tests__"
     ],
+    "compileOnSave": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "compileOnSave": false,
-    "buildOnSave": false
 }

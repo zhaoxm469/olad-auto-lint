@@ -9,6 +9,8 @@ function init() {
   const commandPaths = getCommandPaths()
 
   for (const commandPath of commandPaths) {
+    console.log(commandPath)
+
     const CommandModule = require(commandPath).default
     const commandModule = new CommandModule()
     const { command, description, action } = commandModule
