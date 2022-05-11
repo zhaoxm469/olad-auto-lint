@@ -2,11 +2,11 @@ import { installCommand, unInstallCommand } from "."
 import { writeFileSync, existsSync } from "node:fs"
 import { USER_PCK_PATH } from "../config/const"
 import type { PackageJson } from "pkg-types"
-import { errorLog, warnLog } from "./logger"
-import { startSpinner } from "./spinner"
+import { errorLog } from "./logger"
 import { readFileSync } from "fs-extra"
 import { loading } from "./loading"
 import { command } from "execa"
+import chalk from "chalk"
 
 class UserPackage {
   userPackPath: string
@@ -46,7 +46,7 @@ class UserPackage {
 
   appendScript(scriptName: string, scriptContent: string) {
 
-    startSpinner(`向用户 package.json 写入 Script 命令 ：${scriptName}`)
+    loading.start(`向用户 package.json 写入 Script 命令 ：${scriptName}`)
 
     const packageJSon = JSON.parse(JSON.stringify(this.packageContent))
 
@@ -60,12 +60,15 @@ class UserPackage {
     }
 
     this.write(packageJSon)
+
+    loading.succeed(`向用户 package.json 写入 Script 命令 ${chalk.cyan(scriptName)}`)
+
     return this
   }
 
   appendLintStaged(keyName: string, stagedContent: string[]) {
 
-    startSpinner(`向用户 package.json 写入 lint-staged  ：${keyName}`)
+    loading.start(`向用户 package.json 写入 lint-staged ${keyName}`)
 
     const packageJSon = JSON.parse(JSON.stringify(this.packageContent))
 
@@ -79,6 +82,8 @@ class UserPackage {
     }
 
     this.write(packageJSon)
+
+    loading.addFinishedStep().succeed(`向用户 package.json 写入 lint-staged ${chalk.cyan(keyName)}`)
     return this
   }
 
@@ -87,11 +92,11 @@ class UserPackage {
     loading.start(`正在安装最新版本 ${packageName} 依赖包`)
 
     await command(`${installCommand} ${packageName} ${isDevelopmentDependencies ? "-D" : "-S"}`, { stdio: "ignore" }).catch((error: any) => {
-      warnLog(error)
+      errorLog(error)
       process.exit(3)
     })
 
-    loading.succeed(`安装 ${packageName} `)
+    loading.succeed(`安装最新版本 ${packageName} `)
 
     return this
   }
