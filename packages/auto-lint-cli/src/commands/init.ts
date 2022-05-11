@@ -1,12 +1,15 @@
 import { ESLINT_ALL, ESLINT_VUE2, STYLE_LINT_PACKAGE_NAME, COMMIT_LINT_PACKAGE_NAME } from "../config/const"
 import { startSpinner, succeedSpinier } from "../utils/spinner"
+import { BaseCommand } from "../utils/baseCommand"
 import { userPackage } from "../utils/userPackage"
 import { userProject } from "../utils/userProject"
+import { loading } from "../utils/loading"
 import { commandSync, sync } from "execa"
+import { log } from "../utils/logger"
 import { prompt } from "inquirer"
 import chalk from "chalk"
 
-export default class Init implements ACommands {
+export default class Init extends BaseCommand implements ACommands {
   readonly command = "init"
 
   readonly description = "初始化规范依赖"
@@ -41,6 +44,10 @@ export default class Init implements ACommands {
   ]
 
   action = async () => {
+
+    await this.checkNpmEnv()
+    log("\n")
+
     const { lints } = await prompt<{ lints: string[] }>([
       {
         type: "checkbox",
@@ -73,10 +80,10 @@ export default class Init implements ACommands {
     ])
 
     // 卸载相关依赖
-    userPackage.uninstall(/eslint/).uninstall(/prettier/)
+    await userPackage.uninstall(/eslint|prettier/g)
 
     // 安装依赖
-    userPackage.install(eslintPackName)
+    await userPackage.install(eslintPackName)
 
     // 添加用户目录添加相关模板配置文件
     userProject
@@ -96,17 +103,16 @@ export default class Init implements ACommands {
         "eslint --fix",
       ])
 
-    succeedSpinier(chalk.green("EslLint ， 初始化成功!\n"))
+    loading.succeed("EslLint 初始化成功!")
 
   }
 
-  stylelint() {
+  async stylelint() {
 
-    userPackage
-      // 卸载相关依赖
-      .uninstall(/stylelint/)
-      // 安装依赖
-      .install(STYLE_LINT_PACKAGE_NAME)
+    // 卸载相关依赖
+    await userPackage.uninstall(/stylelint/)
+    // 安装依赖
+    await userPackage.install(STYLE_LINT_PACKAGE_NAME)
 
     // 添加用户目录添加相关模板配置文件
     userProject
@@ -125,18 +131,16 @@ export default class Init implements ACommands {
         "stylelint --fix",
       ])
 
-    succeedSpinier(chalk.green("StyleLint ， 初始化成功!\n"))
+    loading.addFinishedStep().succeed("StyleLint ， 初始化成功!")
 
   }
 
-  commitlint() {
+  async commitlint() {
 
-    userPackage
-      // 卸载相关依赖
-      .uninstall(/husky/)
-      .uninstall(/commitlint/)
-      // 安装依赖
-      .install("husky")
+    // 卸载相关依赖
+    userPackage.uninstall(/husky|commitlint/g)
+    // 安装依赖
+    userPackage.install("husky")
 
     // 一系列husky + lint-staged 初始化操作
     startSpinner("installing husky + lint-staged")
@@ -148,7 +152,7 @@ export default class Init implements ACommands {
     succeedSpinier(chalk.green("husky + lint-staged ， 初始化成功!"))
 
     // 写入Script脚本
-    userPackage.install(COMMIT_LINT_PACKAGE_NAME)
+    await userPackage.install(COMMIT_LINT_PACKAGE_NAME)
 
     userPackage.appendScript("lint:lint-staged", "lint-staged")
 
