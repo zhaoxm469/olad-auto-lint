@@ -14,11 +14,12 @@ export const startSpinner = (text?: string) => {
 
 export const succeedSpinier = (text?: string) => {
   spinner.stopAndPersist({
-    symbol: "🎉",
+    symbol: chalk.green.bold("✔"),
     text: `${text}\n`,
   })
 }
 
 export const failSpinner = (text?: string) => {
-  spinner.fail(chalk.red(text))
+  spinner.prefixText = "\n "
+  spinner.fail(`${chalk.red(text)} \n`)
 }
