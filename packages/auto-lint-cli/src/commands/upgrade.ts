@@ -1,35 +1,49 @@
 /*
  * @Date: 2022-02-21 08:48:11
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-07 00:33:48
+ * @LastEditTime: 2022-05-11 23:17:43
  * @Description: 更新版本
  */
 import { COMMIT_LINT_PACKAGE_NAME, ESLINT_ALL, ESLINT_VUE2, STYLE_LINT_PACKAGE_NAME } from "../config/const"
-import { failSpinner, startSpinner, succeedSpinier } from "./../utils/spinner"
+import { failSpinner } from "./../utils/spinner"
 import { userPackage } from "../utils/userPackage"
-import chalk from "chalk"
+import { loading } from "../utils/loading"
+import { BaseCommand } from "../utils/baseCommand"
 
-export default class Upgrade implements ACommands {
+export default class Upgrade extends BaseCommand implements ACommands {
 
   public readonly command = "upgrade"
 
   public readonly description = "升级规范包相关依赖"
 
+  constructor() {
+    super()
+  }
+
   action = async () => {
     try {
-      startSpinner("正在更新。。。")
+
+      await this.checkNpmEnv()
+
+      loading.start("正在查找依赖包")
 
       const packages = [ESLINT_VUE2, ESLINT_ALL, COMMIT_LINT_PACKAGE_NAME, STYLE_LINT_PACKAGE_NAME]
+      const { dependenciesAndDevDependencies } = userPackage
+
+      if (dependenciesAndDevDependencies.length === 0) {
+        return loading.warn("没有找到相关依赖包！请检查您的package.json文件 \n")
+      }
+
+      loading.succeed(`找到依赖包 ${dependenciesAndDevDependencies.join(",")}`)
 
       for (const pckName of packages) {
-        if (userPackage.dependenciesAndDevDependencies.includes(pckName)) {
-          userPackage
-            .uninstall(pckName)
-            .install(pckName)
+        if (dependenciesAndDevDependencies.includes(pckName)) {
+          await userPackage.uninstall(pckName)
+          await userPackage.install(pckName)
         }
       }
 
-      succeedSpinier(chalk.green("更新成功!"))
+      loading.addFinishedStep().succeed("恭喜您！依赖升级成功！ \n")
 
     }
     catch (error) {
