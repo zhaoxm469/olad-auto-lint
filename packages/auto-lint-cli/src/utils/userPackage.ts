@@ -1,10 +1,12 @@
-import { startSpinner, succeedSpinier } from "./spinner"
 import { installCommand, unInstallCommand } from "."
-import { USER_PCK_PATH } from "../config/const"
-import type { PackageJson } from "../types/shared"
-import { readFileSync } from "fs-extra"
-import { commandSync } from "execa"
 import { writeFileSync, existsSync } from "node:fs"
+import { USER_PCK_PATH } from "../config/const"
+import type { PackageJson } from "pkg-types"
+import { errorLog, warnLog } from "./logger"
+import { startSpinner } from "./spinner"
+import { readFileSync } from "fs-extra"
+import { loading } from "./loading"
+import { command } from "execa"
 
 class UserPackage {
   userPackPath: string
@@ -80,20 +82,21 @@ class UserPackage {
     return this
   }
 
-  append() {}
+  async install(packageName: string, isDevelopmentDependencies = true) {
 
-  install(packageName: string, isDevelopmentDependencies = true) {
-    console.log("\n")
-    startSpinner(`正在安装 ${packageName} 依赖包`)
+    loading.start(`正在安装最新版本 ${packageName} 依赖包`)
 
-    commandSync(`${installCommand} ${packageName} ${isDevelopmentDependencies ? "-D" : "-S"}`, { stdio: "inherit" })
+    await command(`${installCommand} ${packageName} ${isDevelopmentDependencies ? "-D" : "-S"}`, { stdio: "ignore" }).catch((error: any) => {
+      warnLog(error)
+      process.exit(3)
+    })
 
-    console.log("\n")
-    succeedSpinier(`${packageName} 安装成功`)
+    loading.succeed(`安装 ${packageName} `)
+
     return this
   }
 
-  uninstall(packageName: RegExp | string | string[]) {
+  async uninstall(packageName: RegExp | string | string[]) {
 
     const removePackName = this.dependenciesAndDevDependencies.filter(pckName => {
       if (packageName instanceof RegExp) {
@@ -112,9 +115,15 @@ class UserPackage {
     if (!removePackName.length) return this
 
     for (const pckName of removePackName) {
-      console.log("\n")
-      startSpinner(`正在尝试移除 ${pckName} 依赖包`)
-      commandSync(`${unInstallCommand} ${pckName}`, { stdio: "inherit" })
+      loading.start(`正在尝试移除 ${pckName} 依赖包`)
+
+      await command(`${unInstallCommand} ${pckName}`).catch((error: any) => {
+        loading.fail(`移除失败 ${pckName}`)
+        errorLog(error)
+        process.exit(2)
+      })
+
+      loading.succeed(`移除 ${pckName} 依赖包`)
     }
 
     return this
