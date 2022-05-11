@@ -7,19 +7,23 @@
         "forceConsistentCasingInFileNames": true,
         "sourceMap": false,
         "noEmit": false,
-        "allowSyntheticDefaultImports":true,
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
         "noEmitHelpers": false,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        },
         "importHelpers": false,
         "strictNullChecks": false,
         "allowUnreachableCode": true,
-        "removeComments":true
+        "removeComments": true
     },
-    "exclude": [
-        "node_modules",
-        "build",
-        "**/*.test.ts",
-        "temp",
-        "./src/__tests__"
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts",
     ],
     "compileOnSave": true,
     "esModuleInterop": true,
