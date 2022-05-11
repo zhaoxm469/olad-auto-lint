@@ -1,24 +1,45 @@
 import { execSync } from "node:child_process"
 import { sync } from "globby"
-import { join } from "node:path/posix"
+import { resolve, join } from "node:path/posix"
+import { pathExistsSync } from "fs-extra"
+import { ROOT_PATH } from "../config/const"
+import { command } from "execa"
 
 export const getCommandPaths = () => {
-  return sync("../commands/*.js", { cwd: __dirname, deep: 1 }).map(path => join(__dirname, path))
+  return sync("../commands/*.ts", {
+    cwd: __dirname,
+  }).map(path => join(__dirname, path))
 }
 
-// 是否有yarn
-export const hasYarn = () => {
+export const hasYarn = (() => {
   try {
     execSync("yarn --version", { stdio: "ignore" })
-    return true
+    return pathExistsSync(resolve(ROOT_PATH, "yarn.lock"))
   }
   catch {
     return false
   }
-}
+})()
 
-export const installCommand = hasYarn() ? "yarn add " : "npm install "
+export const hasPnpm = (() => {
+  try {
+    execSync("pnpm --version", { stdio: "ignore" })
+    return pathExistsSync(resolve(ROOT_PATH, "pnpm-lock.yaml"))
+  }
+  catch {
+    return false
+  }
+})()
 
-export const unInstallCommand = hasYarn() ? "yarn remove " : "npm uninstall "
+export const packageManager = hasPnpm ? "pnpm" : (hasYarn ? "yarn" : "npm")
+
+export const installCommand = `${packageManager} ${packageManager === "pnpm" || packageManager === "yarn" ? "add" : "install"}`
+
+export const unInstallCommand = `${packageManager} ${packageManager === "pnpm" || packageManager === "yarn" ? "remove" : "uninstall"}`
 
 export const currentProjectRoot = join(__dirname, "../../")
+
+export const getRegistry = async () => {
+  const { stdout } = await command("npm config get registry")
+  return stdout.trim()
+}
