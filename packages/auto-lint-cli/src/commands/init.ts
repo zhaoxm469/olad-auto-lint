@@ -1,12 +1,13 @@
 import { ESLINT_ALL, ESLINT_VUE2, STYLE_LINT_PACKAGE_NAME, COMMIT_LINT_PACKAGE_NAME } from "../config/const"
-import { startSpinner, succeedSpinier } from "../utils/spinner"
+import { succeedSpinier } from "../utils/spinner"
 import { BaseCommand } from "../utils/baseCommand"
 import { userPackage } from "../utils/userPackage"
 import { userProject } from "../utils/userProject"
 import { loading } from "../utils/loading"
-import { commandSync, sync } from "execa"
+import { customCommand } from "../utils"
 import { log } from "../utils/logger"
 import { prompt } from "inquirer"
+import { sync } from "execa"
 import chalk from "chalk"
 
 export default class Init extends BaseCommand implements ACommands {
@@ -139,14 +140,16 @@ export default class Init extends BaseCommand implements ACommands {
 
     // 卸载相关依赖
     userPackage.uninstall(/husky|commitlint/g)
+
     // 安装依赖
     userPackage.install("husky")
 
     // 一系列husky + lint-staged 初始化操作
-    startSpinner("installing husky + lint-staged")
-    sync("npm", ["set-script", "prepare", "husky install"], { stdio: "inherit" })
-    sync("npx", ["husky", "install"], { stdio: "inherit" })
-    commandSync("npm run prepare", { stdio: "inherit" })
+    loading.start("初始化 husky + int-staged")
+
+    sync("npm", ["set-script", "prepare", "husky install"])
+    sync("npx", ["husky", "install"])
+    customCommand("npm run prepare")
 
     console.log("\n")
     succeedSpinier(chalk.green("husky + lint-staged ， 初始化成功!"))

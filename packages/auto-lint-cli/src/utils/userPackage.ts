@@ -1,11 +1,10 @@
-import { installCommand, unInstallCommand } from "."
+import { customCommand, installCommand, unInstallCommand } from "."
 import { writeFileSync, existsSync } from "node:fs"
 import { USER_PCK_PATH } from "../config/const"
 import type { PackageJson } from "pkg-types"
 import { errorLog } from "./logger"
 import { readFileSync } from "fs-extra"
 import { loading } from "./loading"
-import { command } from "execa"
 import chalk from "chalk"
 
 class UserPackage {
@@ -91,7 +90,7 @@ class UserPackage {
 
     loading.start(`正在安装最新版本 ${packageName} 依赖包`)
 
-    await command(`${installCommand} ${packageName} ${isDevelopmentDependencies ? "-D" : "-S"}`, { stdio: "ignore" }).catch((error: any) => {
+    await customCommand(`${installCommand} ${packageName} ${isDevelopmentDependencies ? "-D" : "-S"}`).catch((error: any) => {
       errorLog(error)
       process.exit(3)
     })
@@ -122,7 +121,7 @@ class UserPackage {
     for (const pckName of removePackName) {
       loading.start(`正在尝试移除 ${pckName} 依赖包`)
 
-      await command(`${unInstallCommand} ${pckName}`).catch((error: any) => {
+      await customCommand(`${unInstallCommand} ${pckName}`).catch((error: any) => {
         loading.fail(`移除失败 ${pckName}`)
         errorLog(error)
         process.exit(2)

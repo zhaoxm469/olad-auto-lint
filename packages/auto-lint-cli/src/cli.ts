@@ -1,16 +1,18 @@
 #!/usr/bin/env node
 import { version } from "../package.json"
-import { getCommandPaths } from "./utils/index"
+import { getCommandFilePaths } from "./utils/index"
 import { errorLog } from "./utils/logger"
 import { program } from "commander"
 import { userPackage } from "./utils/userPackage"
 import { failSpinner } from "./utils/spinner"
+import { promptConfig } from "./config/const"
 
 function init() {
 
-  const commandPaths = getCommandPaths()
+  const commandFilePaths = getCommandFilePaths()
 
-  for (const commandPath of commandPaths) {
+  program.option("-d, --debug", "output extra debugging", () => promptConfig.debug = true)
+  for (const commandPath of commandFilePaths) {
     const CommandModule = require(commandPath).default
     const commandModule = new CommandModule()
     const { command, description, action } = commandModule

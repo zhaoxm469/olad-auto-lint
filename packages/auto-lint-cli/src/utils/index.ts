@@ -1,11 +1,22 @@
-import { execSync } from "node:child_process"
-import { sync } from "globby"
+import { promptConfig, ROOT_PATH } from "../config/const"
 import { resolve, join } from "node:path/posix"
+import { execSync } from "node:child_process"
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import { execaCommand, Options } from "execa"
 import { pathExistsSync } from "fs-extra"
-import { ROOT_PATH } from "../config/const"
-import { command } from "execa"
+import { sync } from "globby"
 
-export const getCommandPaths = () => {
+export const customCommand = (_command: string, options = {}) => {
+
+  const options_: Options = {
+    stdio: promptConfig.debug ? "inherit" : "ignore",
+    ...options,
+  }
+
+  return execaCommand(_command, options_)
+}
+
+export const getCommandFilePaths = () => {
   return sync("../commands/*.ts", {
     cwd: __dirname,
   }).map(path => join(__dirname, path))
@@ -40,6 +51,8 @@ export const unInstallCommand = `${packageManager} ${packageManager === "pnpm" |
 export const currentProjectRoot = join(__dirname, "../../")
 
 export const getRegistry = async () => {
-  const { stdout } = await command("npm config get registry")
+  const { stdout } = await customCommand("npm config get registry", {
+    stdio: "pipe",
+  })
   return stdout.trim()
 }
