@@ -10,9 +10,8 @@ module.exports = {
         "@typescript-eslint/no-unused-vars": "off",
         // 强制文件命名规范,
         "unicorn/filename-case": ["error", {
-          "case": "kebabCase",
+          "case": "pascalCase",
         }],
-
         "vue/html-self-closing": [
           "error",
           {
