@@ -12,6 +12,9 @@ module.exports = {
         parser: "@typescript-eslint/parser",
       },
       rules: {
+        // 可以使用未定义的变量
+        "no-unused-vars": "off",
+        "no-undef": "off",
         "@typescript-eslint/no-unused-vars": "off",
         "unicorn/filename-case": ["error", {
           "case": "pascalCase",

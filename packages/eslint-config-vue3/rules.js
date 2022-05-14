@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:08:54
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-02 15:49:01
+ * @LastEditTime: 2022-05-13 23:06:07
  * @Description:
  */
 /**
@@ -15,7 +15,7 @@ module.exports = {
   /**
    * 限制自定义组件的 attrs属性风格
    */
-  "vue/attribute-hyphenation": "off",
+  "vue/attribute-hyphenation": "error",
   /**
    * <script> 标签必须有 lang 属性
    */
@@ -30,11 +30,6 @@ module.exports = {
    */
   "vue/comment-directive": "error",
   /**
-   * 组件的 name 命名规则 ， 默认启用中划线
-   * @reason 这是官方建议的规范
-   */
-  "vue/component-definition-name-casing": ["error", "kebab-case"],
-  /**
    * 此规则旨在为第一个属性强制实施一致的位置。
    * @reason 这是官方建议的规范
    */
@@ -43,7 +38,6 @@ module.exports = {
    * v-text 指令必须合法
    */
   "vue/valid-v-text": "error",
-  // eslint-disable-next-line no-magic-numbers
   "vue/html-indent": ["error", 2],
   /**
    * 元素开始 > 括号是否换行
@@ -55,10 +49,6 @@ module.exports = {
       multiline: "always",
     },
   ],
-  /**
-   * 要求或不允许在标记的右括号前加上空格
-   */
-  "vue/html-closing-bracket-spacing": "off",
   /**
    * 此规则旨在禁止缺少结束标记。
    */
@@ -86,10 +76,6 @@ module.exports = {
    */
   "vue/mustache-interpolation-spacing": ["error", "always"],
   /**
-   * 在多行元素的内容之前和之后需要换行符
-   */
-  "vue/multiline-html-element-content-newline": "off",
-  /**
    * 不允许多个空格,标签attr属性中
    */
   "vue/no-multi-spaces": "error",
@@ -104,7 +90,7 @@ module.exports = {
   /**
    * 强制每个组件都应该再单独的文件中
    */
-  "vue/one-component-per-file": "off",
+  "vue/one-component-per-file": "error",
   /**
    * 强制约束 定义的 props name为 驼峰命名
    */
@@ -124,15 +110,11 @@ module.exports = {
   /**
    * 规定v-bind的写法（简写:key=“value”）
    */
-  "vue/v-bind-style": "off",
+  "vue/v-bind-style": "error",
   /**
    *规定v-on的写法（简写@click=“event”）
    */
   "vue/v-on-style": "error",
-  /**
-   * slot 规则强制实施应使用速记或长格式的指令样式
-   */
-  "vue/v-slot-style": "warn",
   /**
    * 强制执行属性顺序,vue官方推荐的
    */
@@ -167,10 +149,6 @@ module.exports = {
    * 禁止在模版中用 this
    */
   "vue/this-in-template": "error",
-  /**
-   * 要求组件命名是多字的
-   */
-  "vue/multi-word-component-names": "error",
   /**
    * 对自定义事件名称强制实施特定大小写
    */
