@@ -1,14 +1,15 @@
 /*
  * @Date: 2022-02-21 08:48:11
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-14 23:14:47
+ * @LastEditTime: 2022-05-15 00:23:23
  * @Description: 更新版本
  */
 import { COMMIT_LINT_PACKAGE_NAME, ESLINT_ALL, ESLINT_VUE2, STYLE_LINT_PACKAGE_NAME } from "../config/const"
-import { failSpinner } from "./../utils/spinner"
+import { BaseCommand } from "../utils/baseCommand"
 import { userPackage } from "../utils/userPackage"
 import { loading } from "../utils/loading"
-import { BaseCommand } from "../utils/baseCommand"
+import { succeedLog, errorLog } from "../utils/logger"
+import chalk from "chalk"
 
 export default class Upgrade extends BaseCommand implements ACommands {
 
@@ -45,10 +46,10 @@ export default class Upgrade extends BaseCommand implements ACommands {
         await userPackage.install(pckName)
       }
 
-      loading.addFinishedStep().succeed("恭喜您！依赖升级成功！ \n")
+      succeedLog("恭喜您！依赖升级成功！")
 
     } catch (error) {
-      failSpinner(error as string)
+      errorLog(error as string)
       return
     }
   }
