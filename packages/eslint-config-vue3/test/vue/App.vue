@@ -3,8 +3,7 @@
     <img
       v-for="(item, index) in d"
       :key="item"
-      alt="Vue logo"
-      d="1"
+      alt="Vue logo" d="1"
       src="./assets/logo.png"
     >
     <HelloWorld msg="Welcome to Your Vue.js App" />
