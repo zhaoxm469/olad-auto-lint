@@ -1,4 +1,4 @@
 
 module.exports = {
-  extends: ["@olad/eslint-config-vue3", "@olad/eslint-config-react"],
+  extends: ["@olad/eslint-config-react", "@olad/eslint-config-vue3"],
 }
