@@ -4,9 +4,6 @@ module.exports = {
   overrides: [
     {
       files: ["*.vue"],
-      env:{
-        "vue/setup-compiler-macros":true,
-      },
       parser: "vue-eslint-parser",
       parserOptions: {
         parser: "@typescript-eslint/parser",
@@ -29,6 +26,12 @@ module.exports = {
   rules: {
     ...rules,
     "vue/require-explicit-emits": ["error"],
+    // Vue2 规则 关闭
+    "vue/no-v-model-argument": "off",
+    "vue/valid-v-bind-sync": "off",
+    "vue/no-v-for-template-key": "off",
+    // 禁止模版中有多个根节点
+    "vue/no-multiple-template-root": "off",
     // 是否需要闭合标签
     "vue/html-self-closing": [
       "error",
