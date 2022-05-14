@@ -6,6 +6,6 @@ export class BaseCommand {
   async checkNpmEnv() {
     loading.start("检测环境")
     const register = await getRegistry()
-    loading.succeed(`检测环境: Command: ${chalk.yellow(packageManager)} , default ${chalk.cyan(register)}`)
+    loading.succeed(`检测环境: Command: ${chalk.cyan(packageManager)} , default ${chalk.cyan(register)}`)
   }
 }
