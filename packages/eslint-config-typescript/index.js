@@ -44,12 +44,6 @@ module.exports = {
       "error",
       { functions: false, classes: false, variables: true },
     ],
-    "brace-style": "off",
-    "@typescript-eslint/brace-style": [
-      "error",
-      "stroustrup",
-      { allowSingleLine: true },
-    ],
     "comma-dangle": "off",
     "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
     "object-curly-spacing": "off",
@@ -69,5 +63,13 @@ module.exports = {
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/no-namespace": "off",
   },
-  overrides: basic.overrides,
+  overrides: [
+    ...basic.overrides,
+    {
+      files: ["*.ts"],
+      rules: {
+        "no-duplicate-imports": "off",
+      },
+    },
+  ],
 }
