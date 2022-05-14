@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 08:48:11
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-14 09:16:03
+ * @LastEditTime: 2022-05-14 09:31:39
  * @Description: 更新版本
  */
 import { COMMIT_LINT_PACKAGE_NAME, ESLINT_ALL, ESLINT_VUE2, STYLE_LINT_PACKAGE_NAME } from "../config/const"
@@ -27,20 +27,22 @@ export default class Upgrade extends BaseCommand implements ACommands {
 
       loading.start("正在查找依赖包")
 
-      const packages = [ESLINT_VUE2, ESLINT_ALL, COMMIT_LINT_PACKAGE_NAME, STYLE_LINT_PACKAGE_NAME]
+      const packages = new Set([ESLINT_VUE2, ESLINT_ALL, COMMIT_LINT_PACKAGE_NAME, STYLE_LINT_PACKAGE_NAME])
       const { dependenciesAndDevDependencies } = userPackage
 
-      if (dependenciesAndDevDependencies.length === 0 || !dependenciesAndDevDependencies.some(packageName => packages.includes(packageName))) {
+      const upgradePackages = dependenciesAndDevDependencies.filter(packageName => {
+        return packages.has(packageName)
+      })
+
+      if (upgradePackages.length === 0) {
         return loading.warn("没有找到要升级的相关依赖包！请检查您的package.json文件 \n")
       }
 
-      loading.succeed(`找到依赖包 ${dependenciesAndDevDependencies.join(",")}`)
+      loading.succeed(`找到依赖包 ${upgradePackages.join(",")}`)
 
-      for (const pckName of packages) {
-        if (dependenciesAndDevDependencies.includes(pckName)) {
-          await userPackage.uninstall(pckName)
-          await userPackage.install(pckName)
-        }
+      for (const pckName of upgradePackages) {
+        await userPackage.uninstall(pckName)
+        await userPackage.install(pckName)
       }
 
       loading.addFinishedStep().succeed("恭喜您！依赖升级成功！ \n")
