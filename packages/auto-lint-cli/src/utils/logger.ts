@@ -1,5 +1,6 @@
 import boxen from "boxen"
 import chalk from "chalk"
+import { get } from "./fetch"
 
 export const { log } = console
 
@@ -19,17 +20,18 @@ export const successLog = (text = "") => {
   log(`\n ${chalk.green.bold("✔")} ${chalk.green(text)}\n`)
 }
 
-export const updateLog = () => {
+export const upgradeLog = async (oladVersion: string) => {
+  const data = await get("https://registry.npmmirror.com/@olad/eslint-config-vue3")
+  console.log({ data })
   log(
-    boxen(`
-      Update available! ${chalk.yellow("v0.0.0")} → ${chalk.green.bold("v0.0.0")}\n
-      Changelog: https://github.com/zhaoxm469/olad-auto-lint.git\n
-      Run ${chalk.bold("npm i -g @olad/auto-lint")}.
-      `, {
+    `${boxen(`
+Update available! ${chalk.yellow(`v${oladVersion}`)} → ${chalk.green.bold("v0.0.0")}\n
+Changelog: https://github.com/zhaoxm469/olad-auto-lint.git\n
+Run ${chalk.bold.cyan("npm i -g @olad/auto-lint")}.
+    `, {
       padding: 1,
-      title: chalk.bold.green("Found the latest version！"),
       borderStyle: "doubleSingle",
       titleAlignment: "center",
-    }),
+    })}\n`,
   )
 }
