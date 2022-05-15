@@ -1,3 +1,5 @@
+import { promptConfig } from "../config/const"
+import { log } from "./logger"
 import chalk from "chalk"
 import ora from "ora"
 
@@ -9,8 +11,12 @@ export class Loading {
   totalStep = 0
 
   start(text = "", doingPostFix = "...") {
-    this.spinner.prefixText = chalk.yellow(`\n → ${++this.finishedStep} ${text}${doingPostFix}`)
-    this.spinner.start()
+    this.spinner.prefixText = chalk.yellow(`\n → ${++this.finishedStep}. ${text}${doingPostFix}`)
+    if (promptConfig.debug) {
+      log(chalk.yellow(`\n → ${this.finishedStep}. ${text}${doingPostFix}`))
+    } else {
+      this.spinner.start()
+    }
   }
 
   addFinishedStep() {
@@ -20,7 +26,7 @@ export class Loading {
 
   done() {
     this.spinner.prefixText = "\n"
-    // this.spinner.stop()
+    this.spinner.clear().stop()
   }
 
   fail(text = "") {
