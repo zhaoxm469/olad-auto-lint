@@ -1,8 +1,8 @@
 import { promptConfig, ROOT_PATH } from "../config/const"
 import { resolve, join } from "node:path/posix"
 import { execSync } from "node:child_process"
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { execaCommand, Options } from "execa"
+import type { Options } from "execa"
+import { execaCommand } from "execa"
 import { pathExistsSync } from "fs-extra"
 import { sync } from "globby"
 
@@ -13,7 +13,7 @@ export const customCommand = (_command: string, options = {}) => {
     ...options,
   }
 
-  return execaCommand(_command, options_)
+  return  execaCommand(_command, options_)
 }
 
 export const getCommandFilePaths = () => {
@@ -26,8 +26,7 @@ export const hasYarn = (() => {
   try {
     execSync("yarn --version", { stdio: "ignore" })
     return pathExistsSync(resolve(ROOT_PATH, "yarn.lock"))
-  }
-  catch {
+  } catch {
     return false
   }
 })()
@@ -36,8 +35,7 @@ export const hasPnpm = (() => {
   try {
     execSync("pnpm --version", { stdio: "ignore" })
     return pathExistsSync(resolve(ROOT_PATH, "pnpm-lock.yaml"))
-  }
-  catch {
+  } catch {
     return false
   }
 })()
