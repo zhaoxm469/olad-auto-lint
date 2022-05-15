@@ -5,9 +5,8 @@ import { userPackage } from "../utils/userPackage"
 import { userProject } from "../utils/userProject"
 import { loading } from "../utils/loading"
 import { customCommand } from "../utils"
-import { log } from "../utils/logger"
+import { log, succeedLog } from "../utils/logger"
 import { prompt } from "inquirer"
-import { sync } from "execa"
 import chalk from "chalk"
 
 export default class Init extends BaseCommand implements ACommands {
@@ -97,14 +96,11 @@ export default class Init extends BaseCommand implements ACommands {
       // 添加Script命令
       .appendScript("lint:eslint", "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,js,ts,tsx}\" --fix")
       // 添加LintStaged
-      .appendLintStaged("*.{js,jsx,ts,tsx}", [
-        "eslint --fix",
-      ])
-      .appendLintStaged("*.vue", [
-        "eslint --fix",
+      .appendLintStaged("*.{js,jsx,ts,tsx,vue}", [
+        "npm run lint:eslint",
       ])
 
-    loading.succeed("EslLint 初始化成功!")
+    succeedLog("EslLint 初始化成功!")
 
   }
 
@@ -124,15 +120,12 @@ export default class Init extends BaseCommand implements ACommands {
 
     // 注入Script命令
     userPackage
-      .appendScript("lint:stylelint", "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/")
-      .appendLintStaged("*.vue", [
-        "eslint --fix",
-      ])
-      .appendLintStaged("*.{scss,css,less,styl,html}", [
-        "stylelint --fix",
+      .appendScript("lint:style", "stylelint --cache --fix 'src/**/*.{vue,htm,html,css,scss,less}'")
+      .appendLintStaged("*.{scss,css,less,styl,html,less,vue}", [
+        "npm run lint:style",
       ])
 
-    loading.addFinishedStep().succeed("StyleLint ， 初始化成功!")
+    succeedLog("StyleLint 初始化成功!")
 
   }
 
