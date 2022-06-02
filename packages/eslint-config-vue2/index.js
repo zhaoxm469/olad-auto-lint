@@ -2,7 +2,7 @@ const rules = require("./rules.js")
 
 module.exports = {
   parser: "vue-eslint-parser",
-  extends: ["@olad/eslint-config-basic", "@olad/eslint-config-ts"],
+  extends: ["@olad/eslint-config-basic"],
   plugins: ["vue"],
   rules: {
     ...rules,

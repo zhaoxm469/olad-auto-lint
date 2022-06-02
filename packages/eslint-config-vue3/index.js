@@ -17,6 +17,9 @@ module.exports = {
           "case": "pascalCase",
           "ignore": [
             "^.eslintrc",
+            "notFound",
+            "index",
+            "test",
           ],
         }],
       },
@@ -49,7 +52,7 @@ module.exports = {
     "vue/multi-word-component-names": [
       "error",
       {
-        "ignores": ["Todo", "Item"],
+        "ignores": ["Todo", "Item", "index", "Test"],
       },
     ],
     // 保证顺序
