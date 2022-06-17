@@ -1,8 +1,8 @@
 {
   "name": "@olad/auto-lint",
-  "version": "2.0.9",
+  "version": "0.0.5",
   "description": "CLI 命令行工具",
-  "author": "Zhaoxm",
+  "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "./build",
   "scripts": {
     "dev": "unbuild --stub",
@@ -34,6 +34,7 @@
     "handlebars": "^4.7.7",
     "inquirer": "^8.1.5",
     "minimatch": "^3.0.4",
+    "node-fetch": "^3.2.4",
     "ora": "^5.4.1"
   },
   "devDependencies": {
@@ -46,5 +47,11 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhaoxm469/olad-auto-lint"
+  },
+  "homepage": "https://github.com/zhaoxm469/olad-auto-lint",
+  "bugs": "https://github.com/zhaoxm469/olad-auto-lint/issues"
 }

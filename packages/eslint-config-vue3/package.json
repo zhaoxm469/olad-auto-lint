@@ -1,12 +1,13 @@
 {
   "name": "@olad/eslint-config-vue3",
-  "version": "2.0.9",
+  "version": "0.0.5",
   "description": "ESLint config for Vue3",
   "license": "MIT",
-  "author": "zhaoxm",
+  "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "rules.js"
   ],
   "peerDependencies": {
     "eslint": ">=7.4.0"
@@ -20,5 +21,11 @@
   },
   "devDependencies": {
     "eslint": "^8.12.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhaoxm469/olad-auto-lint/tree/main/packages/eslint-config-vue3"
+  },
+  "homepage": "https://github.com/zhaoxm469/olad-auto-lint/tree/main/packages/eslint-config-vue3",
+  "bugs": "https://github.com/zhaoxm469/olad-auto-lint/issues"
 }

@@ -1,7 +1,7 @@
 {
   "name": "@olad/eslint-config",
-  "version": "2.0.9",
-  "author": "zhaoxm",
+  "version": "0.0.5",
+  "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
@@ -14,5 +14,11 @@
   },
   "peerDependencies": {
     "eslint": ">=7.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhaoxm469/olad-auto-lint/tree/main/packages/eslint-config"
+  },
+  "homepage": "https://github.com/zhaoxm469/olad-auto-lint/tree/main/packages/eslint-config",
+  "bugs": "https://github.com/zhaoxm469/olad-auto-lint/issues"
 }

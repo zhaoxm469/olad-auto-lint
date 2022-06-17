@@ -23,12 +23,12 @@ export default class Init extends BaseCommand implements ACommands {
     {
       name: "StyleLint",
       description: "是否安装 stylelint",
-      checked: true,
+      checked: false,
     },
     {
       name: "CommitLint",
       description: "是否安装 commitlint",
-      checked: true,
+      checked: false,
     },
   ]
 
@@ -80,7 +80,7 @@ export default class Init extends BaseCommand implements ACommands {
     ])
 
     // 卸载相关依赖
-    await userPackage.uninstall(/eslint|prettier/g)
+    await userPackage.uninstall(/eslint|prettier/)
 
     // 安装依赖
     await userPackage.install(eslintPackName)

@@ -3,8 +3,6 @@
     "editor.tabSize": 2,
     "files.encoding": "utf8",
     "files.eol": "\n",
-    "editor.formatOnSave": true,
-    // #每次保存的时候将代码按eslint格式进行修复 ,"eslint.autoFixOnSave": true 这个已经过时了
     "editor.codeActionsOnSave": {
         "source.fixAll": true
     },
@@ -21,33 +19,14 @@
         "typescriptreact",
         "vue"
     ],
-    "cSpell.words": [
-        "bumpp",
-        "commitlint",
-        "composables",
-        "devtool",
-        "docsearch",
-        "envinfo",
-        "esbuild",
-        "execa",
-        "frontmatter",
-        "globby",
-        "gtag",
-        "nprogress",
-        "olad",
-        "prefetch",
-        "preload",
-        "prismjs",
-        "rawlist",
-        "shiki",
-        "slugify",
-        "styl",
-        "stylelintignore",
-        "unmount",
-        "vuejs",
-        "vuepress",
-        "vueuse",
-        "Zhaoxm",
-        "zoomable"
+    "eslint.run": "onSave",
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "stylelint.validate": [
+        "css",
+        "scss",
+        "vue",
+        "html"
     ]
 }
