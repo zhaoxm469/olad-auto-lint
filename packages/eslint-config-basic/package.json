@@ -1,6 +1,6 @@
 {
   "name": "@olad/eslint-config-basic",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "ESLint config basic",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "license": "MIT",
