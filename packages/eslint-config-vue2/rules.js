@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-02-21 16:08:54
  * @LastEditors: zhaoxm
- * @LastEditTime: 2022-05-02 15:49:01
+ * @LastEditTime: 2022-09-01 14:42:59
  * @Description:
  */
 /**
@@ -170,7 +170,7 @@ module.exports = {
   /**
    * 要求组件命名是多字的
    */
-  "vue/multi-word-component-names": "error",
+  "vue/multi-word-component-names":"off",
   /**
    * 对自定义事件名称强制实施特定大小写
    */

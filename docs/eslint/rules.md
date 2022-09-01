@@ -1174,9 +1174,9 @@ yoda: "error"
  */
 "vue/this-in-template": "error",
 /**
- * 要求组件命名是多字的
+ * 要求组件命名是多字的 vue 会启动
  */
-"vue/multi-word-component-names": "error",
+"vue/multi-word-component-names": "off",
 /**
  * 对自定义事件名称强制实施特定大小写
  */
@@ -1504,4 +1504,5 @@ indent: "off",
 "@typescript-eslint/ban-types": "off",
 "@typescript-eslint/no-namespace": "off",
 ```
+
 ##

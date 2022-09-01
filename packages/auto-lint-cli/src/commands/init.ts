@@ -8,6 +8,7 @@ import { customCommand } from "../utils"
 import { log, succeedLog } from "../utils/logger"
 import { prompt } from "inquirer"
 import chalk from "chalk"
+import { execaSync } from "execa"
 
 export default class Init extends BaseCommand implements ACommands {
   readonly command = "init"
@@ -140,8 +141,8 @@ export default class Init extends BaseCommand implements ACommands {
     // 一系列husky + lint-staged 初始化操作
     loading.start("初始化 husky + int-staged")
 
-    sync("npm", ["set-script", "prepare", "husky install"])
-    sync("npx", ["husky", "install"])
+    execaSync("npm", ["set-script", "prepare", "husky install"])
+    execaSync("npx", ["husky", "install"])
     customCommand("npm run prepare")
 
     console.log("\n")
@@ -153,9 +154,9 @@ export default class Init extends BaseCommand implements ACommands {
     userPackage.appendScript("lint:lint-staged", "lint-staged")
 
     userProject
-      .addTemplateFile("./.husky", "templates/husky/commit-msg.hbs")
-      .addTemplateFile("./.husky", "templates/husky/common.sh.hbs")
-      .addTemplateFile("./.husky", "templates/husky/pre-commit.hbs")
+      .addTemplateFile("./.husky", "templates/.husky/commit-msg.hbs")
+      .addTemplateFile("./.husky", "templates/.husky/common.sh.hbs")
+      .addTemplateFile("./.husky", "templates/.husky/pre-commit.hbs")
       .addTemplateFile(".", "templates/commitlint.config.js.hbs", {
         packageName: COMMIT_LINT_PACKAGE_NAME,
       })
