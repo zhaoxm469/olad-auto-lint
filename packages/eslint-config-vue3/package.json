@@ -1,6 +1,6 @@
 {
   "name": "@olad/eslint-config-vue3",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "ESLint config for Vue3",
   "license": "MIT",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",

@@ -1,6 +1,6 @@
 {
   "name": "@olad/auto-lint",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "CLI 命令行工具",
   "author": "Zhaoxm <zhaoxm469@163.com> (https://github.com/zhaoxm469/)",
   "main": "./build",
